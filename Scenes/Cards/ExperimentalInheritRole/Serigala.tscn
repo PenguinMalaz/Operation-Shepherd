@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://y5mo2gn5l6dh"]
+
+[ext_resource type="PackedScene" uid="uid://cljtijri10fg8" path="res://Scenes/Cards/Card.tscn" id="1_27l5g"]
+
+[node name="Serigala" instance=ExtResource("1_27l5g")]
+id_card = 1

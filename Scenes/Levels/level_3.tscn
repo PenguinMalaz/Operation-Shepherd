@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://3fqu6hiy6hno"]
+
+[ext_resource type="PackedScene" uid="uid://ci8yyrvfq5bsw" path="res://Scenes/Levels/level.tscn" id="1_6tcp3"]
+[ext_resource type="Resource" uid="uid://38m0jv4m3jww" path="res://Resources/ObjekDanDialog/Pengserut.tres" id="2_nfly3"]
+
+[node name="Level 3" instance=ExtResource("1_6tcp3")]
+next_level_scene = "res://Scenes/Levels/level_4.tscn"
+current_level = 3
+
+[node name="CardBoard" parent="." index="1"]
+object_penentu = ExtResource("2_nfly3")
+pilih_deck = "Deck 2"

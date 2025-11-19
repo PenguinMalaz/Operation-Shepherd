@@ -1,0 +1,128 @@
+63f7b34db8d8cdea90c76aacccf841ec
+::res://::1763475143
+export_presets.cfg::TextFile::-1::1762963052::0::1::::<><><>0<>0<><>::
+icon.svg::CompressedTexture2D::3721487008683203359::1762958815::1762958819::1::::<><><>0<>0<>3f0372242622761977d4a28f0d7fc5ae<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+maginifying_glass.gd::GDScript::4416522650897634613::1762958661::0::1::::<>CanvasLayer<><>0<>0<><>::
+sound_effect.gd::GDScript::3000091396450221348::1762952128::0::1::::<>Node<><>0<>0<><>::
+::res://Asset/::1762668563
+::res://Asset/Font/::1762942593
+VCR_OSD_MONO_1.001.ttf::FontFile::4444937954752043013::1762570472::1762570472::1::::<><><>0<>0<>537660e28971168a2ab50b812940dbdc<>res://.godot/imported/VCR_OSD_MONO_1.001.ttf-e496f43911eb10fb9571890d76700df9.fontdata::
+::res://Asset/Sound/::1762950372
+::res://Asset/Sound/Music/::1762948556
+A New Journey (Main Menu).mp3::AudioStreamMP3::1974547197919978218::1762948531::1762948556::1::::<><><>0<>0<>cdb4550d493e568c18d1db0cd19ccb1d<>res://.godot/imported/A New Journey (Main Menu).mp3-77129195b1d5828bd5d0e17d3758149c.mp3str::
+Judgement (Investigation).mp3::AudioStreamMP3::7918250117925521884::1762948531::1762948556::1::::<><><>0<>0<>40b8d46246366bfeaccf2b4851f2b783<>res://.godot/imported/Judgement (Investigation).mp3-f26382ec9f72503135925c0f2f2f8ead.mp3str::
+Operation Shepherd (Gameplay).mp3::AudioStreamMP3::6288431797144956959::1762948531::1762948556::1::::<><><>0<>0<>b199b517058915e3e5808c23527ba380<>res://.godot/imported/Operation Shepherd (Gameplay).mp3-a81aa833ebaa86a8db4160b568683ab7.mp3str::
+::res://Asset/Sound/Sound Effect/::1762953038
+Button (Hover).wav::AudioStreamWAV::526381932812384047::1762950384::1762950384::1::::<><><>0<>0<>2fcbe66ad70c47550b15bef1704c5d91<>res://.godot/imported/Button (Hover).wav-d6a56103f4f782203daa2144e3acd031.sample::
+Button (Pressed).wav::AudioStreamWAV::7602781144428798405::1762950384::1762950384::1::::<><><>0<>0<>24df2d1cdfc3204ac1c78e1d0a0c8058<>res://.godot/imported/Button (Pressed).wav-21c9e59da77b855b38d58c88fb68377d.sample::
+Card Flip.wav::AudioStreamWAV::2080715607617943612::1762567164::1762950373::1::::<><><>0<>0<>617220e093e0f88a4d3d2ae1bd0cbbd0<>res://.godot/imported/Card Flip.wav-0f4370bd1efd84859d0a2589ab0c4f70.sample::
+Card Hover.wav::AudioStreamWAV::1736506258561043663::1762567164::1762950373::1::::<><><>0<>0<>99b794e45170e5df4189d8757b9cd251<>res://.godot/imported/Card Hover.wav-0555b8c1a87ef3046be63f80590b667a.sample::
+Game Over (Laugh).wav::AudioStreamWAV::2700524384849480350::1762950384::1762950384::1::::<><><>0<>0<>d127e9f1b90b2f1f651b05739d4e516d<>res://.godot/imported/Game Over (Laugh).wav-0e866ec4b188876d194b1e359798a77a.sample::
+Glass Single (Heavy).wav::AudioStreamWAV::2830255022123670475::1762953029::1762953038::1::::<><><>0<>0<>2d795b2bec983fb2b4f526fb00f228e1<>res://.godot/imported/Glass Single (Heavy).wav-0ad580500284f461e199b30fcd4f09d8.sample::
+Howl.wav::AudioStreamWAV::1081769789749015194::1762952933::1762952938::1::::<><><>0<>0<>a35c83803c61c77a9abb54736043affd<>res://.godot/imported/Howl.wav-175ddb5a260c4146280af4912dfe5806.sample::
+Pop.wav::AudioStreamWAV::1663252153056780678::1762569148::1762950373::1::::<><><>0<>0<>3a7908a8eefdffc4581c2394343e1ecd<>res://.godot/imported/Pop.wav-d796bc1c48afbe6e56c620be7eb091f1.sample::
+Score (Coin).wav::AudioStreamWAV::3327619523820409638::1762950383::1762950384::1::::<><><>0<>0<>e2fe9d1cc1afcb3b5597124c8b22a227<>res://.godot/imported/Score (Coin).wav-f464c078aef283d679a8401a342b3660.sample::
+Sheep.wav::AudioStreamWAV::8858554204609910489::1762950383::1762950384::1::::<><><>0<>0<>085e978292a534a58896d5a27555b4c1<>res://.godot/imported/Sheep.wav-6fcffd73914bc8f3441f8756340a5440.sample::
+::res://Asset/Sprite/::1762833482
+::res://Asset/Sprite/Cards/::1762958726
+Belakang kartu.png::CompressedTexture2D::8903390838822662659::1762668563::1762668563::1::::<><><>0<>0<>727cfff1fadbb93596635a99fc05f9bb<>res://.godot/imported/Belakang kartu.png-9778001df0085e11d3b139a874b9bff1.ctex::
+Domba.png::CompressedTexture2D::3768218278293210349::1762964118::1762668563::1::::<><><>0<>0<>50a38076fb4aec0876a6431010ef694b<>res://.godot/imported/Domba.png-6c2c7cc2673044ee028e899e5f4c1f70.ctex::
+Serigala.png::CompressedTexture2D::1295505221067392818::1762668563::1762668563::1::::<><><>0<>0<>09d223a006a2646a343ef1ae1ac65478<>res://.godot/imported/Serigala.png-1126e9e4438305f773091eb562b77766.ctex::
+::res://Asset/Sprite/Cards/Object/::1762851637
+card-pen.png::CompressedTexture2D::6842149197164681687::1762851532::1762851579::1::::<><><>0<>0<>5a6bc1c91778f1b79085c84e6911c73b<>res://.godot/imported/card-pen.png-040fbc5b526620e492d69a96d2976953.ctex::
+card-pencil.png::CompressedTexture2D::4338572252734156358::1762851483::1762851579::1::::<><><>0<>0<>3689932a6959b4eb54c6050ba68815e1<>res://.godot/imported/card-pencil.png-cb8404b5187b781439ae09b70485f0b4.ctex::
+card-penghapus.png::CompressedTexture2D::4912427628022847296::1762851497::1762851579::1::::<><><>0<>0<>cdae01143a327fc6f1511aaaa4df55cc<>res://.godot/imported/card-penghapus.png-6cfb6e4d0afe8debf7015f8f798adb72.ctex::
+card-pengserut.png::CompressedTexture2D::3339126261388147842::1762851519::1762851579::1::::<><><>0<>0<>85f3c60b2dc23f647c409f0e9f21f650<>res://.godot/imported/card-pengserut.png-adecc40c28fd605d9430f778a7f95420.ctex::
+kertas 1.png::CompressedTexture2D::3454082722884205927::1762851404::1762851579::1::::<><><>0<>0<>4cb37787b516f3799cedc62400a7a8cf<>res://.godot/imported/kertas 1.png-c3576bd4624a489911948dc1dbb2d589.ctex::
+::res://Asset/Sprite/Ground/::1762948339
+Ground-v2.png::CompressedTexture2D::3100122646715544289::1762833476::1762833483::1::::<><><>0<>0<>5b384723ca63be2ec7885f3dbeabec80<>res://.godot/imported/Ground-v2.png-a0dbe0cd76a7b2f69d91678aaf0796ba.ctex::
+main-menu-96x80-256x96.png::CompressedTexture2D::2509674164593388219::1762948338::1762948339::1::::<><><>0<>0<>ba7d34b563fdda318daab666c061b156<>res://.godot/imported/main-menu-96x80-256x96.png-322bd3e53eb117b9c5b6e5e0a49a0716.ctex::
+::res://Asset/Sprite/Textures/::1762668563
+PanelTexture.png::CompressedTexture2D::108090448692155049::1762668563::1762668563::1::::<><><>0<>0<>f50334e9e138ecaf434eaacdb62956c1<>res://.godot/imported/PanelTexture.png-f48e7d05ea6d05388557ede12970594a.ctex::
+::res://Asset/Sprite/Textures/Button/::1762836174
+Button Hover.png::CompressedTexture2D::8855754129789305536::1762836171::1762836174::1::::<><><>0<>0<>544f5796523ede3ec23403a4dacf242f<>res://.godot/imported/Button Hover.png-e6b854b3468ad3db14c1f6049d4c6618.ctex::
+Button Normal.png::CompressedTexture2D::2718423626426738194::1762836173::1762836174::1::::<><><>0<>0<>35223dd5b45fd346a340d8da0afd9034<>res://.godot/imported/Button Normal.png-829dc9844333d86b0c9bfeba49bffcb8.ctex::
+Button Pressed.png::CompressedTexture2D::1537180239328199077::1762836172::1762836174::1::::<><><>0<>0<>351f388d9f442a333e47c0ff3b95f1d0<>res://.godot/imported/Button Pressed.png-dd1f06e40007992c7f63d25992232d16.ctex::
+::res://Asset/Sprite/Textures/DialogueBox/::1762668563
+DialogueBox.png::CompressedTexture2D::8520858889636261144::1762668563::1762668563::1::::<><><>0<>0<>99b386aa77e3e2b911412edd5487e168<>res://.godot/imported/DialogueBox.png-0e8f19e769bd8d66215048e3c1cb1140.ctex::
+::res://Asset/Sprite/UI/::1762958172
+button-kaca pembesar.png::CompressedTexture2D::8802466839460255198::1762958172::1762958172::1::::<><><>0<>0<>24c777b00779ef7b75ffb92b8c8592bd<>res://.godot/imported/button-kaca pembesar.png-ab840cf3cfc6318c42f315de57b118f2.ctex::
+Cursor.png::CompressedTexture2D::5230854722642048182::1762668563::1762668563::1::::<><><>0<>0<>9c754baccb140fc3bac80b1ce1c82db4<>res://.godot/imported/Cursor.png-f577c260001c37d4549b798cb1ac4b5a.ctex::
+heart.png::CompressedTexture2D::7421677562026735780::1762668563::1762668563::1::::<><><>0<>0<>04bed758212a6495004b5e60f1df2cc7<>res://.godot/imported/heart.png-a0c9a89fd0bf5b5c7a3bcaa5e4200b4b.ctex::
+icon task.png::CompressedTexture2D::3635077845814914555::1762954890::1762954891::1::::<><><>0<>0<>4114d3f8a71a0eef458b0d2c4832500e<>res://.godot/imported/icon task.png-a9b726ac73552bd08d772034cd4890f4.ctex::
+Kaca pembesar.png::CompressedTexture2D::8407631213950164163::1762668563::1762668563::1::::<><><>0<>0<>854af0833fdf78ceaae71eeb55594bd1<>res://.godot/imported/Kaca pembesar.png-7c720c193b46f7375dbb8e73443eaac2.ctex::
+main-menu-96x80-256x96.png::CompressedTexture2D::8442615668194890845::1762948348::1762948348::1::::<><><>0<>0<>541ae56a55ff63aec190f93ede73b6c9<>res://.godot/imported/main-menu-96x80-256x96.png-25d1cbb10b49b608df98b118712d70eb.ctex::
+::res://Resources/::1762942080
+::res://Resources/ObjekDanDialog/::1762946456
+Kertas.tres::Resource/ObjekDanDialog::6477653782049025346::1762851801::0::1::::<><><>0<>0<><>::uid://da326um6liqtu::::res://Resources/ObjekDanDialog/ObjekDanDialog.gd<>uid://bphgic5ofte20::::res://Asset/Sprite/Cards/Object/kertas 1.png
+ObjekDanDialog.gd::GDScript::7218760417036910506::1762833282::0::1::::ObjekDanDialog<>Resource<><>0<>0<><>::
+Penghapus.tres::Resource/ObjekDanDialog::8359101785302588754::1762851801::0::1::::<><><>0<>0<><>::uid://cb8u7255mra3a::::res://Asset/Sprite/Cards/Object/card-penghapus.png<>uid://da326um6liqtu::::res://Resources/ObjekDanDialog/ObjekDanDialog.gd
+Pengserut.tres::Resource/ObjekDanDialog::2034185842995518374::1762946456::0::1::::<><><>0<>0<><>::uid://da326um6liqtu::::res://Resources/ObjekDanDialog/ObjekDanDialog.gd<>uid://bntq6lpoj34a5::::res://Asset/Sprite/Cards/Object/card-pengserut.png
+Pensil.tres::Resource/ObjekDanDialog::4829759663152899489::1762851800::0::1::::<><><>0<>0<><>::uid://b22vwex8m672y::::res://Asset/Sprite/Cards/Object/card-pencil.png<>uid://da326um6liqtu::::res://Resources/ObjekDanDialog/ObjekDanDialog.gd
+Pulpen.tres::Resource/ObjekDanDialog::2369975340944745793::1762851801::0::1::::<><><>0<>0<><>::uid://c4qngypr2gbtn::::res://Asset/Sprite/Cards/Object/card-pen.png<>uid://da326um6liqtu::::res://Resources/ObjekDanDialog/ObjekDanDialog.gd
+::res://Resources/Texture/::1762942086
+::res://Resources/Texture/Button/::1762942137
+ButtonHover.tres::StyleBoxTexture::8205267702011856107::1762942137::0::1::::<><><>0<>0<><>::uid://dyf18hbi8huom::::res://Asset/Sprite/Textures/Button/Button Hover.png
+ButtonNormal.tres::StyleBoxTexture::4049497816955507939::1762942088::0::1::::<><><>0<>0<><>::uid://bey3bmgu1f0g1::::res://Asset/Sprite/Textures/Button/Button Normal.png
+ButtonPressed.tres::StyleBoxTexture::4272830816274563110::1762942110::0::1::::<><><>0<>0<><>::uid://v5ves4bof83b::::res://Asset/Sprite/Textures/Button/Button Pressed.png
+::res://Scenes/::1762958524
+GameManager.tscn::PackedScene::6123393621148632433::1762934613::0::1::::<><><>0<>0<><>::
+info.gd::GDScript::3586964359187069523::1762955092::0::1::::<>CanvasLayer<><>0<>0<><>::
+info.tscn::PackedScene::117424293089699587::1762958524::0::1::::<><><>0<>0<><>::uid://brds1qphhvqgp::::res://Scenes/info.gd<>uid://b4lfqjm4wfgf2::::res://Asset/Font/VCR_OSD_MONO_1.001.ttf<>uid://bsmh7nd8lndh::::res://Asset/Sprite/Textures/PanelTexture.png<>uid://btxmafg4ni1gj::::res://Asset/Sprite/Cards/Domba.png<>uid://bxxuvw3u47hhj::::res://Resources/Texture/Button/ButtonNormal.tres<>uid://sps1twska8rm::::res://Asset/Sprite/Cards/Serigala.png<>uid://b1415tteok2jy::::res://Resources/Texture/Button/ButtonPressed.tres<>uid://do5xtbv76wo0b::::res://Resources/Texture/Button/ButtonHover.tres
+music.gd::GDScript::6064443815936273323::1762955463::0::1::::<>Node<><>0<>0<><>::
+music.tscn::PackedScene::9077239318824827140::1762955498::0::1::::<><><>0<>0<><>::uid://3eqrep5wgsek::::res://Asset/Sound/Music/A New Journey (Main Menu).mp3<>uid://csnwregmnqkyd::::res://Scenes/music.gd<>uid://cvufs2hb1mthf::::res://Asset/Sound/Music/Operation Shepherd (Gameplay).mp3<>uid://dk2womq0nkxfw::::res://Asset/Sound/Music/Judgement (Investigation).mp3
+sound_effect.tscn::PackedScene::3718371827692160361::1762952945::0::1::::<><><>0<>0<><>::uid://bi0jcjouyl3oa::::res://sound_effect.gd<>uid://hq8o0fnfdc4f::::res://Asset/Sound/Sound Effect/Button (Hover).wav<>uid://dgk3xvbissxsv::::res://Asset/Sound/Sound Effect/Button (Pressed).wav<>uid://beqfih3g0f0ys::::res://Asset/Sound/Sound Effect/Game Over (Laugh).wav<>uid://bgk85fbhc2afj::::res://Asset/Sound/Sound Effect/Glass Single (Heavy).wav<>uid://bnn6n365u14t3::::res://Asset/Sound/Sound Effect/Score (Coin).wav<>uid://dyhfdgc5a2138::::res://Asset/Sound/Sound Effect/Sheep.wav<>uid://poaucqvtmpmw::::res://Asset/Sound/Sound Effect/Howl.wav<>uid://xxxrxcm2rk6i::::res://Asset/Sound/Sound Effect/Pop.wav<>uid://4v6c14lhpl1u::::res://Asset/Sound/Sound Effect/Card Flip.wav
+::res://Scenes/CardBoard/::1762952708
+CardBoard.gd::GDScript::3454898975361100385::1762952708::0::1::::CardBoard<>Node<><>0<>0<><>::
+CardBoard.tscn::PackedScene::3854060897067987950::1762952708::0::1::::<><><>0<>0<><>::uid://bphtxfwccssbh::::res://Scenes/CardBoard/CardBoard.gd<>uid://cljtijri10fg8::::res://Scenes/Cards/Card.tscn<>uid://ba5m2k0urb1wn::::res://Scenes/Cards/card_object.tscn<>uid://hmnadptwgpq::::res://Scenes/Magifying Glass/maginifying_glass.tscn<>uid://bogdb2py0tcfc::::res://Scenes/UI/CursorMagnifyingGlass.tscn<>uid://cuoj3ka8bma1t::::res://Scenes/UI/CursorNormal.tscn
+::res://Scenes/Cards/::1763473853
+Card.gd::GDScript::8999021664699400322::1763473853::0::1::::Card<>Node<><>0<>0<><>::
+Card.tscn::PackedScene::5564666455775941417::1763473797::0::1::::<><><>0<>0<><>::uid://d1hgtpjvdkgec::::res://Scenes/Cards/Card.gd<>uid://dy34stskx411p::::res://Asset/Sprite/Cards/Belakang kartu.png<>uid://xxxrxcm2rk6i::::res://Asset/Sound/Sound Effect/Pop.wav<>uid://4v6c14lhpl1u::::res://Asset/Sound/Sound Effect/Card Flip.wav<>uid://btxmafg4ni1gj::::res://Asset/Sprite/Cards/Domba.png<>uid://dn34f0hfsnj83::::res://Scenes/UI/dialogue_box.tscn<>uid://dr1ypteml0iud::::res://Asset/Sprite/UI/Kaca pembesar.png
+card_object.gd::GDScript::7860320869672410070::1762851677::0::1::::<>Node2D<><>0<>0<><>::
+card_object.tscn::PackedScene::2449129401448632249::1762851677::0::1::::<><><>0<>0<><>::uid://dj8ulo1trteuw::::res://Scenes/Cards/card_object.gd<>uid://dy34stskx411p::::res://Asset/Sprite/Cards/Belakang kartu.png
+::res://Scenes/Cards/ExperimentalInheritRole/::1762849272
+Domba.gd::GDScript::3055293179000345074::1762849272::0::1::::<>Card<><>0<>0<><>::
+Domba.tscn::PackedScene::7676376208975550532::1762849272::0::1::::<><><>0<>0<><>::uid://cljtijri10fg8::::res://Scenes/Cards/Card.tscn
+Serigala.tscn::PackedScene::1747218612992935873::1762849272::0::1::::<><><>0<>0<><>::uid://cljtijri10fg8::::res://Scenes/Cards/Card.tscn
+::res://Scenes/Credits/::1763474310
+credits.gd::GDScript::1252055094900252853::1763474222::0::1::::<>Control<><>0<>0<><>::
+Credits.tscn::PackedScene::9039486320511921033::1763474310::0::1::::<><><>0<>0<><>::uid://r3rfue64abs4::::res://Scenes/Credits/credits.gd<>uid://bkfytjrv1nfsb::::res://Asset/Sprite/Ground/Ground-v2.png<>uid://bsmh7nd8lndh::::res://Asset/Sprite/Textures/PanelTexture.png<>uid://cac7sq4vlj501::::res://Scenes/Fade/fade.tscn<>uid://b4lfqjm4wfgf2::::res://Asset/Font/VCR_OSD_MONO_1.001.ttf<>uid://bxxuvw3u47hhj::::res://Resources/Texture/Button/ButtonNormal.tres<>uid://b1415tteok2jy::::res://Resources/Texture/Button/ButtonPressed.tres<>uid://do5xtbv76wo0b::::res://Resources/Texture/Button/ButtonHover.tres<>uid://bogdb2py0tcfc::::res://Scenes/UI/CursorMagnifyingGlass.tscn<>uid://cuoj3ka8bma1t::::res://Scenes/UI/CursorNormal.tscn
+::res://Scenes/Fade/::1762943696
+fade.gd::GDScript::1625450887450921514::1762929460::0::1::::<>CanvasLayer<><>0<>0<><>::
+fade.tscn::PackedScene::4778946097095299900::1762943696::0::1::::<><><>0<>0<><>::uid://xfm66cdx3tug::::res://Scenes/Fade/fade.gd
+::res://Scenes/Levels/::1763474700
+level.gd::GDScript::549131198011753434::1763474543::0::1::::Level<>Node2D<><>0<>0<><>::
+level.tscn::PackedScene::5403977574842131022::1763474700::0::1::::<><><>0<>0<><>::uid://bu562416w70f7::::res://Scenes/CardBoard/CardBoard.tscn<>uid://h3ad04dxamxm::::res://Scenes/Levels/level.gd<>uid://ckqxyhwrtplkt::::res://Scenes/UI/HUD.tscn<>uid://bkfytjrv1nfsb::::res://Asset/Sprite/Ground/Ground-v2.png
+LevelSelection.gd::GDScript::5523497677038967836::1762952164::0::1::::LevelSelection<>Control<><>0<>0<><>::
+LevelSelection.tscn::PackedScene::1976941840003769948::1763474395::0::1::::<><><>0<>0<><>::uid://ckxvg155corls::::res://Scenes/Levels/LevelSelection.gd<>uid://bxxuvw3u47hhj::::res://Resources/Texture/Button/ButtonNormal.tres<>uid://bkfytjrv1nfsb::::res://Asset/Sprite/Ground/Ground-v2.png<>uid://cac7sq4vlj501::::res://Scenes/Fade/fade.tscn<>uid://b1415tteok2jy::::res://Resources/Texture/Button/ButtonPressed.tres<>uid://bogdb2py0tcfc::::res://Scenes/UI/CursorMagnifyingGlass.tscn<>uid://cuoj3ka8bma1t::::res://Scenes/UI/CursorNormal.tscn<>uid://do5xtbv76wo0b::::res://Resources/Texture/Button/ButtonHover.tres<>uid://b22vwex8m672y::::res://Asset/Sprite/Cards/Object/card-pencil.png<>uid://b4lfqjm4wfgf2::::res://Asset/Font/VCR_OSD_MONO_1.001.ttf<>uid://c4qngypr2gbtn::::res://Asset/Sprite/Cards/Object/card-pen.png<>uid://bntq6lpoj34a5::::res://Asset/Sprite/Cards/Object/card-pengserut.png<>uid://cb8u7255mra3a::::res://Asset/Sprite/Cards/Object/card-penghapus.png<>uid://bphgic5ofte20::::res://Asset/Sprite/Cards/Object/kertas 1.png<>uid://bsmh7nd8lndh::::res://Asset/Sprite/Textures/PanelTexture.png
+level_1.tscn::PackedScene::3393730254668341963::1762954085::0::1::::<><><>0<>0<><>::uid://ci8yyrvfq5bsw::::res://Scenes/Levels/level.tscn<>uid://bw47w4h2agxn::::res://Scenes/info.tscn
+level_2.tscn::PackedScene::1186769004640386463::1762945338::0::1::::<><><>0<>0<><>::uid://ci8yyrvfq5bsw::::res://Scenes/Levels/level.tscn<>uid://81bfavtnhqgn::::res://Resources/ObjekDanDialog/Pulpen.tres
+level_3.tscn::PackedScene::1976618337831834780::1762946456::0::1::::<><><>0<>0<><>::uid://ci8yyrvfq5bsw::::res://Scenes/Levels/level.tscn<>uid://38m0jv4m3jww::::res://Resources/ObjekDanDialog/Pengserut.tres
+level_4.tscn::PackedScene::3720939468487270002::1762945350::0::1::::<><><>0<>0<><>::uid://ci8yyrvfq5bsw::::res://Scenes/Levels/level.tscn<>uid://drdhgkadx58ly::::res://Resources/ObjekDanDialog/Penghapus.tres
+level_5.tscn::PackedScene::7568333715202492912::1762945360::0::1::::<><><>0<>0<><>::uid://ci8yyrvfq5bsw::::res://Scenes/Levels/level.tscn<>uid://cyj3anf2i1dre::::res://Resources/ObjekDanDialog/Kertas.tres
+::res://Scenes/Magifying Glass/::1762958978
+maginifying_glass.tscn::PackedScene::15202468854586790::1762958978::0::1::::<><><>0<>0<><>::uid://b36nqod5xfskb::::res://maginifying_glass.gd<>uid://b4lfqjm4wfgf2::::res://Asset/Font/VCR_OSD_MONO_1.001.ttf<>uid://bey3bmgu1f0g1::::res://Asset/Sprite/Textures/Button/Button Normal.png<>uid://v5ves4bof83b::::res://Asset/Sprite/Textures/Button/Button Pressed.png<>uid://dyf18hbi8huom::::res://Asset/Sprite/Textures/Button/Button Hover.png<>uid://dxn8lwi83gthu::::res://Asset/Sprite/UI/button-kaca pembesar.png
+::res://Scenes/UI/::1763474676
+CursorMagnifyingGlass.gd::GDScript::3767262407655794349::1762668563::0::1::::<>Sprite2D<><>0<>0<><>::
+CursorMagnifyingGlass.tscn::PackedScene::3381636140349245340::1762668566::0::1::::<><><>0<>0<><>::uid://dr1ypteml0iud::::res://Asset/Sprite/UI/Kaca pembesar.png<>uid://btw5i5ibjdird::::res://Scenes/UI/CursorMagnifyingGlass.gd
+CursorNormal.tscn::PackedScene::6206116510602601239::1762668566::0::1::::<><><>0<>0<><>::uid://cgr4obqkg4f2e::::res://Asset/Sprite/UI/Cursor.png<>uid://b8qendojl6uft::::res://Scenes/UI/cursor_normal.gd
+cursor_normal.gd::GDScript::4735948830727128149::1762668563::0::1::::<>Sprite2D<><>0<>0<><>::
+dialogue_box.tscn::PackedScene::8131290641396288010::1762670316::0::1::::<><><>0<>0<><>::uid://b4lfqjm4wfgf2::::res://Asset/Font/VCR_OSD_MONO_1.001.ttf<>uid://dtntkh7qeloyy::::res://Asset/Sprite/Textures/DialogueBox/DialogueBox.png
+hud.gd::GDScript::7539836218970079035::1763474676::0::1::::HUD<>Node<><>0<>0<><>::
+HUD.tscn::PackedScene::5509199600166371931::1762959531::0::1::::<><><>0<>0<><>::uid://dfomabdbuqvyx::::res://Scenes/UI/hud.gd<>uid://dd0d7eth13gky::::res://Asset/Sprite/UI/heart.png<>uid://bsmh7nd8lndh::::res://Asset/Sprite/Textures/PanelTexture.png<>uid://b4lfqjm4wfgf2::::res://Asset/Font/VCR_OSD_MONO_1.001.ttf<>uid://bxxuvw3u47hhj::::res://Resources/Texture/Button/ButtonNormal.tres<>uid://br14g3nimg5rr::::res://Asset/Sprite/UI/icon task.png<>uid://bcicsfokqyoh5::::res://Scenes/UI/Menus/GameOver.tscn<>uid://b1nsbqfdtiaqf::::res://Scenes/UI/Menus/NextLevel.tscn<>uid://b1415tteok2jy::::res://Resources/Texture/Button/ButtonPressed.tres<>uid://do5xtbv76wo0b::::res://Resources/Texture/Button/ButtonHover.tres<>uid://cac7sq4vlj501::::res://Scenes/Fade/fade.tscn
+::res://Scenes/UI/MainMenu/::1763474304
+MainMenu.gd::GDScript::6016779376415315976::1763474251::0::1::::<>Control<><>0<>0<><>::
+MainMenu.tscn::PackedScene::1229015829471908313::1763474304::0::1::::<><><>0<>0<><>::uid://crytqhyrgxfq3::::res://Scenes/UI/MainMenu/MainMenu.gd<>uid://bkfytjrv1nfsb::::res://Asset/Sprite/Ground/Ground-v2.png<>uid://cac7sq4vlj501::::res://Scenes/Fade/fade.tscn<>uid://bogdb2py0tcfc::::res://Scenes/UI/CursorMagnifyingGlass.tscn<>uid://b4lfqjm4wfgf2::::res://Asset/Font/VCR_OSD_MONO_1.001.ttf<>uid://cuoj3ka8bma1t::::res://Scenes/UI/CursorNormal.tscn<>uid://bxxuvw3u47hhj::::res://Resources/Texture/Button/ButtonNormal.tres<>uid://b1415tteok2jy::::res://Resources/Texture/Button/ButtonPressed.tres<>uid://do5xtbv76wo0b::::res://Resources/Texture/Button/ButtonHover.tres<>uid://btxmafg4ni1gj::::res://Asset/Sprite/Cards/Domba.png<>uid://sps1twska8rm::::res://Asset/Sprite/Cards/Serigala.png<>uid://dsjwv8o6s6mun::::res://Asset/Sprite/UI/main-menu-96x80-256x96.png
+::res://Scenes/UI/Menus/::1763474938
+GameOver.gd::GDScript::3306424947544992072::1763474857::0::1::::<>CanvasLayer<><>0<>0<><>::
+GameOver.tscn::PackedScene::2543467255998172996::1763474938::0::1::::<><><>0<>0<><>::uid://bndwlogy1oa3a::::res://Scenes/UI/Menus/GameOver.gd<>uid://bsmh7nd8lndh::::res://Asset/Sprite/Textures/PanelTexture.png<>uid://b4lfqjm4wfgf2::::res://Asset/Font/VCR_OSD_MONO_1.001.ttf<>uid://bey3bmgu1f0g1::::res://Asset/Sprite/Textures/Button/Button Normal.png<>uid://v5ves4bof83b::::res://Asset/Sprite/Textures/Button/Button Pressed.png<>uid://dyf18hbi8huom::::res://Asset/Sprite/Textures/Button/Button Hover.png<>uid://cac7sq4vlj501::::res://Scenes/Fade/fade.tscn
+NextLevel.gd::GDScript::5678199847888448213::1762955394::0::1::::<>CanvasLayer<><>0<>0<><>::
+NextLevel.tscn::PackedScene::4239263069008057397::1762960798::0::1::::<><><>0<>0<><>::uid://cm5tee6eqkyoj::::res://Scenes/UI/Menus/NextLevel.gd<>uid://b4lfqjm4wfgf2::::res://Asset/Font/VCR_OSD_MONO_1.001.ttf<>uid://bsmh7nd8lndh::::res://Asset/Sprite/Textures/PanelTexture.png<>uid://bxxuvw3u47hhj::::res://Resources/Texture/Button/ButtonNormal.tres<>uid://b1415tteok2jy::::res://Resources/Texture/Button/ButtonPressed.tres<>uid://do5xtbv76wo0b::::res://Resources/Texture/Button/ButtonHover.tres<>uid://cac7sq4vlj501::::res://Scenes/Fade/fade.tscn
+::res://Scripts/::1762565709
+::res://Scripts/Globals/::1763474938
+GlobalSignals.gd::GDScript::5253379047818577416::1762565709::0::1::::<>Node<><>0<>0<><>::
+GlobalVariable.gd::GDScript::2936796660221174891::1763474938::0::1::::<>Node<><>0<>0<><>::
+::res://Scripts/Systems/::1762565709
+ScoreSystem.gd::GDScript::6805397794724891667::1762565709::0::1::::<>Node<><>0<>0<><>::
+::res://Scripts/Utils/::1762565709
+Helpers.gd::GDScript::6659304569251527026::1762565709::0::1::::<>Node<><>0<>0<><>::

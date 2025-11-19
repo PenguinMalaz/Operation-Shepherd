@@ -1,0 +1,95 @@
+[gd_scene load_steps=6 format=3 uid="uid://3fv7cojyohqq"]
+
+[ext_resource type="Script" uid="uid://ckxvg155corls" path="res://Scenes/Levels/LevelSelection.gd" id="1_0o5wr"]
+[ext_resource type="PackedScene" uid="uid://cac7sq4vlj501" path="res://Scenes/Fade/fade.tscn" id="2_sg2c8"]
+
+[sub_resource type="Theme" id="Theme_0o5wr"]
+
+[sub_resource type="InputEventKey" id="InputEventKey_0o5wr"]
+pressed = true
+
+[sub_resource type="Shortcut" id="Shortcut_sg2c8"]
+events = [SubResource("InputEventKey_0o5wr")]
+
+[node name="LevelSelection" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_0o5wr")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = SubResource("Theme_0o5wr")
+follow_focus = true
+draw_focus_border = true
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="LevelsContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/ScrollContainer/MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 20
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/LevelsContainer"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button2" type="Button" parent="MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/LevelsContainer"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button3" type="Button" parent="MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/LevelsContainer"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button4" type="Button" parent="MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/LevelsContainer"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button5" type="Button" parent="MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/LevelsContainer"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Exit" type="Button" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+shortcut = SubResource("Shortcut_sg2c8")
+text = "Exit"
+
+[node name="Fade" parent="." instance=ExtResource("2_sg2c8")]
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Exit" to="." method="_on_exit_pressed"]

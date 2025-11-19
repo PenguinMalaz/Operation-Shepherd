@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://4v6c14lhpl1u"
+path="res://.godot/imported/Card Flip.wav-0f4370bd1efd84859d0a2589ab0c4f70.sample"
+
+[deps]
+
+source_file="res://Asset/Sound/Sound Effect/Card Flip.wav"
+dest_files=["res://.godot/imported/Card Flip.wav-0f4370bd1efd84859d0a2589ab0c4f70.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

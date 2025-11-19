@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://ctihnso3ncatl"]
+
+[ext_resource type="Script" uid="uid://cckxfjiuegn1r" path="res://Scenes/game_manager.gd" id="1_m2tc1"]
+[ext_resource type="PackedScene" uid="uid://rrlygdbjfrhp" path="res://Scenes/UI/MainMenu/MainMenu.tscn" id="2_bwyv8"]
+
+[node name="GameManager" type="Node"]
+script = ExtResource("1_m2tc1")
+
+[node name="MainMenu" parent="." instance=ExtResource("2_bwyv8")]
+
+[node name="Transitions" type="Node" parent="."]
+
+[node name="FadeBlack" type="CanvasLayer" parent="Transitions"]
+layer = 100
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="Transitions/FadeBlack"]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+color = Color(0, 0, 0, 1)

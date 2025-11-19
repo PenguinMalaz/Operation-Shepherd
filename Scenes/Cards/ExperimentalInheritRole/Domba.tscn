@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://dhmq2audv4i5q"]
+
+[ext_resource type="PackedScene" uid="uid://cljtijri10fg8" path="res://Scenes/Cards/Card.tscn" id="1_75gf6"]
+
+[node name="Domba" instance=ExtResource("1_75gf6")]

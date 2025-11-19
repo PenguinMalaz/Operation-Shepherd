@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dk2womq0nkxfw"
+path="res://.godot/imported/Judgement (Investigation).mp3-f26382ec9f72503135925c0f2f2f8ead.mp3str"
+
+[deps]
+
+source_file="res://Asset/Sound/Music/Judgement (Investigation).mp3"
+dest_files=["res://.godot/imported/Judgement (Investigation).mp3-f26382ec9f72503135925c0f2f2f8ead.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

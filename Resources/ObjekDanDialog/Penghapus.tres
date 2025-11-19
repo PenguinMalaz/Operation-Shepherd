@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ObjekDanDialog" load_steps=3 format=3 uid="uid://drdhgkadx58ly"]
+
+[ext_resource type="Texture2D" uid="uid://cb8u7255mra3a" path="res://Asset/Sprite/Cards/Object/card-penghapus.png" id="1_4supf"]
+[ext_resource type="Script" uid="uid://da326um6liqtu" path="res://Resources/ObjekDanDialog/ObjekDanDialog.gd" id="1_guusa"]
+
+[resource]
+script = ExtResource("1_guusa")
+nama_objek = "Penghapus"
+domba_dialogs = PackedStringArray("Benda kecil terbuat dari karet", "Saat digosok, tulisan pensil hilang", "Warnanya beragam dan sering ada di meja belajar", "Jika dipakai, ia meninggalkan serpihan", "Benda ini berpasangan dengan pensil")
+serigala_dialogs = PackedStringArray("Aku melihat sebuah barang kecil di antara rak buku", "Ada sebuah benda ringan di dalam laci", "Sebuah objek kecil di dalam kotak", "Barang kecil yang berada di samping penggaris")
+card_texture = ExtResource("1_4supf")
+metadata/_custom_type_script = "uid://da326um6liqtu"

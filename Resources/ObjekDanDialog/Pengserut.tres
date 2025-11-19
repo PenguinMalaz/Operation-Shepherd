@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ObjekDanDialog" load_steps=3 format=3 uid="uid://38m0jv4m3jww"]
+
+[ext_resource type="Script" uid="uid://da326um6liqtu" path="res://Resources/ObjekDanDialog/ObjekDanDialog.gd" id="1_ehu57"]
+[ext_resource type="Texture2D" uid="uid://bntq6lpoj34a5" path="res://Asset/Sprite/Cards/Object/card-pengserut.png" id="1_twc4c"]
+
+[resource]
+script = ExtResource("1_ehu57")
+nama_objek = "Pengserut"
+domba_dialogs = PackedStringArray("Dia terbuat dari plastik atau logam, dan punya lubang kecil dan pisau tajam", "Benda ini akan membuat pensilku jadi lancip lagi", "Jika digunakan dia menghasilkan serpihan kayu kecil", "Didalamnya ada benda tajam yang berguna untuk pensil", "Bisa membuat pensil jadi lebih pendek")
+serigala_dialogs = PackedStringArray("Benda tersebut berada di sekolah saja dan suka digunakan untuk memotong", "Benda yang sangat rapuh dan lembek", "Benda ini sangat cocok berpasangan dengan pulpen", "Benda ini memiliki warna yang kusam dan jelek")
+card_texture = ExtResource("1_twc4c")
+metadata/_custom_type_script = "uid://da326um6liqtu"

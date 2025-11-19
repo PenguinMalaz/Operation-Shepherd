@@ -1,0 +1,321 @@
+[gd_scene load_steps=12 format=3 uid="uid://d112av8khxnx6"]
+
+[ext_resource type="Script" uid="uid://r3rfue64abs4" path="res://Scenes/Credits/credits.gd" id="1_mdxjw"]
+[ext_resource type="Texture2D" uid="uid://bkfytjrv1nfsb" path="res://Asset/Sprite/Ground/Ground-v2.png" id="2_jdyel"]
+[ext_resource type="Texture2D" uid="uid://bsmh7nd8lndh" path="res://Asset/Sprite/Textures/PanelTexture.png" id="2_jq1kv"]
+[ext_resource type="PackedScene" uid="uid://cac7sq4vlj501" path="res://Scenes/Fade/fade.tscn" id="2_mrcp2"]
+[ext_resource type="FontFile" uid="uid://b4lfqjm4wfgf2" path="res://Asset/Font/VCR_OSD_MONO_1.001.ttf" id="3_qqh6l"]
+[ext_resource type="StyleBox" uid="uid://bxxuvw3u47hhj" path="res://Resources/Texture/Button/ButtonNormal.tres" id="5_hktpy"]
+[ext_resource type="StyleBox" uid="uid://b1415tteok2jy" path="res://Resources/Texture/Button/ButtonPressed.tres" id="6_cqi0y"]
+[ext_resource type="StyleBox" uid="uid://do5xtbv76wo0b" path="res://Resources/Texture/Button/ButtonHover.tres" id="7_cqxlb"]
+[ext_resource type="PackedScene" uid="uid://bogdb2py0tcfc" path="res://Scenes/UI/CursorMagnifyingGlass.tscn" id="9_cqxlb"]
+[ext_resource type="PackedScene" uid="uid://cuoj3ka8bma1t" path="res://Scenes/UI/CursorNormal.tscn" id="10_21x4v"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qqh6l"]
+texture = ExtResource("2_jq1kv")
+texture_margin_left = 6.0
+texture_margin_top = 6.0
+texture_margin_right = 6.0
+texture_margin_bottom = 6.0
+region_rect = Rect2(0, 0, 32, 32)
+
+[node name="Credits" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mdxjw")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(288, 168)
+scale = Vector2(1.3, 1.3)
+texture = ExtResource("2_jdyel")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 128.0
+offset_top = 32.0
+offset_right = -128.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_qqh6l")
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -144.0
+offset_top = -120.0
+offset_right = 144.0
+offset_bottom = -97.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_qqh6l")
+theme_override_font_sizes/font_size = 24
+text = "Credit"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -144.0
+offset_top = -88.0
+offset_right = 144.0
+offset_bottom = -65.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_qqh6l")
+theme_override_font_sizes/font_size = 12
+text = "Salahudin Yusuf"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -144.0
+offset_top = -72.0
+offset_right = 144.0
+offset_bottom = -27.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.7666196, 0.76661956, 0.76661956, 1)
+theme_override_fonts/font = ExtResource("3_qqh6l")
+theme_override_font_sizes/font_size = 10
+text = "Game Designer
+Programmer
+Pixel Artist"
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -144.0
+offset_top = -32.0
+offset_right = 144.0
+offset_bottom = -9.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_qqh6l")
+theme_override_font_sizes/font_size = 12
+text = "Aldi Alfariz"
+horizontal_alignment = 1
+
+[node name="Label5" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -144.0
+offset_top = -16.0
+offset_right = 144.0
+offset_bottom = -3.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.7666196, 0.76661956, 0.76661956, 1)
+theme_override_fonts/font = ExtResource("3_qqh6l")
+theme_override_font_sizes/font_size = 10
+text = "Pixel Artist"
+horizontal_alignment = 1
+
+[node name="Label6" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -144.0
+offset_right = 144.0
+offset_bottom = 23.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_qqh6l")
+theme_override_font_sizes/font_size = 12
+text = "Ahmad Agung Maulana"
+horizontal_alignment = 1
+
+[node name="Label7" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -144.0
+offset_top = 16.0
+offset_right = 144.0
+offset_bottom = 29.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.7666196, 0.76661956, 0.76661956, 1)
+theme_override_fonts/font = ExtResource("3_qqh6l")
+theme_override_font_sizes/font_size = 10
+text = "Pixel Artist"
+horizontal_alignment = 1
+
+[node name="Label8" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -144.0
+offset_top = 32.0
+offset_right = 144.0
+offset_bottom = 55.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_qqh6l")
+theme_override_font_sizes/font_size = 12
+text = "Winata Hadi Pratama"
+horizontal_alignment = 1
+
+[node name="Label9" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -144.0
+offset_top = 48.0
+offset_right = 144.0
+offset_bottom = 61.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.7666196, 0.76661956, 0.76661956, 1)
+theme_override_fonts/font = ExtResource("3_qqh6l")
+theme_override_font_sizes/font_size = 10
+text = "Programmer"
+horizontal_alignment = 1
+
+[node name="Label10" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -144.0
+offset_top = 64.0
+offset_right = 144.0
+offset_bottom = 87.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_qqh6l")
+theme_override_font_sizes/font_size = 12
+text = "Surya Hadini Subagja"
+horizontal_alignment = 1
+
+[node name="Label11" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -144.0
+offset_top = 80.0
+offset_right = 144.0
+offset_bottom = 93.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.7666196, 0.76661956, 0.76661956, 1)
+theme_override_fonts/font = ExtResource("3_qqh6l")
+theme_override_font_sizes/font_size = 10
+text = "Programmer"
+horizontal_alignment = 1
+
+[node name="Label12" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -144.0
+offset_top = 96.0
+offset_right = 144.0
+offset_bottom = 119.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_qqh6l")
+theme_override_font_sizes/font_size = 12
+text = "Naufal Avrilzal Irawan"
+horizontal_alignment = 1
+
+[node name="Label13" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -144.0
+offset_top = 112.0
+offset_right = 144.0
+offset_bottom = 125.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.7666196, 0.76661956, 0.76661956, 1)
+theme_override_fonts/font = ExtResource("3_qqh6l")
+theme_override_font_sizes/font_size = 10
+text = "Sound Composer"
+horizontal_alignment = 1
+
+[node name="Back" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 16.0
+offset_top = -44.0
+offset_right = 120.0
+offset_bottom = -13.0
+grow_vertical = 0
+focus_mode = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_qqh6l")
+theme_override_styles/normal = ExtResource("5_hktpy")
+theme_override_styles/pressed = ExtResource("6_cqi0y")
+theme_override_styles/hover = ExtResource("7_cqxlb")
+text = "Back"
+
+[node name="Fade" parent="." instance=ExtResource("2_mrcp2")]
+
+[node name="Cursor" type="CanvasLayer" parent="."]
+layer = 500
+
+[node name="Magnifying Glass" parent="Cursor" instance=ExtResource("9_cqxlb")]
+visible = false
+position = Vector2(-128, -128)
+
+[node name="CursorNormal" parent="Cursor" instance=ExtResource("10_21x4v")]
+position = Vector2(288, 168)
+
+[connection signal="button_down" from="Back" to="." method="_on_back_button_down"]
+[connection signal="mouse_entered" from="Back" to="." method="_on_back_mouse_entered"]

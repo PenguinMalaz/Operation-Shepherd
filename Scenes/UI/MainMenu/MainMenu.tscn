@@ -1,0 +1,118 @@
+[gd_scene load_steps=13 format=3 uid="uid://rrlygdbjfrhp"]
+
+[ext_resource type="Script" uid="uid://crytqhyrgxfq3" path="res://Scenes/UI/MainMenu/MainMenu.gd" id="1_les83"]
+[ext_resource type="Texture2D" uid="uid://bkfytjrv1nfsb" path="res://Asset/Sprite/Ground/Ground-v2.png" id="2_7nukq"]
+[ext_resource type="PackedScene" uid="uid://cac7sq4vlj501" path="res://Scenes/Fade/fade.tscn" id="2_7rqq1"]
+[ext_resource type="PackedScene" uid="uid://bogdb2py0tcfc" path="res://Scenes/UI/CursorMagnifyingGlass.tscn" id="3_gwdte"]
+[ext_resource type="FontFile" uid="uid://b4lfqjm4wfgf2" path="res://Asset/Font/VCR_OSD_MONO_1.001.ttf" id="3_tc2ed"]
+[ext_resource type="PackedScene" uid="uid://cuoj3ka8bma1t" path="res://Scenes/UI/CursorNormal.tscn" id="4_7nukq"]
+[ext_resource type="StyleBox" uid="uid://bxxuvw3u47hhj" path="res://Resources/Texture/Button/ButtonNormal.tres" id="4_u8hla"]
+[ext_resource type="StyleBox" uid="uid://b1415tteok2jy" path="res://Resources/Texture/Button/ButtonPressed.tres" id="5_tbwd8"]
+[ext_resource type="StyleBox" uid="uid://do5xtbv76wo0b" path="res://Resources/Texture/Button/ButtonHover.tres" id="6_geava"]
+[ext_resource type="Texture2D" uid="uid://btxmafg4ni1gj" path="res://Asset/Sprite/Cards/Domba.png" id="10_geava"]
+[ext_resource type="Texture2D" uid="uid://sps1twska8rm" path="res://Asset/Sprite/Cards/Serigala.png" id="11_vwuc7"]
+[ext_resource type="Texture2D" uid="uid://dsjwv8o6s6mun" path="res://Asset/Sprite/UI/main-menu-96x80-256x96.png" id="12_vwuc7"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_les83")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 2
+
+[node name="Play" type="Button" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_tc2ed")
+theme_override_styles/normal = ExtResource("4_u8hla")
+theme_override_styles/pressed = ExtResource("5_tbwd8")
+theme_override_styles/hover = ExtResource("6_geava")
+text = "Play"
+
+[node name="Credits" type="Button" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_tc2ed")
+theme_override_styles/normal = ExtResource("4_u8hla")
+theme_override_styles/pressed = ExtResource("5_tbwd8")
+theme_override_styles/hover = ExtResource("6_geava")
+text = "Credits"
+
+[node name="Quit" type="Button" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_tc2ed")
+theme_override_styles/normal = ExtResource("4_u8hla")
+theme_override_styles/pressed = ExtResource("5_tbwd8")
+theme_override_styles/hover = ExtResource("6_geava")
+text = "Exit"
+
+[node name="Fade" parent="." instance=ExtResource("2_7rqq1")]
+
+[node name="Cursor" type="CanvasLayer" parent="."]
+layer = 500
+
+[node name="Magnifying Glass" parent="Cursor" instance=ExtResource("3_gwdte")]
+visible = false
+position = Vector2(-128, -128)
+
+[node name="CursorNormal" parent="Cursor" instance=ExtResource("4_7nukq")]
+position = Vector2(288, 168)
+
+[node name="Sprite" type="Node2D" parent="."]
+
+[node name="Background" type="Sprite2D" parent="Sprite"]
+z_index = -1
+position = Vector2(288, 168)
+scale = Vector2(1.3, 1.3)
+texture = ExtResource("2_7nukq")
+
+[node name="Card_1" type="Sprite2D" parent="Sprite"]
+position = Vector2(124.22231, 182.41948)
+rotation = 0.6211202
+texture = ExtResource("10_geava")
+
+[node name="Card_2" type="Sprite2D" parent="Sprite"]
+position = Vector2(464, 264)
+rotation = -0.70822316
+texture = ExtResource("10_geava")
+
+[node name="Card_3" type="Sprite2D" parent="Sprite"]
+position = Vector2(112.000015, 264.00003)
+rotation = 0.2277965
+texture = ExtResource("11_vwuc7")
+
+[node name="Card_4" type="Sprite2D" parent="Sprite"]
+position = Vector2(444.2223, 190.41948)
+rotation = 0.10318819
+texture = ExtResource("11_vwuc7")
+
+[node name="Logo" type="Sprite2D" parent="Sprite"]
+position = Vector2(288, 72)
+texture = ExtResource("12_vwuc7")
+
+[connection signal="mouse_entered" from="CenterContainer/VBoxContainer/Play" to="." method="_on_play_mouse_entered"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="mouse_entered" from="CenterContainer/VBoxContainer/Credits" to="." method="_on_credits_mouse_entered"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Credits" to="." method="_on_credits_pressed"]
+[connection signal="mouse_entered" from="CenterContainer/VBoxContainer/Quit" to="." method="_on_quit_mouse_entered"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]

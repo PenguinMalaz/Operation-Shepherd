@@ -1,0 +1,15 @@
+Node2D
+AnimatedSprite2D
+CanvasLayer
+Control
+AnimationPlayer
+Sprite2D
+AudioStreamPlayer
+Node
+AudioStreamPlayer      - Matches the "sound" keyword.
+Label
+RichTextLabel
+Panel
+Button
+MarginContainer
+NinePatchRect

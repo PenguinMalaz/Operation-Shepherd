@@ -1,0 +1,256 @@
+[gd_scene load_steps=22 format=3 uid="uid://b1nsbqfdtiaqf"]
+
+[ext_resource type="PackedScene" uid="uid://ctihnso3ncatl" path="res://Scenes/GameManager.tscn" id="1_6hbgh"]
+[ext_resource type="Script" uid="uid://cm5tee6eqkyoj" path="res://Scenes/UI/Menus/NextLevel.gd" id="2_y3kif"]
+[ext_resource type="FontFile" uid="uid://b4lfqjm4wfgf2" path="res://Asset/Font/VCR_OSD_MONO_1.001.ttf" id="3_x45r7"]
+[ext_resource type="Texture2D" uid="uid://bsmh7nd8lndh" path="res://Asset/Sprite/Textures/PanelTexture.png" id="4_d45qr"]
+[ext_resource type="FontFile" uid="uid://blf2gw3ktb3lm" path="res://Asset/Font/Pixellari.ttf" id="5_rjpgg"]
+[ext_resource type="Texture2D" uid="uid://dd0d7eth13gky" path="res://Asset/Sprite/UI/heart.png" id="5_y3kif"]
+[ext_resource type="Texture2D" uid="uid://bey3bmgu1f0g1" path="res://Asset/Sprite/Textures/Button/Button Normal.png" id="6_cmdi1"]
+[ext_resource type="Texture2D" uid="uid://v5ves4bof83b" path="res://Asset/Sprite/Textures/Button/Button Pressed.png" id="7_gocaj"]
+[ext_resource type="Texture2D" uid="uid://dyf18hbi8huom" path="res://Asset/Sprite/Textures/Button/Button Hover.png" id="8_vxqnu"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_y3kif"]
+texture = ExtResource("4_d45qr")
+texture_margin_left = 6.0
+texture_margin_top = 6.0
+texture_margin_right = 6.0
+texture_margin_bottom = 6.0
+region_rect = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qc5w2"]
+atlas = ExtResource("5_y3kif")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xaom8"]
+atlas = ExtResource("5_y3kif")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_x45r7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qc5w2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xaom8")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_y46o5"]
+texture = ExtResource("6_cmdi1")
+texture_margin_left = 5.0
+texture_margin_top = 7.0
+texture_margin_right = 5.0
+texture_margin_bottom = 9.0
+region_rect = Rect2(0, 0, 32, 32)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3od3v"]
+texture = ExtResource("7_gocaj")
+texture_margin_left = 5.0
+texture_margin_top = 10.0
+texture_margin_right = 5.0
+texture_margin_bottom = 6.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_omkwh"]
+texture = ExtResource("8_vxqnu")
+texture_margin_left = 5.0
+texture_margin_top = 7.0
+texture_margin_right = 5.0
+texture_margin_bottom = 9.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qv44x"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ewbbc"]
+
+[sub_resource type="Animation" id="Animation_y46o5"]
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(0.22531249, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_gsc5i"]
+resource_name = "fade_in"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(0.22531343, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_y46o5"]
+_data = {
+&"RESET": SubResource("Animation_y46o5"),
+&"fade_in": SubResource("Animation_gsc5i")
+}
+
+[node name="NextLevel" instance=ExtResource("1_6hbgh")]
+script = ExtResource("2_y3kif")
+set_current_level = 0
+set_total_score = 0
+set_current_heart = 0
+
+[node name="NextLevel" type="Control" parent="." index="0"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BG" type="ColorRect" parent="NextLevel" index="0"]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.19607843)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="NextLevel" index="1"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -177.75
+offset_top = -105.520004
+offset_right = 177.75
+offset_bottom = -24.519882
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_fonts/normal_font = ExtResource("3_x45r7")
+theme_override_font_sizes/normal_font_size = 40
+bbcode_enabled = true
+text = "Level Complete"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="StatPanel" type="Control" parent="NextLevel" index="2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -114.5
+offset_top = -23.375
+offset_right = 114.5
+offset_bottom = 23.375
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Panel" type="Panel" parent="NextLevel/StatPanel" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -5.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_y3kif")
+
+[node name="Score" type="RichTextLabel" parent="NextLevel/StatPanel/Panel" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 7.0
+offset_top = 4.0
+offset_right = 138.83301
+offset_bottom = 26.833
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.6, 0.6)
+theme_override_constants/paragraph_separation = 10
+theme_override_fonts/normal_font = ExtResource("3_x45r7")
+bbcode_enabled = true
+text = "Level	: 0
+Score	: 0
+Heart	: "
+vertical_alignment = 1
+
+[node name="Heart" type="Control" parent="NextLevel/StatPanel/Panel" index="1"]
+anchors_preset = 0
+offset_left = 65.5
+offset_top = 40.375
+offset_right = 230.5
+offset_bottom = 55.375
+
+[node name="Heart1" type="AnimatedSprite2D" parent="NextLevel/StatPanel/Panel/Heart" index="0"]
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_x45r7")
+
+[node name="Heart2" type="AnimatedSprite2D" parent="NextLevel/StatPanel/Panel/Heart" index="1"]
+position = Vector2(16, 0)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_x45r7")
+
+[node name="Heart3" type="AnimatedSprite2D" parent="NextLevel/StatPanel/Panel/Heart" index="2"]
+position = Vector2(32, 0)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_x45r7")
+
+[node name="NextLevelButton" type="Control" parent="NextLevel" index="3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -68.5
+offset_top = 43.0
+offset_right = 68.5
+offset_bottom = 72.96002
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NextLevelBtn" type="Button" parent="NextLevel/NextLevelButton" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("5_rjpgg")
+theme_override_styles/normal = SubResource("StyleBoxTexture_y46o5")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_3od3v")
+theme_override_styles/hover = SubResource("StyleBoxTexture_omkwh")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_qv44x")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ewbbc")
+text = "Next Level"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="2"]
+root_node = NodePath("../NextLevel")
+libraries = {
+&"": SubResource("AnimationLibrary_y46o5")
+}
+
+[connection signal="pressed" from="NextLevel/NextLevelButton/NextLevelBtn" to="." method="_on_next_level_btn_pressed"]

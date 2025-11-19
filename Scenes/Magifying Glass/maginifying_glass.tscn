@@ -1,0 +1,90 @@
+[gd_scene load_steps=14 format=3 uid="uid://hmnadptwgpq"]
+
+[ext_resource type="Script" uid="uid://b36nqod5xfskb" path="res://maginifying_glass.gd" id="1_43po4"]
+[ext_resource type="FontFile" uid="uid://b4lfqjm4wfgf2" path="res://Asset/Font/VCR_OSD_MONO_1.001.ttf" id="2_bojci"]
+[ext_resource type="Texture2D" uid="uid://bey3bmgu1f0g1" path="res://Asset/Sprite/Textures/Button/Button Normal.png" id="2_gpef0"]
+[ext_resource type="Texture2D" uid="uid://v5ves4bof83b" path="res://Asset/Sprite/Textures/Button/Button Pressed.png" id="3_bojci"]
+[ext_resource type="Texture2D" uid="uid://dyf18hbi8huom" path="res://Asset/Sprite/Textures/Button/Button Hover.png" id="4_ewxd1"]
+[ext_resource type="Texture2D" uid="uid://dxn8lwi83gthu" path="res://Asset/Sprite/UI/button-kaca pembesar.png" id="6_ewxd1"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2qpml"]
+texture = ExtResource("2_gpef0")
+texture_margin_left = 5.0
+texture_margin_top = 7.0
+texture_margin_right = 5.0
+texture_margin_bottom = 9.0
+region_rect = Rect2(0, 0, 32, 32)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nel4f"]
+texture = ExtResource("3_bojci")
+texture_margin_left = 5.0
+texture_margin_top = 10.0
+texture_margin_right = 5.0
+texture_margin_bottom = 6.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_q1u3t"]
+texture = ExtResource("4_ewxd1")
+texture_margin_left = 5.0
+texture_margin_top = 7.0
+texture_margin_right = 5.0
+texture_margin_bottom = 9.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2qpml"]
+atlas = ExtResource("6_ewxd1")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nel4f"]
+atlas = ExtResource("6_ewxd1")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q1u3t"]
+atlas = ExtResource("6_ewxd1")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fgbem"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2qpml")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nel4f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q1u3t")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Maginifying Glass" type="CanvasLayer"]
+script = ExtResource("1_43po4")
+
+[node name="Button" type="Button" parent="."]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -144.0
+offset_top = -116.0
+offset_right = -64.0
+offset_bottom = -36.0
+grow_horizontal = 0
+grow_vertical = 0
+focus_mode = 0
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_fonts/font = ExtResource("2_bojci")
+theme_override_styles/normal = SubResource("StyleBoxTexture_2qpml")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_nel4f")
+theme_override_styles/hover = SubResource("StyleBoxTexture_q1u3t")
+flat = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Button"]
+position = Vector2(40, 40)
+sprite_frames = SubResource("SpriteFrames_fgbem")
+
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
+[connection signal="mouse_entered" from="Button" to="." method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="Button" to="." method="_on_button_mouse_exited"]

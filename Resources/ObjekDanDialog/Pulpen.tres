@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ObjekDanDialog" load_steps=3 format=3 uid="uid://81bfavtnhqgn"]
+
+[ext_resource type="Texture2D" uid="uid://c4qngypr2gbtn" path="res://Asset/Sprite/Cards/Object/card-pen.png" id="1_rbvu3"]
+[ext_resource type="Script" uid="uid://da326um6liqtu" path="res://Resources/ObjekDanDialog/ObjekDanDialog.gd" id="1_wha71"]
+
+[resource]
+script = ExtResource("1_wha71")
+nama_objek = "Pulpen"
+domba_dialogs = PackedStringArray("Di dalamnya terdapat tinta", "Biasa digunakan untuk menulis", "Biasanya bentuknya panjang", "Setelah digunakan tidak bisa di hapus", "Jenisnya ballpoint, gel, rollerball, fountain, dan mekanik")
+serigala_dialogs = PackedStringArray("Benda tersebut berada di sekolah saja", "Benda yang sangat rapuh", "Benda ini cocok berpasangan dengan pengserut", "Benda ini cocok berpasangan dengan penghapus")
+card_texture = ExtResource("1_rbvu3")
+metadata/_custom_type_script = "uid://da326um6liqtu"

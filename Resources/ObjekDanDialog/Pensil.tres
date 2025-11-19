@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ObjekDanDialog" load_steps=3 format=3 uid="uid://ca2to3bfdbpy4"]
+
+[ext_resource type="Texture2D" uid="uid://b22vwex8m672y" path="res://Asset/Sprite/Cards/Object/card-pencil.png" id="1_jphdd"]
+[ext_resource type="Script" uid="uid://da326um6liqtu" path="res://Resources/ObjekDanDialog/ObjekDanDialog.gd" id="1_qqtcw"]
+
+[resource]
+script = ExtResource("1_qqtcw")
+nama_objek = "Pensil"
+domba_dialogs = PackedStringArray("Digunakan untuk menulis atau menggambar", "Ujungnya runcing agar mudah digunakan", "Dapat diraut bila tumpul", "Ringan dan mudah dibawa ke mana saja", "Ada yang berwana-warni juga")
+serigala_dialogs = PackedStringArray("Benda itu tergeletak di atas meja", "Sebuah barang kecil di sudut ruangan jendela", "Sebuah benda tipis dengan ukuran tidak terlalu panjang", "Suatu benda kecil di lantai kelas")
+card_texture = ExtResource("1_jphdd")
+metadata/_custom_type_script = "uid://da326um6liqtu"

@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://df3fl6hx48oyq"]
+
+[ext_resource type="PackedScene" uid="uid://ci8yyrvfq5bsw" path="res://Scenes/Levels/level.tscn" id="1_efpaj"]
+[ext_resource type="Resource" uid="uid://cyj3anf2i1dre" path="res://Resources/ObjekDanDialog/Kertas.tres" id="2_arbu7"]
+
+[node name="Level 5" instance=ExtResource("1_efpaj")]
+next_level_scene = "res://Scenes/Levels/LevelSelection.tscn"
+current_level = 5
+
+[node name="CardBoard" parent="." index="1"]
+object_penentu = ExtResource("2_arbu7")
+pilih_deck = "Deck 2"
+jumlah_serigala = 2

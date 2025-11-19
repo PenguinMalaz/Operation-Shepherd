@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://cuoj3ka8bma1t"]
+
+[ext_resource type="Texture2D" uid="uid://cgr4obqkg4f2e" path="res://Asset/Sprite/UI/Cursor.png" id="1_nqip6"]
+[ext_resource type="Script" uid="uid://b8qendojl6uft" path="res://Scenes/UI/cursor_normal.gd" id="2_wkssj"]
+
+[node name="CursorNormal" type="Sprite2D"]
+texture = ExtResource("1_nqip6")
+offset = Vector2(13, 13)
+script = ExtResource("2_wkssj")

@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://bogdb2py0tcfc"]
+
+[ext_resource type="Texture2D" uid="uid://dr1ypteml0iud" path="res://Asset/Sprite/UI/Kaca pembesar.png" id="1_epcea"]
+[ext_resource type="Script" uid="uid://btw5i5ibjdird" path="res://Scenes/UI/CursorMagnifyingGlass.gd" id="2_qchjr"]
+
+[node name="Magnifying Glass" type="Sprite2D"]
+texture = ExtResource("1_epcea")
+offset = Vector2(5, 5)
+script = ExtResource("2_qchjr")

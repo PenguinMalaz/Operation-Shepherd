@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://bol7iherj7hhr"]
+
+[ext_resource type="PackedScene" uid="uid://ci8yyrvfq5bsw" path="res://Scenes/Levels/level.tscn" id="1_tlcug"]
+[ext_resource type="PackedScene" uid="uid://bw47w4h2agxn" path="res://Scenes/info.tscn" id="2_4dpyx"]
+
+[node name="Level 1" instance=ExtResource("1_tlcug")]
+next_level_scene = "res://Scenes/Levels/level_2.tscn"
+current_level = 1
+
+[node name="Info" parent="." index="3" instance=ExtResource("2_4dpyx")]

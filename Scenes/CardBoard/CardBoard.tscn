@@ -1,0 +1,69 @@
+[gd_scene load_steps=7 format=3 uid="uid://bu562416w70f7"]
+
+[ext_resource type="Script" uid="uid://bphtxfwccssbh" path="res://Scenes/CardBoard/CardBoard.gd" id="1_8xbk8"]
+[ext_resource type="PackedScene" uid="uid://cljtijri10fg8" path="res://Scenes/Cards/Card.tscn" id="1_bcglx"]
+[ext_resource type="PackedScene" uid="uid://ba5m2k0urb1wn" path="res://Scenes/Cards/card_object.tscn" id="2_m7nnl"]
+[ext_resource type="PackedScene" uid="uid://hmnadptwgpq" path="res://Scenes/Magifying Glass/maginifying_glass.tscn" id="4_wjf55"]
+[ext_resource type="PackedScene" uid="uid://bogdb2py0tcfc" path="res://Scenes/UI/CursorMagnifyingGlass.tscn" id="5_1rs4u"]
+[ext_resource type="PackedScene" uid="uid://cuoj3ka8bma1t" path="res://Scenes/UI/CursorNormal.tscn" id="6_qnhg7"]
+
+[node name="CardBoard" type="Node2D"]
+script = ExtResource("1_8xbk8")
+
+[node name="CardObject" parent="." instance=ExtResource("2_m7nnl")]
+position = Vector2(288, 168)
+scale = Vector2(0.8, 0.8)
+
+[node name="CardDeck5" type="Node2D" parent="."]
+position = Vector2(288, 168)
+scale = Vector2(0.8, 0.8)
+
+[node name="Card1" parent="CardDeck5" instance=ExtResource("1_bcglx")]
+position = Vector2(0, -120)
+
+[node name="Card2" parent="CardDeck5" instance=ExtResource("1_bcglx")]
+position = Vector2(110.000015, -30.000004)
+
+[node name="Card3" parent="CardDeck5" instance=ExtResource("1_bcglx")]
+position = Vector2(79.999985, 100)
+
+[node name="Card4" parent="CardDeck5" instance=ExtResource("1_bcglx")]
+position = Vector2(-80, 100)
+
+[node name="Card5" parent="CardDeck5" instance=ExtResource("1_bcglx")]
+position = Vector2(-109.99999, -30.000004)
+
+[node name="CardDeck6" type="Node2D" parent="."]
+visible = false
+position = Vector2(288, 168)
+scale = Vector2(0.8, 0.8)
+
+[node name="Card1" parent="CardDeck6" instance=ExtResource("1_bcglx")]
+position = Vector2(0, -120)
+
+[node name="Card2" parent="CardDeck6" instance=ExtResource("1_bcglx")]
+position = Vector2(110.000015, -59.999996)
+
+[node name="Card3" parent="CardDeck6" instance=ExtResource("1_bcglx")]
+position = Vector2(110.000015, 60.000008)
+
+[node name="Card4" parent="CardDeck6" instance=ExtResource("1_bcglx")]
+position = Vector2(0, 119.99999)
+
+[node name="Card5" parent="CardDeck6" instance=ExtResource("1_bcglx")]
+position = Vector2(-109.99999, 60.000008)
+
+[node name="Card6" parent="CardDeck6" instance=ExtResource("1_bcglx")]
+position = Vector2(-109.99999, -59.999996)
+
+[node name="Maginifying Glass" parent="." instance=ExtResource("4_wjf55")]
+
+[node name="Cursor" type="CanvasLayer" parent="."]
+layer = 500
+
+[node name="Magnifying Glass" parent="Cursor" instance=ExtResource("5_1rs4u")]
+visible = false
+position = Vector2(-128, -128)
+
+[node name="CursorNormal" parent="Cursor" instance=ExtResource("6_qnhg7")]
+position = Vector2(288, 168)

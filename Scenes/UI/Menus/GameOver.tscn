@@ -1,0 +1,226 @@
+[gd_scene load_steps=16 format=3 uid="uid://bcicsfokqyoh5"]
+
+[ext_resource type="Script" uid="uid://bndwlogy1oa3a" path="res://Scenes/UI/Menus/GameOver.gd" id="1_6et0x"]
+[ext_resource type="Texture2D" uid="uid://bsmh7nd8lndh" path="res://Asset/Sprite/Textures/PanelTexture.png" id="1_b5w5t"]
+[ext_resource type="FontFile" uid="uid://b4lfqjm4wfgf2" path="res://Asset/Font/VCR_OSD_MONO_1.001.ttf" id="2_cyj2c"]
+[ext_resource type="Texture2D" uid="uid://bey3bmgu1f0g1" path="res://Asset/Sprite/Textures/Button/Button Normal.png" id="4_6et0x"]
+[ext_resource type="Texture2D" uid="uid://v5ves4bof83b" path="res://Asset/Sprite/Textures/Button/Button Pressed.png" id="5_gsc5i"]
+[ext_resource type="Texture2D" uid="uid://dyf18hbi8huom" path="res://Asset/Sprite/Textures/Button/Button Hover.png" id="6_y46o5"]
+[ext_resource type="PackedScene" uid="uid://cac7sq4vlj501" path="res://Scenes/Fade/fade.tscn" id="8_gsc5i"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gsc5i"]
+texture = ExtResource("1_b5w5t")
+texture_margin_left = 6.0
+texture_margin_top = 6.0
+texture_margin_right = 6.0
+texture_margin_bottom = 6.0
+region_rect = Rect2(0, 0, 32, 32)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_y46o5"]
+texture = ExtResource("4_6et0x")
+texture_margin_left = 5.0
+texture_margin_top = 7.0
+texture_margin_right = 5.0
+texture_margin_bottom = 9.0
+region_rect = Rect2(0, 0, 32, 32)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3od3v"]
+texture = ExtResource("5_gsc5i")
+texture_margin_left = 5.0
+texture_margin_top = 10.0
+texture_margin_right = 5.0
+texture_margin_bottom = 6.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_omkwh"]
+texture = ExtResource("6_y46o5")
+texture_margin_left = 5.0
+texture_margin_top = 7.0
+texture_margin_right = 5.0
+texture_margin_bottom = 9.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qv44x"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ewbbc"]
+
+[sub_resource type="Animation" id="Animation_6et0x"]
+resource_name = "play"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GameOver:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_y46o5"]
+_data = {
+&"play": SubResource("Animation_6et0x")
+}
+
+[node name="GameOver" type="CanvasLayer"]
+script = ExtResource("1_6et0x")
+
+[node name="GameOver" type="Control" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="BG" type="ColorRect" parent="GameOver"]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.68235296)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="GameOver"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -115.5
+offset_top = -105.520004
+offset_right = 115.5
+offset_bottom = -24.519897
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_fonts/normal_font = ExtResource("2_cyj2c")
+theme_override_font_sizes/normal_font_size = 40
+bbcode_enabled = true
+text = "Game Over"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Score" type="Control" parent="GameOver"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -114.5
+offset_top = -23.375
+offset_right = 114.5
+offset_bottom = 23.375
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Panel" type="Panel" parent="GameOver/Score"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -2.5
+offset_bottom = 2.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_gsc5i")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="GameOver/Score/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 7.0
+offset_top = 4.0
+offset_right = 138.83331
+offset_bottom = 28.708344
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.6, 0.6)
+theme_override_constants/paragraph_separation = 10
+theme_override_fonts/normal_font = ExtResource("2_cyj2c")
+bbcode_enabled = true
+text = "Level Score	 : 0
+Target Score : 0
+Total Score  : 0"
+vertical_alignment = 1
+
+[node name="ActionButtons" type="Control" parent="GameOver"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -68.5
+offset_top = 43.0
+offset_right = 68.5
+offset_bottom = 72.96002
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LevelSelectionBtn" type="Button" parent="GameOver/ActionButtons"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -104.0
+offset_top = 20.019993
+offset_right = 104.0
+offset_bottom = 48.019993
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_cyj2c")
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxTexture_y46o5")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_3od3v")
+theme_override_styles/hover = SubResource("StyleBoxTexture_omkwh")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_qv44x")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ewbbc")
+text = "Main Menu"
+
+[node name="RestartBtn" type="Button" parent="GameOver/ActionButtons"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -104.0
+offset_top = -19.980007
+offset_right = 104.0
+offset_bottom = 8.019993
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_cyj2c")
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxTexture_y46o5")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_3od3v")
+theme_override_styles/hover = SubResource("StyleBoxTexture_omkwh")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_qv44x")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ewbbc")
+text = "Restart"
+
+[node name="Fade" parent="." instance=ExtResource("8_gsc5i")]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_y46o5")
+}
+
+[connection signal="mouse_entered" from="GameOver/ActionButtons/LevelSelectionBtn" to="." method="_on_level_selection_btn_mouse_entered"]
+[connection signal="pressed" from="GameOver/ActionButtons/LevelSelectionBtn" to="." method="_on_level_selection_btn_pressed"]
+[connection signal="mouse_entered" from="GameOver/ActionButtons/RestartBtn" to="." method="_on_restart_btn_mouse_entered"]
+[connection signal="pressed" from="GameOver/ActionButtons/RestartBtn" to="." method="_on_restart_btn_pressed"]
