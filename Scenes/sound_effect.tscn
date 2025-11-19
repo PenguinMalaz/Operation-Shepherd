@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://bs8hbndj5guub"]
 
-[ext_resource type="Script" uid="uid://bi0jcjouyl3oa" path="res://sound_effect.gd" id="1_0sduf"]
+[ext_resource type="Script" uid="uid://bi0jcjouyl3oa" path="res://Scripts/Globals/sound_effect.gd" id="1_0sduf"]
 [ext_resource type="AudioStream" uid="uid://hq8o0fnfdc4f" path="res://Asset/Sound/Sound Effect/Button (Hover).wav" id="2_sid52"]
 [ext_resource type="AudioStream" uid="uid://dgk3xvbissxsv" path="res://Asset/Sound/Sound Effect/Button (Pressed).wav" id="3_e5hn1"]
 [ext_resource type="AudioStream" uid="uid://beqfih3g0f0ys" path="res://Asset/Sound/Sound Effect/Game Over (Laugh).wav" id="4_5ehhf"]

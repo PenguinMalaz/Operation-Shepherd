@@ -1,6 +1,6 @@
 [gd_scene load_steps=14 format=3 uid="uid://hmnadptwgpq"]
 
-[ext_resource type="Script" uid="uid://b36nqod5xfskb" path="res://maginifying_glass.gd" id="1_43po4"]
+[ext_resource type="Script" uid="uid://b36nqod5xfskb" path="res://Scenes/Magifying Glass/maginifying_glass.gd" id="1_43po4"]
 [ext_resource type="FontFile" uid="uid://b4lfqjm4wfgf2" path="res://Asset/Font/VCR_OSD_MONO_1.001.ttf" id="2_bojci"]
 [ext_resource type="Texture2D" uid="uid://bey3bmgu1f0g1" path="res://Asset/Sprite/Textures/Button/Button Normal.png" id="2_gpef0"]
 [ext_resource type="Texture2D" uid="uid://v5ves4bof83b" path="res://Asset/Sprite/Textures/Button/Button Pressed.png" id="3_bojci"]
