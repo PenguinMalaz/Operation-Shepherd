@@ -1,0 +1,249 @@
+[gd_scene load_steps=28 format=3 uid="uid://htym46wwu1wd"]
+
+[ext_resource type="Script" uid="uid://cdpj05w8pu6vl" path="res://Scenes/UI/Menus/options_menu.gd" id="1_7ip8e"]
+[ext_resource type="FontFile" uid="uid://b4lfqjm4wfgf2" path="res://Asset/Font/VCR_OSD_MONO_1.001.ttf" id="1_10if7"]
+[ext_resource type="Script" uid="uid://cnj4ldx0rnb2u" path="res://Scenes/UI/Menus/audio_option.gd" id="1_ufup8"]
+[ext_resource type="Texture2D" uid="uid://ceim0nhnq5hl8" path="res://Asset/Sprite/Ground/Ground-main menu.png" id="2_t0wnj"]
+[ext_resource type="Texture2D" uid="uid://grut6i7wy28b" path="res://Asset/Sprite/UI/UI-Paper.png" id="3_6ht8o"]
+[ext_resource type="Texture2D" uid="uid://dbwkg3oh06cjp" path="res://Asset/Sprite/Level Selection/Decoration/PaperNoteLong.png" id="3_q780e"]
+[ext_resource type="StyleBox" uid="uid://bxxuvw3u47hhj" path="res://Resources/Texture/Button/ButtonNormal.tres" id="3_tiwd8"]
+[ext_resource type="StyleBox" uid="uid://b1415tteok2jy" path="res://Resources/Texture/Button/ButtonPressed.tres" id="4_7ip8e"]
+[ext_resource type="Texture2D" uid="uid://pmd3eegfm37x" path="res://Asset/Sprite/Textures/Button/ButtonAudioSliderNormal.png" id="4_yqaaq"]
+[ext_resource type="StyleBox" uid="uid://do5xtbv76wo0b" path="res://Resources/Texture/Button/ButtonHover.tres" id="5_ivyyu"]
+[ext_resource type="Texture2D" uid="uid://cai3yn2ifa80g" path="res://Asset/Sprite/Textures/Button/BackgroundSliderValue.png" id="6_50r2a"]
+[ext_resource type="Texture2D" uid="uid://cw4ksmqqdgbpp" path="res://Asset/Sprite/Textures/Button/BackgroundSlider.png" id="6_lx32p"]
+[ext_resource type="PackedScene" uid="uid://cac7sq4vlj501" path="res://Scenes/Fade/fade.tscn" id="8_ivyyu"]
+[ext_resource type="PackedScene" uid="uid://bogdb2py0tcfc" path="res://Scenes/UI/CursorMagnifyingGlass.tscn" id="9_2sswp"]
+[ext_resource type="PackedScene" uid="uid://cuoj3ka8bma1t" path="res://Scenes/UI/CursorNormal.tscn" id="10_p1vnx"]
+[ext_resource type="Texture2D" uid="uid://bxgmymkcvhcgq" path="res://Asset/Sprite/UI/UI-settings.png" id="11_p1vnx"]
+[ext_resource type="Texture2D" uid="uid://nn5gdbra1341" path="res://Asset/Sprite/Level Selection/Decoration/board-item-dog.png" id="17_q780e"]
+[ext_resource type="Texture2D" uid="uid://bl4ffwk0j4c2f" path="res://Asset/Sprite/Level Selection/Decoration/board-item-fox_.png" id="18_xyfxa"]
+[ext_resource type="Texture2D" uid="uid://cqf831542cbmv" path="res://Asset/Sprite/Level Selection/Decoration/board-item-mini-paper4.png" id="19_akvi7"]
+[ext_resource type="Texture2D" uid="uid://deefwpqiqwadc" path="res://Asset/Sprite/Level Selection/Decoration/board-item-mini-paper5.png" id="20_tc6yf"]
+[ext_resource type="Texture2D" uid="uid://btqfgxmmifa67" path="res://Asset/Sprite/Level Selection/Decoration/board-item-mini-paper4-ripped.png" id="21_whh2q"]
+[ext_resource type="Texture2D" uid="uid://c0jj1xyutpn85" path="res://Asset/Sprite/Level Selection/Decoration/board-item-mini-paper1.png" id="22_jqxxp"]
+[ext_resource type="Texture2D" uid="uid://cxhjpxsxadx4h" path="res://Asset/Sprite/Level Selection/Decoration/board-item-mini-paper2.png" id="23_lgc18"]
+[ext_resource type="Texture2D" uid="uid://cet8dvp25t12u" path="res://Asset/Sprite/Level Selection/Decoration/board-item-mini-paper3.png" id="24_to6jg"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yqaaq"]
+texture = ExtResource("6_lx32p")
+texture_margin_left = 3.0
+texture_margin_top = 3.0
+texture_margin_right = 3.0
+texture_margin_bottom = 3.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lx32p"]
+texture = ExtResource("6_50r2a")
+texture_margin_left = 3.0
+texture_margin_top = 3.0
+texture_margin_right = 3.0
+texture_margin_bottom = 3.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_50r2a"]
+texture = ExtResource("6_50r2a")
+texture_margin_left = 3.0
+texture_margin_top = 3.0
+texture_margin_right = 3.0
+texture_margin_bottom = 3.0
+
+[node name="OptionsMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7ip8e")
+
+[node name="AudioOption" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ufup8")
+
+[node name="CenterContainer" type="CenterContainer" parent="AudioOption"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.48400003
+anchor_top = 0.5
+anchor_right = 0.48400003
+anchor_bottom = 0.5
+offset_left = -100.78403
+offset_top = -63.0
+offset_right = 99.21597
+offset_bottom = 63.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="AudioOption/CenterContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme_override_constants/separation = 7
+alignment = 1
+
+[node name="UiPaper3" type="Sprite2D" parent="AudioOption/CenterContainer/VBoxContainer"]
+position = Vector2(100, 39)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("3_q780e")
+
+[node name="UiPaper" type="Sprite2D" parent="AudioOption/CenterContainer/VBoxContainer"]
+position = Vector2(99.99999, 6.999998)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("3_6ht8o")
+
+[node name="Label2" type="Label" parent="AudioOption/CenterContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0.5686275, 0.45490196, 0.36078432, 1)
+theme_override_fonts/font = ExtResource("1_10if7")
+text = "Music"
+horizontal_alignment = 1
+
+[node name="MusicSlider" type="HSlider" parent="AudioOption/CenterContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_icons/grabber = ExtResource("4_yqaaq")
+theme_override_icons/grabber_highlight = ExtResource("4_yqaaq")
+theme_override_styles/slider = SubResource("StyleBoxTexture_yqaaq")
+theme_override_styles/grabber_area = SubResource("StyleBoxTexture_lx32p")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxTexture_50r2a")
+max_value = 1.0
+step = 0.001
+
+[node name="UiPaper4" type="Sprite2D" parent="AudioOption/CenterContainer/VBoxContainer"]
+position = Vector2(100, 112.99999)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("3_q780e")
+
+[node name="UiPaper2" type="Sprite2D" parent="AudioOption/CenterContainer/VBoxContainer"]
+position = Vector2(100, 81)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("3_6ht8o")
+
+[node name="Label3" type="Label" parent="AudioOption/CenterContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0.5686275, 0.45490196, 0.36078432, 1)
+theme_override_fonts/font = ExtResource("1_10if7")
+text = "Sound Effect"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="SoundEffectSlider" type="HSlider" parent="AudioOption/CenterContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_icons/grabber = ExtResource("4_yqaaq")
+theme_override_icons/grabber_highlight = ExtResource("4_yqaaq")
+theme_override_styles/slider = SubResource("StyleBoxTexture_yqaaq")
+theme_override_styles/grabber_area = SubResource("StyleBoxTexture_lx32p")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxTexture_50r2a")
+max_value = 1.0
+step = 0.001
+
+[node name="Sprite" type="Node2D" parent="."]
+
+[node name="Background" type="Sprite2D" parent="Sprite"]
+z_index = -1
+position = Vector2(288, 165)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("2_t0wnj")
+
+[node name="Background2" type="Sprite2D" parent="Sprite"]
+z_index = -1
+position = Vector2(-274, 165)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("2_t0wnj")
+
+[node name="Background3" type="Sprite2D" parent="Sprite"]
+z_index = -1
+position = Vector2(850, 165)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("2_t0wnj")
+
+[node name="BoardItemDog" type="Sprite2D" parent="Sprite"]
+position = Vector2(121, 94)
+texture = ExtResource("17_q780e")
+
+[node name="BoardItemFox" type="Sprite2D" parent="Sprite"]
+position = Vector2(441, 202)
+texture = ExtResource("18_xyfxa")
+
+[node name="Back" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 77.0
+offset_top = -64.0
+offset_right = 181.0
+offset_bottom = -33.0
+grow_vertical = 0
+focus_mode = 0
+theme_override_colors/font_color = Color(0.37254903, 0.39215687, 0.4392157, 1)
+theme_override_colors/font_pressed_color = Color(0.9490196, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0.9490196, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_10if7")
+theme_override_styles/normal = ExtResource("3_tiwd8")
+theme_override_styles/pressed = ExtResource("4_7ip8e")
+theme_override_styles/hover = ExtResource("5_ivyyu")
+text = "Back"
+
+[node name="Fade" parent="." instance=ExtResource("8_ivyyu")]
+
+[node name="Cursor" type="CanvasLayer" parent="."]
+layer = 500
+
+[node name="Magnifying Glass" parent="Cursor" instance=ExtResource("9_2sswp")]
+visible = false
+position = Vector2(-128, -128)
+
+[node name="CursorNormal" parent="Cursor" instance=ExtResource("10_p1vnx")]
+position = Vector2(288, 168)
+
+[node name="UiSettings" type="Sprite2D" parent="."]
+position = Vector2(278, 62)
+texture = ExtResource("11_p1vnx")
+
+[node name="BoardItemMiniPaper4" type="Sprite2D" parent="."]
+position = Vector2(120, 132)
+texture = ExtResource("19_akvi7")
+
+[node name="BoardItemMiniPaper5" type="Sprite2D" parent="."]
+position = Vector2(439, 159)
+texture = ExtResource("20_tc6yf")
+
+[node name="BoardItemMiniPaper4Ripped" type="Sprite2D" parent="."]
+position = Vector2(91, 177)
+texture = ExtResource("21_whh2q")
+
+[node name="BoardItemMiniPaper1" type="Sprite2D" parent="."]
+position = Vector2(121, 228)
+texture = ExtResource("22_jqxxp")
+
+[node name="BoardItemMiniPaper2" type="Sprite2D" parent="."]
+position = Vector2(142, 181)
+texture = ExtResource("23_lgc18")
+
+[node name="BoardItemMiniPaper3" type="Sprite2D" parent="."]
+position = Vector2(438, 64)
+texture = ExtResource("22_jqxxp")
+
+[node name="BoardItemMiniPaper6" type="Sprite2D" parent="."]
+position = Vector2(410, 105)
+texture = ExtResource("23_lgc18")
+
+[node name="BoardItemMiniPaper7" type="Sprite2D" parent="."]
+position = Vector2(465, 122)
+texture = ExtResource("24_to6jg")
+
+[connection signal="drag_ended" from="AudioOption/CenterContainer/VBoxContainer/MusicSlider" to="AudioOption" method="_on_music_slider_drag_ended"]
+[connection signal="drag_ended" from="AudioOption/CenterContainer/VBoxContainer/SoundEffectSlider" to="." method="_on_sound_effect_slider_drag_ended"]
+[connection signal="drag_ended" from="AudioOption/CenterContainer/VBoxContainer/SoundEffectSlider" to="AudioOption" method="_on_sound_effect_slider_drag_ended"]
+[connection signal="mouse_entered" from="Back" to="." method="_on_back_mouse_entered"]
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]

@@ -16,7 +16,7 @@ const LOCKED_COLOR: Color = Color(0.5, 0.5, 0.5, 1) # Warna redup (abu-abu)
 	$"Level 2/Sprite",
 	$"Level 3/Sprite",
 	$"Level 4/Sprite",
-	$"Level 5/Sprite",
+	$"Level 5/Sprite"
 ]
 @onready var level_buttons: Array[Button] = [
 	$"Level 1" as Button, # Sesuaikan path jika perlu
@@ -59,87 +59,66 @@ func _ready() -> void:
 
 
 # --- Fungsi Pemicu Level (Menambahkan pengecekan .disabled) ---
-
 func _on_level_1_button_down() -> void:
-	if not level_buttons[0].disabled:
-		fade.fade("res://Scenes/Levels/level_1.tscn")
-		SoundEffect.flip()
+	level_loader_button_down(0, 1)
 
 func _on_level_2_button_down() -> void:
-	if not level_buttons[1].disabled:
-		fade.fade("res://Scenes/Levels/level_2.tscn")
-		SoundEffect.flip()
-		
+	level_loader_button_down(1, 2)
 
 func _on_level_3_button_down() -> void:
-	if not level_buttons[2].disabled:
-		fade.fade("res://Scenes/Levels/level_3.tscn")
-		SoundEffect.flip()
-		
+	level_loader_button_down(2, 3)
 
 func _on_level_4_button_down() -> void:
-	if not level_buttons[3].disabled:
-		fade.fade("res://Scenes/Levels/level_4.tscn")
-		SoundEffect.flip()
-		
+	level_loader_button_down(3, 4)
 
 func _on_level_5_button_down() -> void:
-	if not level_buttons[4].disabled:
-		fade.fade("res://Scenes/Levels/level_5.tscn")
-		SoundEffect.flip()
-		
+	level_loader_button_down(4, 5)
 
+func level_loader_button_down(level_button: int, level: int) -> void:
+	if not level_buttons[level_button].disabled:
+		fade.fade("res://Scenes/Levels/level_" + str(level) + ".tscn")
+		SoundEffect.pressed()
 
 # --- Handling Mouse Hover (Mengecek status disabled agar level terkunci tidak scaling) ---
-
 func _on_level_1_mouse_entered() -> void:
-	if not level_buttons[0].disabled:
-		level_sprites[0].scale = Vector2(1.1, 1.1)
+	level_mouse_entered(0)
+
+func _on_level_2_mouse_entered() -> void:
+	level_mouse_entered(1)
+
+func _on_level_3_mouse_entered() -> void:
+	level_mouse_entered(2)
+
+func _on_level_4_mouse_entered() -> void:
+	level_mouse_entered(3)
+
+func _on_level_5_mouse_entered() -> void:
+	level_mouse_entered(4)
+
+func level_mouse_entered(level_array: int) -> void:
+	if not level_buttons[level_array].disabled:
+		level_sprites[level_array].scale = Vector2(1.1, 1.1)
 		SoundEffect.pops()
 
 func _on_level_1_mouse_exited() -> void:
-	if not level_buttons[0].disabled:
-		level_sprites[0].scale = Vector2(1, 1)
-		
-
-func _on_level_2_mouse_entered() -> void:
-	if not level_buttons[1].disabled:
-		level_sprites[1].scale = Vector2(1.1, 1.1)
-		SoundEffect.pops()
+	level_mouse_exited(0)
 
 func _on_level_2_mouse_exited() -> void:
-	if not level_buttons[1].disabled:
-		level_sprites[1].scale = Vector2(1, 1)
-		
-
-func _on_level_3_mouse_entered() -> void:
-	if not level_buttons[2].disabled:
-		level_sprites[2].scale = Vector2(1.1, 1.1)
-		SoundEffect.pops()
+	level_mouse_exited(1)
 
 func _on_level_3_mouse_exited() -> void:
-	if not level_buttons[2].disabled:
-		level_sprites[2].scale = Vector2(1, 1)
-		
-
-func _on_level_4_mouse_entered() -> void:
-	if not level_buttons[3].disabled:
-		level_sprites[3].scale = Vector2(1.1, 1.1)
-		SoundEffect.pops()
+	level_mouse_exited(2)
 
 func _on_level_4_mouse_exited() -> void:
-	if not level_buttons[3].disabled:
-		level_sprites[3].scale = Vector2(1, 1)
-
-func _on_level_5_mouse_entered() -> void:
-	if not level_buttons[4].disabled:
-		level_sprites[4].scale = Vector2(1.1, 1.1)
-		SoundEffect.pops()
+	level_mouse_exited(3)
 
 func _on_level_5_mouse_exited() -> void:
-	if not level_buttons[4].disabled:
-		level_sprites[4].scale = Vector2(1, 1)
-		
+	level_mouse_exited(4)
+
+func level_mouse_exited(level_array: int) -> void:
+	if not level_buttons[level_array].disabled:
+		level_sprites[level_array].scale = Vector2(1, 1)
+
 # --- Fungsi Back ---
 func _on_back_button_down() -> void:
 	fade.fade("res://Scenes/UI/MainMenu/MainMenu.tscn")

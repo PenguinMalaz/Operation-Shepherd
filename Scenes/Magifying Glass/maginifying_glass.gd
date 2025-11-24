@@ -1,35 +1,39 @@
 extends CanvasLayer
 
+signal elimination_active
+
+signal button_pressed
+
 # Untuk mengeliminasi kartu
 var investigation_active: bool = false
+var elimination: bool = false
 var button_hover: bool = false
 
 func _ready() -> void:
-	
-	investigation_active = false 
-	
-	
+	investigation_active = false
 
 
 func _process(_delta: float) -> void:
-	if investigation_active:
+	if elimination:
 		$Button/AnimatedSprite2D.frame = 2
 	else:
 		if button_hover == true:
 			$Button/AnimatedSprite2D.frame = 1
 		else:
 			$Button/AnimatedSprite2D.frame = 0
+	
 
 func _on_button_button_down() -> void:
 	# Toggle nilai antara true dan false
-	investigation_active = not investigation_active
-	SoundEffect.pressed()
+	elimination = not elimination
+	SoundEffect.reload_()
+	emit_signal("button_pressed")
 	
-	
-	if investigation_active:
+	if elimination:
 		# Jika Investigation diaktifkan
 		Music.stop_gameplay()
 		Music.play_investigation()
+		emit_signal("elimination_active")
 	else:
 		# Jika Investigation dibatalkan (dimatikan)
 		Music.stop_investigation()

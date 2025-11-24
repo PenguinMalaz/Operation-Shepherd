@@ -1,12 +1,12 @@
 extends CanvasLayer
 
 # Export variable score untuk ditampilkan di game over
-var end_score: int = 0
-var end_target_score: int = 0
+var predators_found: int = 0
 var predators_left: int = 0
+var total_predators: int = 0
 
 # Node text dari score
-@onready var game_over_score_label: RichTextLabel = $GameOver/Score/Panel/RichTextLabel
+@onready var game_over_score_label: RichTextLabel = $"GameOver/Predator left"/Panel/RichTextLabel
 
 
 func _process(_delta: float) -> void:
@@ -14,17 +14,15 @@ func _process(_delta: float) -> void:
 
 func display_text() -> void:
 	var color_red: String = "#b35054"
-	var color_green: String = "#a7d694"
 	
-	
-	var format_string: String = "Level Score\t : [color=" + color_red + "]%d[/color]\n"
-	format_string += "Target Score : [color=" + color_green + "]%d[/color]\n"
-	format_string += "Predators tersisa: [color=" + color_red + "]%d[/color]"
+	var format_string: String = "Predators found\t : [color=" + color_red + "]%d[/color]\n"
+	format_string += "Predators left: [color=" + color_red + "]%d[/color]\n"
+	format_string += "Total predators: [color=" + color_red + "]%d[/color]"
 	
 	game_over_score_label.text = format_string % [
-		end_score, 
-		end_target_score, 
-		predators_left,
+		predators_found,
+		predators_left, 
+		total_predators,
 	]
 
 ## Ketika tombol level selection ditekan

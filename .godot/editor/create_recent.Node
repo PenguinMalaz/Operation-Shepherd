@@ -1,15 +1,14 @@
-Node2D
 AnimatedSprite2D
-CanvasLayer
 Control
-AnimationPlayer
-Sprite2D
-AudioStreamPlayer
-Node
-AudioStreamPlayer      - Matches the "sound" keyword.
 Label
+HSlider
+CenterContainer
+Sprite2D
+AnimationPlayer
+Node2D
+Node
+CanvasLayer
+AudioStreamPlayer
+AudioStreamPlayer      - Matches the "sound" keyword.
 RichTextLabel
 Panel
-Button
-MarginContainer
-NinePatchRect

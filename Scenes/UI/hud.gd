@@ -1,17 +1,15 @@
 extends Node
 class_name HUD
 
+signal is_predator_found
+
 # Untuk menentukan jumlah heart
 var heart: int = 3
 
 # Total predator sesuai dengan jumlah predator di card board
-var total_predator: int = 1
+var total_predators: int = 1
 # Ketika predator ditemukan
-var predator_ditemukan: int = 0
-# Menyimpan score
-var score: int = 0
-# Menyimpan target score
-var target_score: int = 0
+var predators_found: int = 0
 
 # Node heart 1
 @onready var heart_1: AnimatedSprite2D = $Heart/Panel/Heart1
@@ -22,14 +20,7 @@ var target_score: int = 0
 
 # Node text dari predator found
 @onready var predator_counter: RichTextLabel = $"Predator found/Panel/RichTextLabel"
-# Node text dari score
-@onready var score_label: RichTextLabel = $"Score/Panel/RichTextLabel"
-# Node text dari task find predator
-@onready var task_find_predator: RichTextLabel = $Task/FindPredator/RichTextLabel
-# Node text dari task target score
-@onready var task_target_score: RichTextLabel = $"Task/Target Score/RichTextLabel"
 
-# Preload scene game over dan next level
 
 
 func _ready() -> void:
@@ -40,11 +31,6 @@ func _ready() -> void:
 	if predator_counter:
 		update_predator_display()
 	
-	if score_label:
-		update_score_display()
-	
-	if task_find_predator and task_target_score:
-		update_task_display()
 
 ## Mengatur UI dari heart
 func heart_frame(heart_1_frame: int, heart_2_frame: int, heart_3_frame: int) -> void:
@@ -72,56 +58,33 @@ func kurangi_heart() -> void:
 
 ## Menambah score dan mengubah tampilan UI
 func predator_ditemukan_bertambah() -> void:
-	if predator_ditemukan < total_predator:
-		predator_ditemukan += 1
+	if predators_found < total_predators:
+		predators_found += 1
 		update_predator_display()
 		
-		tambah_score(100)
 	
-	if predator_ditemukan == total_predator:
+	if predators_found == total_predators:
+		emit_signal("is_predator_found")
+		
 		await get_tree().create_timer(0.5).timeout
 		$NextLevel/AnimationPlayer.play("play")
 		$NextLevel.visible = true
 
-## Fungsi untuk menambahkan score
-func tambah_score(poin: int) -> void:
-	score += poin
-	GlobalVariable.CURRENT_TOTAL_SCORE += score  # update global total score saat ini
-	update_score_display()
-
 ## Mengatur total predator
 func set_total_predator(total: int) -> void:
-	total_predator = total
-	
-	# Hitung Target Score
-	target_score = total_predator * 100
+	total_predators = total
 	
 	update_predator_display() 
-	update_task_display()
-
-## Fungsi untuk memperbarui tampilan score
-func update_score_display() -> void:
-	var teks_hijau_angka: String = "[color=#a7d694]%d[/color]" % score
-	var teks_final: String = "Score : %s" % teks_hijau_angka
 	
-	score_label.text = teks_final
-
-## Fungsi untuk memperbarui tampilan task
-func update_task_display() -> void:
-	var teks_merah_total_predator: String = "[color=#b35054]%d[/color]" % total_predator
-	task_find_predator.text = "Temukan %s predator" % teks_merah_total_predator
-	
-	var teks_hijau_target_score: String = "[color=#a7d694]%d[/color]" % target_score
-	task_target_score.text = "Target %s score" % teks_hijau_target_score
 
 ## Fungsi untuk memperbarui tampilan predator found
 func update_predator_display() -> void:
-	var teks_merah_angka: String = "[color=#b35054]%d[/color]" % predator_ditemukan
-	var teks_merah_total: String = "[color=#b35054]%d[/color]" % total_predator
+	var teks_merah_angka: String = "[color=#b35054]%d[/color]" % predators_found
 	var teks_merah_slash: String = "[color=#b35054]/[/color]"
+	var teks_merah_total: String = "[color=#b35054]%d[/color]" % total_predators
 	
 	# Gabungkan semua bagian
-	var teks_final: String = "Predator ditemukan : %s%s%s" % [
+	var teks_final: String = "Predators found : %s%s%s" % [
 		teks_merah_angka,
 		teks_merah_slash,
 		teks_merah_total

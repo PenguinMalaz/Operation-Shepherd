@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://b8qendojl6uft" path="res://Scenes/UI/cursor_normal.gd" id="2_wkssj"]
 
 [node name="CursorNormal" type="Sprite2D"]
+scale = Vector2(0.6, 0.6)
 texture = ExtResource("1_nqip6")
 offset = Vector2(13, 13)
 script = ExtResource("2_wkssj")

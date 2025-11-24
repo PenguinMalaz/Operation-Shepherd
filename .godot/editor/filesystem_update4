@@ -1,3 +1,18 @@
+res://Scenes/UI/MainMenu/MainMenu.tscn
+res://Scenes/UI/Menus/options_menu.tscn
+res://Scenes/Credits/Credits.tscn
+res://Resources/Texture/Button/ButtonNormal.tres
+res://Resources/Texture/Button/ButtonPressed.tres
+res://Resources/Texture/Button/ButtonHover.tres
 res://Scenes/Levels/LevelSelection.tscn
-res://Scenes/sound_effect.tscn
-res://Scenes/Magifying Glass/maginifying_glass.tscn
+res://Scenes/UI/Menus/audio_option.gd
+res://Scenes/UI/HUD.tscn
+res://Scenes/UI/Menus/GameOver.tscn
+res://Scenes/UI/Menus/NextLevel.tscn
+res://Scenes/info.tscn
+res://Scenes/info.gd
+res://Resources/ObjekDanDialog/Kertas.tres
+res://Scenes/CardBoard/CardBoard.tscn
+res://Resources/ObjekDanDialog/Pensil.tres
+res://Resources/ObjekDanDialog/Penghapus.tres
+res://Resources/ObjekDanDialog/Pengserut.tres

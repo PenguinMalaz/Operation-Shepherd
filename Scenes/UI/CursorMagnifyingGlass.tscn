@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://btw5i5ibjdird" path="res://Scenes/UI/CursorMagnifyingGlass.gd" id="2_qchjr"]
 
 [node name="Magnifying Glass" type="Sprite2D"]
+scale = Vector2(0.6, 0.6)
 texture = ExtResource("1_epcea")
 offset = Vector2(5, 5)
 script = ExtResource("2_qchjr")

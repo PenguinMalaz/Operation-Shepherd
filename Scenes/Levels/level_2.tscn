@@ -7,5 +7,5 @@
 next_level_scene = "res://Scenes/Levels/level_3.tscn"
 current_level = 2
 
-[node name="CardBoard" parent="." index="1"]
+[node name="CardBoard" parent="." index="0"]
 object_penentu = ExtResource("2_oylv5")

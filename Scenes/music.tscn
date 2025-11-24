@@ -1,22 +1,23 @@
 [gd_scene load_steps=5 format=3 uid="uid://d2lc2nav86l21"]
 
-[ext_resource type="AudioStream" uid="uid://3eqrep5wgsek" path="res://Asset/Sound/Music/A New Journey (Main Menu).mp3" id="1_fbmny"]
 [ext_resource type="Script" uid="uid://csnwregmnqkyd" path="res://Scenes/music.gd" id="1_vi5kw"]
 [ext_resource type="AudioStream" uid="uid://cvufs2hb1mthf" path="res://Asset/Sound/Music/Operation Shepherd (Gameplay).mp3" id="2_qxpp0"]
-[ext_resource type="AudioStream" uid="uid://dk2womq0nkxfw" path="res://Asset/Sound/Music/Judgement (Investigation).mp3" id="3_476t3"]
+[ext_resource type="AudioStream" uid="uid://dtb5dqvro5q3x" path="res://Asset/Sound/Music/Mummer's Steps (Main Menu).mp3" id="2_vi5kw"]
+[ext_resource type="AudioStream" uid="uid://bjgin3nxky0jt" path="res://Asset/Sound/Music/Judgement (Execution).mp3" id="4_vi5kw"]
 
 [node name="Music" type="Node"]
 script = ExtResource("1_vi5kw")
 
 [node name="MainMenu" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("1_fbmny")
-volume_db = -5.0
+stream = ExtResource("2_vi5kw")
 autoplay = true
+bus = &"Music"
 
 [node name="Gameplay" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_qxpp0")
 volume_db = -5.0
+bus = &"Music"
 
 [node name="Investigation" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("3_476t3")
-volume_db = -5.0
+stream = ExtResource("4_vi5kw")
+bus = &"Music"

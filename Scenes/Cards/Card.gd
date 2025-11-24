@@ -3,6 +3,11 @@ class_name Card
 ## Card
 ## Scene ini untuk di inheritance di scene lain
 
+# Signal untuk memberi tahu CardBoard bahwa kursor masuk
+signal card_hover_entered
+# Signal untuk memberi tahu CardBoard bahwa kursor keluar
+signal card_hover_exited
+
 enum IdCard{
 	DOMBA,
 	SERIGALA,
@@ -19,12 +24,10 @@ signal card_clicked(card: Card)
 # Disabled button
 @export var button_disabled: bool = false
 # Card flipped
-var card_flipped: bool = false
+@export var card_flipped: bool = false
 
 # Node dari sprite
 @onready var sprite: Sprite2D = $Button/Sprite
-# Node sound card hover
-@onready var card_hover: AudioStreamPlayer = $Audio/CardHover
 # Node animation card fliped
 @onready var flip: AnimationPlayer = $Animations/Flip
 # Node text dialogue
@@ -34,14 +37,22 @@ var card_flipped: bool = false
 # Node animation loop
 @onready var loop: AnimationPlayer = $Animations/Loop
 # Node animation elimated
-@onready var eliminated: AnimationPlayer = $Animations/Eliminated
+@onready var suspect_anim: AnimationPlayer = $Animations/Suspect
 # Node button
 @onready var button: Button = $Button
+# Node magnifying glass
+@onready var magnifying_glass_sprite: Sprite2D = $Button/Sprite/Sprite2D
+# Node elimination mode
+@onready var elimination_mode: AnimationPlayer = $Animations/EliminationMode
 
 # Texture domba
-const texture_domba = preload("res://Asset/Sprite/Cards/Domba.png")
+const texture_domba = preload("res://Asset/Sprite/Cards/door-card-sheep.png")
 # Texture serigala
-const texture_serigala = preload("res://Asset/Sprite/Cards/Serigala.png")
+const texture_serigala = preload("res://Asset/Sprite/Cards/door-card-wolf.png")
+
+var suspect: bool = false
+
+var is_mouse_can_entered: bool = false
 
 func _process(_delta: float) -> void:
 	# Mengatur text dialog
@@ -50,14 +61,11 @@ func _process(_delta: float) -> void:
 	# Menonaktifkan kartu
 	if button_disabled:
 		button.disabled = true
-		sprite.self_modulate = Color(0.374, 0.374, 0.374, 1.0)
 		loop.pause()
 		terapkan_texture()
-	else:
-		button.disabled = false
+		sprite.self_modulate = Color(0.577, 0.577, 0.577, 1.0)
 	
 	
-
 ## Menerapkan texture ketika kartu di eliminasi
 func terapkan_texture() -> void:
 	if id_card == IdCard.DOMBA :
@@ -65,25 +73,32 @@ func terapkan_texture() -> void:
 	elif id_card == IdCard.SERIGALA :
 		sprite.texture = texture_serigala
 
+
+
 ## Hover entered card
 func _on_button_mouse_entered() -> void:
-	if !button_disabled:
-		sprite.scale = Vector2(1.1, 1.1)
-		card_hover.play()
-		if card_flipped:
+	if !is_mouse_can_entered:
+		if !button_disabled:
+			if !suspect:
+				flip.play("Flip")
+				loop.play("loop")
+				SoundEffect.flip()
+			
 			dialogue_box_fade.play("fade")
+			emit_signal("card_hover_entered", self)
 
 ## Hover exited card
 func _on_button_mouse_exited() -> void:
-	if !button_disabled:
-		sprite.scale = Vector2(1, 1)
-		if card_flipped:
+	if !is_mouse_can_entered:
+		if !button_disabled:
+			if !suspect:
+				flip.play_backwards("Flip")
+				loop.play("RESET")
+				SoundEffect.flip()
+				
 			dialogue_box_fade.play_backwards("fade")
+			emit_signal("card_hover_exited")
 
 ## Button down
 func _on_button_button_down() -> void:
-	if !card_flipped:
-		flip.play("Flip")
-		dialogue_box_fade.play("fade")
-		loop.play("loop")
 	emit_signal("card_clicked", self)

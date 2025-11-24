@@ -9,6 +9,9 @@ extends Node
 @onready var wolf: AudioStreamPlayer = $Wolf
 @onready var pop: AudioStreamPlayer = $Pop
 @onready var card_flip: AudioStreamPlayer = $flip
+@onready var gunshoot: AudioStreamPlayer = $Gunshoot
+@onready var glass_double: AudioStreamPlayer = $GlassDouble
+@onready var reload: AudioStreamPlayer = $Reload
 
 func hover() -> void:
 	button_hover.play()
@@ -36,3 +39,12 @@ func pops() -> void:
 
 func flip() -> void:
 	card_flip.play()
+
+func shoot() -> void:
+	gunshoot.play()
+
+func glass_double_deselect() -> void:
+	glass_double.play()
+
+func reload_() -> void:
+	reload.play()

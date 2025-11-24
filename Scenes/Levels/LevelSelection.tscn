@@ -1,87 +1,41 @@
-[gd_scene load_steps=20 format=3 uid="uid://3fv7cojyohqq"]
+[gd_scene load_steps=35 format=3 uid="uid://3fv7cojyohqq"]
 
 [ext_resource type="Script" uid="uid://ckxvg155corls" path="res://Scenes/Levels/LevelSelection.gd" id="1_0o5wr"]
 [ext_resource type="StyleBox" uid="uid://bxxuvw3u47hhj" path="res://Resources/Texture/Button/ButtonNormal.tres" id="2_eqhlv"]
-[ext_resource type="Texture2D" uid="uid://bkfytjrv1nfsb" path="res://Asset/Sprite/Ground/Ground-v2.png" id="2_o061i"]
+[ext_resource type="Texture2D" uid="uid://by3i0y4plhkvq" path="res://Asset/Sprite/Ground/Ground-stage.png" id="2_kaob2"]
 [ext_resource type="PackedScene" uid="uid://cac7sq4vlj501" path="res://Scenes/Fade/fade.tscn" id="2_sg2c8"]
+[ext_resource type="Texture2D" uid="uid://bo1l1m6dmncty" path="res://Asset/Sprite/Level Selection/Decoration/board-item-card-fox-ripped.png" id="3_a78so"]
 [ext_resource type="StyleBox" uid="uid://b1415tteok2jy" path="res://Resources/Texture/Button/ButtonPressed.tres" id="3_bp6eg"]
 [ext_resource type="PackedScene" uid="uid://bogdb2py0tcfc" path="res://Scenes/UI/CursorMagnifyingGlass.tscn" id="3_o3fsi"]
+[ext_resource type="Texture2D" uid="uid://nn5gdbra1341" path="res://Asset/Sprite/Level Selection/Decoration/board-item-dog.png" id="4_5qv8d"]
 [ext_resource type="PackedScene" uid="uid://cuoj3ka8bma1t" path="res://Scenes/UI/CursorNormal.tscn" id="4_b8uro"]
 [ext_resource type="StyleBox" uid="uid://do5xtbv76wo0b" path="res://Resources/Texture/Button/ButtonHover.tres" id="4_o061i"]
-[ext_resource type="Texture2D" uid="uid://b22vwex8m672y" path="res://Asset/Sprite/Cards/Object/card-pencil.png" id="5_bp6eg"]
+[ext_resource type="Texture2D" uid="uid://djhmggphhkkpo" path="res://Asset/Sprite/Level Selection/Decoration/board-item-fox_-ripped.png" id="5_4m432"]
+[ext_resource type="Texture2D" uid="uid://bl4ffwk0j4c2f" path="res://Asset/Sprite/Level Selection/Decoration/board-item-fox_.png" id="6_eyhug"]
+[ext_resource type="Texture2D" uid="uid://b865ouc1kk1v4" path="res://Asset/Sprite/Level Selection/Decoration/board-item-missing-poster-sheep.png" id="7_n5hle"]
+[ext_resource type="Texture2D" uid="uid://dutwduo3dej2o" path="res://Asset/Sprite/Level Selection/Decoration/board-item-newspaper-wolf-final.png" id="8_bymcv"]
+[ext_resource type="Texture2D" uid="uid://b15g1r1rskor8" path="res://Asset/Sprite/Level Selection/Decoration/board-item-paper-ripped.png" id="9_4m432"]
+[ext_resource type="Texture2D" uid="uid://b1ee3pikd7hen" path="res://Asset/Sprite/Level Selection/Decoration/board-item-newspaper.png" id="9_eygte"]
 [ext_resource type="FontFile" uid="uid://b4lfqjm4wfgf2" path="res://Asset/Font/VCR_OSD_MONO_1.001.ttf" id="10_5pwot"]
-[ext_resource type="Texture2D" uid="uid://c4qngypr2gbtn" path="res://Asset/Sprite/Cards/Object/card-pen.png" id="11_tp4t1"]
-[ext_resource type="Texture2D" uid="uid://bntq6lpoj34a5" path="res://Asset/Sprite/Cards/Object/card-pengserut.png" id="12_kaob2"]
-[ext_resource type="Texture2D" uid="uid://cb8u7255mra3a" path="res://Asset/Sprite/Cards/Object/card-penghapus.png" id="13_8aj64"]
-[ext_resource type="Texture2D" uid="uid://bphgic5ofte20" path="res://Asset/Sprite/Cards/Object/kertas 1.png" id="14_ds5p1"]
-[ext_resource type="Texture2D" uid="uid://bsmh7nd8lndh" path="res://Asset/Sprite/Textures/PanelTexture.png" id="15_kaob2"]
+[ext_resource type="Texture2D" uid="uid://cxhjpxsxadx4h" path="res://Asset/Sprite/Level Selection/Decoration/board-item-mini-paper2.png" id="10_n5hle"]
+[ext_resource type="Texture2D" uid="uid://cjdkuo54ppfn0" path="res://Asset/Sprite/Level Selection/card-board-pencil.png" id="10_tp4t1"]
+[ext_resource type="Texture2D" uid="uid://caqj3fru6k1gb" path="res://Asset/Sprite/Level Selection/pin.png" id="11_8aj64"]
+[ext_resource type="Texture2D" uid="uid://cet8dvp25t12u" path="res://Asset/Sprite/Level Selection/Decoration/board-item-mini-paper3.png" id="11_bymcv"]
+[ext_resource type="Texture2D" uid="uid://bo264r0jw145q" path="res://Asset/Sprite/Level Selection/Decoration/board-item-No.1.png" id="11_ds5p1"]
+[ext_resource type="Texture2D" uid="uid://44r0b4vmtnvw" path="res://Asset/Sprite/Level Selection/card-board-pen.png" id="11_kaob2"]
+[ext_resource type="Texture2D" uid="uid://b4xt22fhcd701" path="res://Asset/Sprite/Level Selection/card-board-pengserut.png" id="12_8aj64"]
+[ext_resource type="Texture2D" uid="uid://dtn0q4aflprwt" path="res://Asset/Sprite/Level Selection/card-board-eraser.png" id="13_ds5p1"]
+[ext_resource type="Texture2D" uid="uid://c1bubpck7syj7" path="res://Asset/Sprite/Level Selection/Decoration/board-item-No.2.png" id="14_k6s0f"]
+[ext_resource type="Texture2D" uid="uid://72bx3pn5jh4y" path="res://Asset/Sprite/Level Selection/card-board-paper.png" id="14_mhxq7"]
+[ext_resource type="Texture2D" uid="uid://c4imv7tu5fguf" path="res://Asset/Sprite/Level Selection/Decoration/board-item-No.3.png" id="16_n5k8j"]
+[ext_resource type="Texture2D" uid="uid://cx3eexy8juh7x" path="res://Asset/Sprite/Level Selection/Decoration/board-item-No.4.png" id="18_k6s0f"]
+[ext_resource type="Texture2D" uid="uid://vchvclvrl2mq" path="res://Asset/Sprite/Level Selection/Decoration/board-item-No.5.png" id="20_n5k8j"]
+[ext_resource type="Texture2D" uid="uid://btqfgxmmifa67" path="res://Asset/Sprite/Level Selection/Decoration/board-item-mini-paper4-ripped.png" id="28_4m432"]
+[ext_resource type="Texture2D" uid="uid://c0jj1xyutpn85" path="res://Asset/Sprite/Level Selection/Decoration/board-item-mini-paper1.png" id="28_5qv8d"]
 
-[sub_resource type="Animation" id="Animation_kaob2"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Level 1/Sprite:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [-0.2617994]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Level 2/Sprite:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [-0.2617994]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Level 3/Sprite:rotation")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [-0.2617994]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Level 4/Sprite:rotation")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [-0.2617994]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("Level 5/Sprite:rotation")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [-0.2617994]
-}
-
-[sub_resource type="Animation" id="Animation_tp4t1"]
+[sub_resource type="Animation" id="Animation_bymcv"]
 resource_name = "loop"
-length = 2.0
+length = 8.0
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -90,10 +44,10 @@ tracks/0/path = NodePath("Level 1/Sprite:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1, 2),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0.00999999, 2, 4, 6, 8),
+"transitions": PackedFloat32Array(0.5, 0.6, 0.5, 0.6, 0.5),
 "update": 0,
-"values": [0.17453292519943295, -0.17453292519943295, 0.17453292519943295]
+"values": [-0.08726646, 0.08726646, -0.08726646, 0.08726646, -0.08726646]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -102,10 +56,10 @@ tracks/1/path = NodePath("Level 2/Sprite:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 1, 2),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0.5, 2.5, 4.5, 6.5),
+"transitions": PackedFloat32Array(0.5, 0.6, 0.5, 0.6),
 "update": 0,
-"values": [0.17453292519943295, -0.17453292519943295, 0.17453292519943295]
+"values": [-0.08726646, 0.08726646, -0.08726646, 0.08726646]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -114,10 +68,10 @@ tracks/2/path = NodePath("Level 3/Sprite:rotation")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 1, 2),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0.029999971, 2, 4, 6, 8),
+"transitions": PackedFloat32Array(0.6, 0.5, 0.6, 0.5, 0.6),
 "update": 0,
-"values": [0.17453292519943295, -0.17453292519943295, 0.17453292519943295]
+"values": [0.08726646, -0.08726646, 0.08726646, -0.08726646, 0.08726646]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -126,10 +80,10 @@ tracks/3/path = NodePath("Level 4/Sprite:rotation")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 1, 2),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0.5, 2.5, 4.5, 6.5),
+"transitions": PackedFloat32Array(0.6, 0.5, 0.6, 0.5),
 "update": 0,
-"values": [0.17453292519943295, -0.17453292519943295, 0.17453292519943295]
+"values": [0.08726646259971647, -0.08726646, 0.08726646259971647, -0.08726646]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
@@ -138,25 +92,16 @@ tracks/4/path = NodePath("Level 5/Sprite:rotation")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0, 1, 2),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0, 2, 4, 6, 8),
+"transitions": PackedFloat32Array(0.5, 0.6, 0.5, 0.6, 0.5),
 "update": 0,
-"values": [0.17453292519943295, -0.17453292519943295, 0.17453292519943295]
+"values": [-0.08726646, 0.08726646, -0.08726646, 0.08726646, -0.08726646]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_8aj64"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_eygte"]
 _data = {
-&"RESET": SubResource("Animation_kaob2"),
-&"loop": SubResource("Animation_tp4t1")
+&"loop": SubResource("Animation_bymcv")
 }
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8aj64"]
-texture = ExtResource("15_kaob2")
-texture_margin_left = 6.0
-texture_margin_top = 6.0
-texture_margin_right = 6.0
-texture_margin_bottom = 6.0
-region_rect = Rect2(0, 0, 32, 32)
 
 [node name="LevelSelection" type="Control"]
 layout_mode = 3
@@ -169,9 +114,78 @@ mouse_filter = 2
 script = ExtResource("1_0o5wr")
 
 [node name="Background" type="Sprite2D" parent="."]
-position = Vector2(288, 168)
-scale = Vector2(1.3, 1.3)
-texture = ExtResource("2_o061i")
+position = Vector2(288, 165)
+rotation = 0.00049157767
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("2_kaob2")
+
+[node name="Background2" type="Sprite2D" parent="."]
+position = Vector2(850, 165)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("2_kaob2")
+
+[node name="Background3" type="Sprite2D" parent="."]
+position = Vector2(-274, 165)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("2_kaob2")
+
+[node name="Decoration" type="Node2D" parent="."]
+
+[node name="BoardItemDog" type="Sprite2D" parent="Decoration"]
+position = Vector2(97, 59)
+texture = ExtResource("4_5qv8d")
+
+[node name="BoardItemFoxRipped" type="Sprite2D" parent="Decoration"]
+position = Vector2(350, 140)
+texture = ExtResource("5_4m432")
+
+[node name="BoardItemFox" type="Sprite2D" parent="Decoration"]
+position = Vector2(458, 48)
+texture = ExtResource("6_eyhug")
+
+[node name="BoardItemMissingPosterSheep" type="Sprite2D" parent="Decoration"]
+position = Vector2(217, 142)
+texture = ExtResource("7_n5hle")
+
+[node name="BoardItemNewspaperWolfFinal" type="Sprite2D" parent="Decoration"]
+position = Vector2(434, 247)
+texture = ExtResource("8_bymcv")
+
+[node name="BoardItemNewspaper" type="Sprite2D" parent="Decoration"]
+position = Vector2(131, 203)
+texture = ExtResource("9_eygte")
+
+[node name="BoardItemPaperRipped" type="Sprite2D" parent="Decoration"]
+position = Vector2(466, 163)
+texture = ExtResource("9_4m432")
+
+[node name="BoardItemMiniPaper2" type="Sprite2D" parent="Decoration"]
+position = Vector2(413, 185)
+texture = ExtResource("10_n5hle")
+
+[node name="BoardItemMiniPaper4" type="Sprite2D" parent="Decoration"]
+position = Vector2(194, 73)
+texture = ExtResource("10_n5hle")
+
+[node name="BoardItemMiniPaper5" type="Sprite2D" parent="Decoration"]
+position = Vector2(369, 82)
+texture = ExtResource("10_n5hle")
+
+[node name="BoardItemMiniPaper3" type="Sprite2D" parent="Decoration"]
+position = Vector2(285, 202)
+texture = ExtResource("11_bymcv")
+
+[node name="BoardItemMiniPaper1" type="Sprite2D" parent="Decoration"]
+position = Vector2(102, 228)
+texture = ExtResource("28_5qv8d")
+
+[node name="BoardItemMiniPaper4Ripped" type="Sprite2D" parent="Decoration"]
+position = Vector2(98, 123)
+texture = ExtResource("28_4m432")
+
+[node name="BoardItemCardFoxRipped" type="Sprite2D" parent="Decoration"]
+position = Vector2(280, 253)
+texture = ExtResource("3_a78so")
 
 [node name="Fade" parent="." instance=ExtResource("2_sg2c8")]
 
@@ -190,13 +204,15 @@ layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_left = 16.0
-offset_top = -44.0
-offset_right = 120.0
-offset_bottom = -13.0
+offset_left = 77.0
+offset_top = -64.0
+offset_right = 181.0
+offset_bottom = -33.0
 grow_vertical = 0
 focus_mode = 0
-theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0.37254903, 0.39215687, 0.4392157, 1)
+theme_override_colors/font_pressed_color = Color(0.9490196, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0.9490196, 1, 1, 1)
 theme_override_fonts/font = ExtResource("10_5pwot")
 theme_override_styles/normal = ExtResource("2_eqhlv")
 theme_override_styles/pressed = ExtResource("3_bp6eg")
@@ -210,10 +226,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -24.0
-offset_top = -130.0
-offset_right = 24.0
-offset_bottom = -62.0
+offset_left = -168.0
+offset_top = -73.99999
+offset_right = -120.0
+offset_bottom = -6.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(1.2, 1.2)
@@ -222,9 +238,20 @@ focus_mode = 0
 flat = true
 
 [node name="Sprite" type="Sprite2D" parent="Level 1"]
-position = Vector2(24, 34)
-rotation = -0.2617994
-texture = ExtResource("5_bp6eg")
+position = Vector2(24.835846, 7.1074386)
+rotation = 0.065836325
+texture = ExtResource("10_tp4t1")
+offset = Vector2(-0.5025177, 27.36148)
+
+[node name="BoardItemNo_1" type="Sprite2D" parent="Level 1/Sprite"]
+position = Vector2(7.4974847, 45.2259)
+scale = Vector2(0.8333333, 0.8333333)
+texture = ExtResource("11_ds5p1")
+
+[node name="Pin" type="Sprite2D" parent="Level 1"]
+position = Vector2(24.765463, 5.333327)
+scale = Vector2(0.9999999, 0.9999999)
+texture = ExtResource("11_8aj64")
 
 [node name="Level 2" type="Button" parent="."]
 layout_mode = 1
@@ -233,10 +260,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 72.0
-offset_top = -42.0
-offset_right = 120.0
-offset_bottom = 26.0
+offset_left = -32.0
+offset_top = -74.0
+offset_right = 16.0
+offset_bottom = -6.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(1.2, 1.2)
@@ -245,9 +272,20 @@ focus_mode = 0
 flat = true
 
 [node name="Sprite" type="Sprite2D" parent="Level 2"]
-position = Vector2(24, 34)
-rotation = -0.2617994
-texture = ExtResource("11_tp4t1")
+position = Vector2(24.835846, 7.1074386)
+rotation = 0.02471581
+texture = ExtResource("11_kaob2")
+offset = Vector2(-0.5025177, 27.36148)
+
+[node name="BoardItemNo_2" type="Sprite2D" parent="Level 2/Sprite"]
+position = Vector2(9.164154, 45.2259)
+scale = Vector2(0.83333325, 0.83333325)
+texture = ExtResource("14_k6s0f")
+
+[node name="Pin" type="Sprite2D" parent="Level 2"]
+position = Vector2(24.765463, 5.333327)
+scale = Vector2(0.9999999, 0.9999999)
+texture = ExtResource("11_8aj64")
 
 [node name="Level 3" type="Button" parent="."]
 layout_mode = 1
@@ -256,10 +294,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 40.0
-offset_top = 70.0
-offset_right = 88.0
-offset_bottom = 138.0
+offset_left = 104.0
+offset_top = -74.0
+offset_right = 152.0
+offset_bottom = -6.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(1.2, 1.2)
@@ -268,9 +306,20 @@ focus_mode = 0
 flat = true
 
 [node name="Sprite" type="Sprite2D" parent="Level 3"]
-position = Vector2(24, 34)
-rotation = -0.2617994
-texture = ExtResource("12_kaob2")
+position = Vector2(24.835846, 7.1074386)
+rotation = -0.056353174
+texture = ExtResource("12_8aj64")
+offset = Vector2(-0.5025177, 27.36148)
+
+[node name="BoardItemNo_3" type="Sprite2D" parent="Level 3/Sprite"]
+position = Vector2(9.164154, 45.2259)
+scale = Vector2(0.83333325, 0.83333325)
+texture = ExtResource("16_n5k8j")
+
+[node name="Pin" type="Sprite2D" parent="Level 3"]
+position = Vector2(24.765463, 5.333327)
+scale = Vector2(0.9999999, 0.9999999)
+texture = ExtResource("11_8aj64")
 
 [node name="Level 4" type="Button" parent="."]
 layout_mode = 1
@@ -279,10 +328,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -88.0
-offset_top = 70.0
-offset_right = -40.000015
-offset_bottom = 138.0
+offset_left = -96.0
+offset_top = 30.000015
+offset_right = -48.0
+offset_bottom = 98.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(1.2, 1.2)
@@ -291,9 +340,20 @@ focus_mode = 0
 flat = true
 
 [node name="Sprite" type="Sprite2D" parent="Level 4"]
-position = Vector2(24, 34)
-rotation = -0.2617994
-texture = ExtResource("13_8aj64")
+position = Vector2(24.835846, 7.1074386)
+rotation = -0.013048999
+texture = ExtResource("13_ds5p1")
+offset = Vector2(-0.5025177, 27.36148)
+
+[node name="BoardItemNo_4" type="Sprite2D" parent="Level 4/Sprite"]
+position = Vector2(9.997482, 45.225876)
+scale = Vector2(0.83333325, 0.83333325)
+texture = ExtResource("18_k6s0f")
+
+[node name="Pin" type="Sprite2D" parent="Level 4"]
+position = Vector2(24.765463, 5.333327)
+scale = Vector2(0.9999999, 0.9999999)
+texture = ExtResource("11_8aj64")
 
 [node name="Level 5" type="Button" parent="."]
 layout_mode = 1
@@ -302,10 +362,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -119.999985
-offset_top = -41.999992
-offset_right = -71.999985
-offset_bottom = 26.0
+offset_left = 32.0
+offset_top = 30.0
+offset_right = 80.0
+offset_bottom = 98.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(1.2, 1.2)
@@ -314,40 +374,26 @@ focus_mode = 0
 flat = true
 
 [node name="Sprite" type="Sprite2D" parent="Level 5"]
-position = Vector2(24, 34)
-rotation = -0.2617994
-texture = ExtResource("14_ds5p1")
+position = Vector2(24.835846, 7.1074386)
+rotation = 0.06605008
+texture = ExtResource("14_mhxq7")
+offset = Vector2(-0.5025177, 27.36148)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="BoardItemNo_5" type="Sprite2D" parent="Level 5/Sprite"]
+position = Vector2(8.330811, 45.22589)
+scale = Vector2(0.83333325, 0.83333325)
+texture = ExtResource("20_n5k8j")
+
+[node name="Pin" type="Sprite2D" parent="Level 5"]
+position = Vector2(24.765463, 5.333327)
+scale = Vector2(0.9999999, 0.9999999)
+texture = ExtResource("11_8aj64")
+
+[node name="Loop" type="AnimationPlayer" parent="."]
 libraries = {
-&"": SubResource("AnimationLibrary_8aj64")
+&"": SubResource("AnimationLibrary_eygte")
 }
 autoplay = "loop"
-
-[node name="Panel" type="Panel" parent="."]
-layout_mode = 1
-anchors_preset = 4
-anchor_top = 0.5
-anchor_bottom = 0.5
-offset_left = -48.0
-offset_top = -130.0
-offset_right = 152.0
-offset_bottom = -98.0
-grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_8aj64")
-
-[node name="RichTextLabel" type="RichTextLabel" parent="Panel"]
-layout_mode = 0
-offset_left = 64.0
-offset_top = 8.0
-offset_right = 330.66666
-offset_bottom = 30.857147
-scale = Vector2(0.6, 0.6)
-theme_override_fonts/normal_font = ExtResource("10_5pwot")
-theme_override_font_sizes/normal_font_size = 24
-bbcode_enabled = true
-text = "Level Selection"
-vertical_alignment = 1
 
 [connection signal="button_down" from="Back" to="." method="_on_back_button_down"]
 [connection signal="mouse_entered" from="Back" to="." method="_on_back_mouse_entered"]

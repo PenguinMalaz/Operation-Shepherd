@@ -72,7 +72,7 @@ func load_game() -> Error:
 	if not parsed_data is Dictionary:
 		print("ERROR: Save data is corrupted or invalid.")
 		return ERR_PARSE_ERROR
-		
+	
 	var save_data: Dictionary = parsed_data
 	
 	# Terapkan data yang dimuat

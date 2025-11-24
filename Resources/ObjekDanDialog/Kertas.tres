@@ -6,7 +6,7 @@
 [resource]
 script = ExtResource("1_b54sy")
 nama_objek = "Kertas"
-domba_dialogs = PackedStringArray("Permukaannya rata dan cocok untuk menulis", "Warnanya biasanya putih atau terang", "Permukaannya rata dan cocok untuk menulis", "Benda ini tipis dan mudah ditekuk", "Biasa digunakan oleh orang-orang kreatif")
-serigala_dialogs = PackedStringArray("Benda itu terletak diam di atas meja dengan makanan", "Ada sebuah benda tipis yang tahan air di tas", "Barang kecil di dalam laci", "Benda tipis yang sangat berat")
+domba_dialogs = PackedStringArray("Permukaannya rata dan cocok untuk menulis", "Warnanya biasanya putih atau terang", "Biasanya benda ini mudah terbakar", "Benda ini tipis dan mudah ditekuk", "Biasa digunakan oleh orang-orang kreatif")
+serigala_dialogs = PackedStringArray("Benda itu terletak diam di atas meja dengan makanan", "Ada sebuah benda tipis yang tidak bisa terbakar", "Barang kecil di dalam laci", "Benda tipis yang sangat berat")
 card_texture = ExtResource("1_ifkbi")
 metadata/_custom_type_script = "uid://da326um6liqtu"

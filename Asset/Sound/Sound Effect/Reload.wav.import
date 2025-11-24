@@ -2,13 +2,13 @@
 
 importer="wav"
 type="AudioStreamWAV"
-uid="uid://poaucqvtmpmw"
-path="res://.godot/imported/Howl.wav-175ddb5a260c4146280af4912dfe5806.sample"
+uid="uid://cutbewuw6okk2"
+path="res://.godot/imported/Reload.wav-178600142ba32d0aea04e4038f6d3ed2.sample"
 
 [deps]
 
-source_file="res://Asset/Sound/Sound Effect/Howl.wav"
-dest_files=["res://.godot/imported/Howl.wav-175ddb5a260c4146280af4912dfe5806.sample"]
+source_file="res://Asset/Sound/Sound Effect/Reload.wav"
+dest_files=["res://.godot/imported/Reload.wav-178600142ba32d0aea04e4038f6d3ed2.sample"]
 
 [params]
 

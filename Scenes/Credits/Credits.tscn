@@ -1,23 +1,28 @@
-[gd_scene load_steps=12 format=3 uid="uid://d112av8khxnx6"]
+[gd_scene load_steps=24 format=3 uid="uid://d112av8khxnx6"]
 
 [ext_resource type="Script" uid="uid://r3rfue64abs4" path="res://Scenes/Credits/credits.gd" id="1_mdxjw"]
-[ext_resource type="Texture2D" uid="uid://bkfytjrv1nfsb" path="res://Asset/Sprite/Ground/Ground-v2.png" id="2_jdyel"]
-[ext_resource type="Texture2D" uid="uid://bsmh7nd8lndh" path="res://Asset/Sprite/Textures/PanelTexture.png" id="2_jq1kv"]
 [ext_resource type="PackedScene" uid="uid://cac7sq4vlj501" path="res://Scenes/Fade/fade.tscn" id="2_mrcp2"]
+[ext_resource type="Texture2D" uid="uid://c6on3epnc7u8t" path="res://Asset/Sprite/Level Selection/Decoration/PaperNoteBig.png" id="2_smnvh"]
+[ext_resource type="Texture2D" uid="uid://grut6i7wy28b" path="res://Asset/Sprite/UI/UI-Paper.png" id="3_21x4v"]
 [ext_resource type="FontFile" uid="uid://b4lfqjm4wfgf2" path="res://Asset/Font/VCR_OSD_MONO_1.001.ttf" id="3_qqh6l"]
+[ext_resource type="Texture2D" uid="uid://bdtihe7nrk2ys" path="res://Asset/Sprite/UI/UI-PaperShort.png" id="4_3hdsx"]
+[ext_resource type="Texture2D" uid="uid://dj6mjrqoc3in6" path="res://Asset/Sprite/Level Selection/Decoration/PaperNote.png" id="4_lfft4"]
+[ext_resource type="Texture2D" uid="uid://dy01je4u07yyb" path="res://Asset/Sprite/UI/UI-PaperMedium.png" id="4_lx1n2"]
+[ext_resource type="Texture2D" uid="uid://cwrsbbc85dcmc" path="res://Asset/Sprite/UI/UI-PaperLong.png" id="5_8pv8m"]
 [ext_resource type="StyleBox" uid="uid://bxxuvw3u47hhj" path="res://Resources/Texture/Button/ButtonNormal.tres" id="5_hktpy"]
 [ext_resource type="StyleBox" uid="uid://b1415tteok2jy" path="res://Resources/Texture/Button/ButtonPressed.tres" id="6_cqi0y"]
 [ext_resource type="StyleBox" uid="uid://do5xtbv76wo0b" path="res://Resources/Texture/Button/ButtonHover.tres" id="7_cqxlb"]
 [ext_resource type="PackedScene" uid="uid://bogdb2py0tcfc" path="res://Scenes/UI/CursorMagnifyingGlass.tscn" id="9_cqxlb"]
+[ext_resource type="Texture2D" uid="uid://bfbl3x1t5e4oc" path="res://Asset/Sprite/UI/UI-credit.png" id="10_3hdsx"]
 [ext_resource type="PackedScene" uid="uid://cuoj3ka8bma1t" path="res://Scenes/UI/CursorNormal.tscn" id="10_21x4v"]
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qqh6l"]
-texture = ExtResource("2_jq1kv")
-texture_margin_left = 6.0
-texture_margin_top = 6.0
-texture_margin_right = 6.0
-texture_margin_bottom = 6.0
-region_rect = Rect2(0, 0, 32, 32)
+[ext_resource type="Texture2D" uid="uid://ceim0nhnq5hl8" path="res://Asset/Sprite/Ground/Ground-main menu.png" id="10_cqxlb"]
+[ext_resource type="Texture2D" uid="uid://c0jj1xyutpn85" path="res://Asset/Sprite/Level Selection/Decoration/board-item-mini-paper1.png" id="13_lfft4"]
+[ext_resource type="Texture2D" uid="uid://cxhjpxsxadx4h" path="res://Asset/Sprite/Level Selection/Decoration/board-item-mini-paper2.png" id="16_hlfgu"]
+[ext_resource type="Texture2D" uid="uid://cet8dvp25t12u" path="res://Asset/Sprite/Level Selection/Decoration/board-item-mini-paper3.png" id="17_woyrx"]
+[ext_resource type="Texture2D" uid="uid://btqfgxmmifa67" path="res://Asset/Sprite/Level Selection/Decoration/board-item-mini-paper4-ripped.png" id="18_yrsep"]
+[ext_resource type="Texture2D" uid="uid://djhmggphhkkpo" path="res://Asset/Sprite/Level Selection/Decoration/board-item-fox_-ripped.png" id="20_yrsep"]
+[ext_resource type="Texture2D" uid="uid://deefwpqiqwadc" path="res://Asset/Sprite/Level Selection/Decoration/board-item-mini-paper5.png" id="21_mnpla"]
+[ext_resource type="Texture2D" uid="uid://cqf831542cbmv" path="res://Asset/Sprite/Level Selection/Decoration/board-item-mini-paper4.png" id="22_rata4"]
 
 [node name="Credits" type="Control"]
 layout_mode = 3
@@ -28,25 +33,41 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_mdxjw")
 
-[node name="Background" type="Sprite2D" parent="."]
-position = Vector2(288, 168)
-scale = Vector2(1.3, 1.3)
-texture = ExtResource("2_jdyel")
-
-[node name="Panel" type="Panel" parent="."]
+[node name="Credit" type="Control" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 128.0
-offset_top = 32.0
-offset_right = -128.0
-offset_bottom = -20.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_qqh6l")
 
-[node name="Label" type="Label" parent="Panel"]
+[node name="Salahudin Yusuf" type="Control" parent="Credit"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -14.0
+offset_top = -1.0
+offset_right = -14.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="UiPaper2" type="Sprite2D" parent="Credit/Salahudin Yusuf"]
+position = Vector2(0, 23)
+scale = Vector2(0.79999995, 0.79999995)
+texture = ExtResource("2_smnvh")
+
+[node name="UiPaper" type="Sprite2D" parent="Credit/Salahudin Yusuf"]
+position = Vector2(-7.867813e-06, -10)
+rotation = 0.0017754055
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("4_3hdsx")
+
+[node name="Label2" type="Label" parent="Credit/Salahudin Yusuf"]
+z_index = 1
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -54,35 +75,18 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -144.0
-offset_top = -120.0
+offset_top = -14.0
 offset_right = 144.0
-offset_bottom = -97.0
+offset_bottom = -3.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_fonts/font = ExtResource("3_qqh6l")
-theme_override_font_sizes/font_size = 24
-text = "Credit"
-horizontal_alignment = 1
-
-[node name="Label2" type="Label" parent="Panel"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -144.0
-offset_top = -88.0
-offset_right = 144.0
-offset_bottom = -65.0
-grow_horizontal = 2
-grow_vertical = 2
+theme_override_colors/font_color = Color(0.5686275, 0.45490196, 0.36078432, 1)
 theme_override_fonts/font = ExtResource("3_qqh6l")
 theme_override_font_sizes/font_size = 12
 text = "Salahudin Yusuf"
 horizontal_alignment = 1
 
-[node name="Label3" type="Label" parent="Panel"]
+[node name="Label3" type="Label" parent="Credit/Salahudin Yusuf"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -90,12 +94,12 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -144.0
-offset_top = -72.0
+offset_top = 10.0
 offset_right = 144.0
-offset_bottom = -27.0
+offset_bottom = 55.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_colors/font_color = Color(0.7666196, 0.76661956, 0.76661956, 1)
+theme_override_colors/font_color = Color(0.37254903, 0.39215687, 0.4392157, 1)
 theme_override_fonts/font = ExtResource("3_qqh6l")
 theme_override_font_sizes/font_size = 10
 text = "Game Designer
@@ -103,7 +107,32 @@ Programmer
 Pixel Artist"
 horizontal_alignment = 1
 
-[node name="Label4" type="Label" parent="Panel"]
+[node name="Aldi Alfariz" type="Control" parent="Credit"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -146.99998
+offset_top = -22.0
+offset_right = -146.99998
+offset_bottom = -22.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -0.06981317
+
+[node name="UiPaper2" type="Sprite2D" parent="Credit/Aldi Alfariz"]
+position = Vector2(0.06975192, -0.99756765)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("4_lfft4")
+
+[node name="UiPaper" type="Sprite2D" parent="Credit/Aldi Alfariz"]
+position = Vector2(0, -21)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("4_3hdsx")
+
+[node name="Label4" type="Label" parent="Credit/Aldi Alfariz"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -111,17 +140,18 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -144.0
-offset_top = -32.0
+offset_top = -26.0
 offset_right = 144.0
-offset_bottom = -9.0
+offset_bottom = -3.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_colors/font_color = Color(0.5686275, 0.45490196, 0.36078432, 1)
 theme_override_fonts/font = ExtResource("3_qqh6l")
 theme_override_font_sizes/font_size = 12
 text = "Aldi Alfariz"
 horizontal_alignment = 1
 
-[node name="Label5" type="Label" parent="Panel"]
+[node name="Label5" type="Label" parent="Credit/Aldi Alfariz"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -129,35 +159,61 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -144.0
-offset_top = -16.0
 offset_right = 144.0
-offset_bottom = -3.0
+offset_bottom = 13.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_colors/font_color = Color(0.7666196, 0.76661956, 0.76661956, 1)
+theme_override_colors/font_color = Color(0.37254903, 0.39215687, 0.4392157, 1)
 theme_override_fonts/font = ExtResource("3_qqh6l")
 theme_override_font_sizes/font_size = 10
 text = "Pixel Artist"
 horizontal_alignment = 1
 
-[node name="Label6" type="Label" parent="Panel"]
+[node name="Ahmad Agung Maulana" type="Control" parent="Credit"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -144.0
-offset_right = 144.0
-offset_bottom = 23.0
+offset_left = 121.0
+offset_top = -25.0
+offset_right = 121.0
+offset_bottom = -25.0
 grow_horizontal = 2
 grow_vertical = 2
+rotation = 0.06981317
+
+[node name="UiPaper2" type="Sprite2D" parent="Credit/Ahmad Agung Maulana"]
+position = Vector2(0.069732666, -0.9975586)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("4_lfft4")
+
+[node name="UiPaper" type="Sprite2D" parent="Credit/Ahmad Agung Maulana"]
+position = Vector2(0, -21)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("4_lx1n2")
+
+[node name="Label6" type="Label" parent="Credit/Ahmad Agung Maulana"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -146.0
+offset_top = -24.0
+offset_right = 142.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.5686275, 0.45490196, 0.36078432, 1)
 theme_override_fonts/font = ExtResource("3_qqh6l")
 theme_override_font_sizes/font_size = 12
 text = "Ahmad Agung Maulana"
 horizontal_alignment = 1
 
-[node name="Label7" type="Label" parent="Panel"]
+[node name="Label7" type="Label" parent="Credit/Ahmad Agung Maulana"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -165,36 +221,61 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -144.0
-offset_top = 16.0
 offset_right = 144.0
-offset_bottom = 29.0
+offset_bottom = 13.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_colors/font_color = Color(0.7666196, 0.76661956, 0.76661956, 1)
+theme_override_colors/font_color = Color(0.37254903, 0.39215687, 0.4392157, 1)
 theme_override_fonts/font = ExtResource("3_qqh6l")
 theme_override_font_sizes/font_size = 10
 text = "Pixel Artist"
 horizontal_alignment = 1
 
-[node name="Label8" type="Label" parent="Panel"]
+[node name="Winata Hadi Pratama" type="Control" parent="Credit"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -144.0
-offset_top = 32.0
-offset_right = 144.0
-offset_bottom = 55.0
+offset_left = -140.0
+offset_top = 63.0
+offset_right = -140.0
+offset_bottom = 63.0
 grow_horizontal = 2
 grow_vertical = 2
+rotation = -0.06981317
+
+[node name="UiPaper2" type="Sprite2D" parent="Credit/Winata Hadi Pratama"]
+position = Vector2(0.06976318, -0.9975586)
+scale = Vector2(0.79999995, 0.79999995)
+texture = ExtResource("4_lfft4")
+
+[node name="UiPaper" type="Sprite2D" parent="Credit/Winata Hadi Pratama"]
+position = Vector2(0, -21)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("3_21x4v")
+
+[node name="Label8" type="Label" parent="Credit/Winata Hadi Pratama"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -146.0
+offset_top = -26.0
+offset_right = 142.0
+offset_bottom = -3.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.5686275, 0.45490196, 0.36078432, 1)
 theme_override_fonts/font = ExtResource("3_qqh6l")
 theme_override_font_sizes/font_size = 12
 text = "Winata Hadi Pratama"
 horizontal_alignment = 1
 
-[node name="Label9" type="Label" parent="Panel"]
+[node name="Label9" type="Label" parent="Credit/Winata Hadi Pratama"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -202,36 +283,61 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -144.0
-offset_top = 48.0
 offset_right = 144.0
-offset_bottom = 61.0
+offset_bottom = 13.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_colors/font_color = Color(0.7666196, 0.76661956, 0.76661956, 1)
+theme_override_colors/font_color = Color(0.37254903, 0.39215687, 0.4392157, 1)
 theme_override_fonts/font = ExtResource("3_qqh6l")
 theme_override_font_sizes/font_size = 10
 text = "Programmer"
 horizontal_alignment = 1
 
-[node name="Label10" type="Label" parent="Panel"]
+[node name="Surya Hadini Subagja" type="Control" parent="Credit"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -144.0
-offset_top = 64.0
-offset_right = 144.0
-offset_bottom = 87.0
+offset_left = 118.0
+offset_top = 65.0
+offset_right = 118.0
+offset_bottom = 65.0
 grow_horizontal = 2
 grow_vertical = 2
+rotation = 0.06981317
+
+[node name="UiPaper2" type="Sprite2D" parent="Credit/Surya Hadini Subagja"]
+position = Vector2(0.06976318, -0.99757385)
+scale = Vector2(0.79999995, 0.79999995)
+texture = ExtResource("4_lfft4")
+
+[node name="UiPaper" type="Sprite2D" parent="Credit/Surya Hadini Subagja"]
+position = Vector2(0, -21)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("4_lx1n2")
+
+[node name="Label10" type="Label" parent="Credit/Surya Hadini Subagja"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -145.0
+offset_top = -25.0
+offset_right = 143.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.5686275, 0.45490196, 0.36078432, 1)
 theme_override_fonts/font = ExtResource("3_qqh6l")
 theme_override_font_sizes/font_size = 12
 text = "Surya Hadini Subagja"
 horizontal_alignment = 1
 
-[node name="Label11" type="Label" parent="Panel"]
+[node name="Label11" type="Label" parent="Credit/Surya Hadini Subagja"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -239,18 +345,41 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -144.0
-offset_top = 80.0
 offset_right = 144.0
-offset_bottom = 93.0
+offset_bottom = 13.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_colors/font_color = Color(0.7666196, 0.76661956, 0.76661956, 1)
+theme_override_colors/font_color = Color(0.37254903, 0.39215687, 0.4392157, 1)
 theme_override_fonts/font = ExtResource("3_qqh6l")
 theme_override_font_sizes/font_size = 10
 text = "Programmer"
 horizontal_alignment = 1
 
-[node name="Label12" type="Label" parent="Panel"]
+[node name="Naufal Avrilzal Irawan" type="Control" parent="Credit"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -13.0
+offset_top = 113.0
+offset_right = -13.0
+offset_bottom = 113.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="UiPaper2" type="Sprite2D" parent="Credit/Naufal Avrilzal Irawan"]
+position = Vector2(0.06976318, -0.9975586)
+scale = Vector2(0.79999995, 0.79999995)
+texture = ExtResource("4_lfft4")
+
+[node name="UiPaper" type="Sprite2D" parent="Credit/Naufal Avrilzal Irawan"]
+position = Vector2(0, -21)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("5_8pv8m")
+
+[node name="Label12" type="Label" parent="Credit/Naufal Avrilzal Irawan"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -258,17 +387,18 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -144.0
-offset_top = 96.0
+offset_top = -25.0
 offset_right = 144.0
-offset_bottom = 119.0
+offset_bottom = -2.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_colors/font_color = Color(0.5686275, 0.45490196, 0.36078432, 1)
 theme_override_fonts/font = ExtResource("3_qqh6l")
 theme_override_font_sizes/font_size = 12
 text = "Naufal Avrilzal Irawan"
 horizontal_alignment = 1
 
-[node name="Label13" type="Label" parent="Panel"]
+[node name="Label13" type="Label" parent="Credit/Naufal Avrilzal Irawan"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -276,12 +406,11 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -144.0
-offset_top = 112.0
 offset_right = 144.0
-offset_bottom = 125.0
+offset_bottom = 13.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_colors/font_color = Color(0.7666196, 0.76661956, 0.76661956, 1)
+theme_override_colors/font_color = Color(0.37254903, 0.39215687, 0.4392157, 1)
 theme_override_fonts/font = ExtResource("3_qqh6l")
 theme_override_font_sizes/font_size = 10
 text = "Sound Composer"
@@ -292,13 +421,15 @@ layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_left = 16.0
-offset_top = -44.0
-offset_right = 120.0
-offset_bottom = -13.0
+offset_left = 80.0
+offset_top = -63.0
+offset_right = 171.0
+offset_bottom = -30.0
 grow_vertical = 0
 focus_mode = 0
-theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0.37254903, 0.39215687, 0.4392157, 1)
+theme_override_colors/font_pressed_color = Color(0.9490196, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0.9490196, 1, 1, 1)
 theme_override_fonts/font = ExtResource("3_qqh6l")
 theme_override_styles/normal = ExtResource("5_hktpy")
 theme_override_styles/pressed = ExtResource("6_cqi0y")
@@ -316,6 +447,78 @@ position = Vector2(-128, -128)
 
 [node name="CursorNormal" parent="Cursor" instance=ExtResource("10_21x4v")]
 position = Vector2(288, 168)
+
+[node name="Sprite" type="Node2D" parent="."]
+
+[node name="Background" type="Sprite2D" parent="Sprite"]
+z_index = -1
+position = Vector2(288, 165)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("10_cqxlb")
+
+[node name="Background2" type="Sprite2D" parent="Sprite"]
+z_index = -1
+position = Vector2(-274, 165)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("10_cqxlb")
+
+[node name="Background3" type="Sprite2D" parent="Sprite"]
+z_index = -1
+position = Vector2(850, 165)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("10_cqxlb")
+
+[node name="UiCredit" type="Sprite2D" parent="Sprite"]
+position = Vector2(272, 64)
+texture = ExtResource("10_3hdsx")
+
+[node name="BoardItemMiniPaper4Ripped" type="Sprite2D" parent="."]
+position = Vector2(93, 61)
+texture = ExtResource("18_yrsep")
+
+[node name="BoardItemMiniPaper3" type="Sprite2D" parent="."]
+position = Vector2(275.5, 105)
+texture = ExtResource("17_woyrx")
+
+[node name="BoardItemMiniPaper7" type="Sprite2D" parent="."]
+position = Vector2(410, 176)
+texture = ExtResource("16_hlfgu")
+
+[node name="BoardItemMiniPaper10" type="Sprite2D" parent="."]
+position = Vector2(462, 282)
+texture = ExtResource("16_hlfgu")
+
+[node name="BoardItemMiniPaper8" type="Sprite2D" parent="."]
+position = Vector2(273, 228)
+texture = ExtResource("16_hlfgu")
+
+[node name="BoardItemMiniPaper1" type="Sprite2D" parent="."]
+position = Vector2(403, 72)
+texture = ExtResource("13_lfft4")
+
+[node name="BoardItemMiniPaper2" type="Sprite2D" parent="."]
+position = Vector2(407, 271)
+texture = ExtResource("21_mnpla")
+
+[node name="BoardItemMiniPaper4" type="Sprite2D" parent="."]
+position = Vector2(149, 174)
+texture = ExtResource("16_hlfgu")
+
+[node name="BoardItemMiniPaper5" type="Sprite2D" parent="."]
+position = Vector2(232.5, 119)
+texture = ExtResource("16_hlfgu")
+
+[node name="BoardItemMiniPaper6" type="Sprite2D" parent="."]
+position = Vector2(313.5, 120)
+texture = ExtResource("16_hlfgu")
+
+[node name="BoardItemFoxRipped" type="Sprite2D" parent="."]
+position = Vector2(147, 70)
+texture = ExtResource("20_yrsep")
+
+[node name="BoardItemMiniPaper9" type="Sprite2D" parent="."]
+position = Vector2(461, 51)
+texture = ExtResource("22_rata4")
 
 [connection signal="button_down" from="Back" to="." method="_on_back_button_down"]
 [connection signal="mouse_entered" from="Back" to="." method="_on_back_mouse_entered"]

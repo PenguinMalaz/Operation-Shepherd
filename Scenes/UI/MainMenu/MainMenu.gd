@@ -14,6 +14,10 @@ func _on_play_pressed() -> void:
 	fade.fade("res://Scenes/Levels/LevelSelection.tscn")
 	SoundEffect.pressed()
 
+func _on_setting_pressed() -> void:
+	fade.fade("res://Scenes/UI/Menus/options_menu.tscn")
+	SoundEffect.pressed()
+
 ## Credit button Pressed
 func _on_credits_pressed() -> void:
 	fade.fade("res://Scenes/Credits/Credits.tscn")
@@ -34,4 +38,7 @@ func _on_credits_mouse_entered() -> void:
 
 ## Quit button Hover
 func _on_quit_mouse_entered() -> void:
+	SoundEffect.hover()
+
+func _on_setting_mouse_entered() -> void:
 	SoundEffect.hover()

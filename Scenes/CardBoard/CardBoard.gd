@@ -15,6 +15,10 @@ signal Domba
 # Menentukan agar serigala tidak lebih dari total kartu
 var total_kartu: int = 5
 
+var elimination: bool = false
+
+var is_level_complete: bool = false
+
 # Akses semua Node Kartu menggunakan onready
 # Deck 1 berisi 5 kartu
 @onready var deck_1: Array = [
@@ -47,7 +51,8 @@ var total_kartu: int = 5
 @onready var cursor_magnifying_glass: Sprite2D = $"Cursor/Magnifying Glass"
 # Node cursor normal
 @onready var cursor_normal: Sprite2D = $Cursor/CursorNormal
-
+# Node cursor crosshair
+@onready var cursor_crosshair: Sprite2D = $Cursor/CursorCrosshair
 
 # Menyimpan id dari setiap card
 var deck_kartu: Array = []
@@ -58,11 +63,9 @@ var current_deck: Array = []
 const ID_DOMBA = Card.IdCard.DOMBA
 # Id serigala
 const ID_SERIGALA = Card.IdCard.SERIGALA
-# Array yang menampung SEMUA nama objek (untuk diacak)
-#const NAMA_OBJEK: Array = ["Pensil", "Penghapus", "Kertas", "Pengserut", "Pulpen"]
 
 func _ready() -> void:
-	randomize() 
+	randomize()
 	
 	# Memastikan jumlah_serigala tidak melebihi batas (walaupun @export_range sudah membatasinya di editor)
 	jumlah_serigala = clamp(jumlah_serigala, 1, total_kartu)
@@ -77,14 +80,54 @@ func _ready() -> void:
 	
 	# Menetapkan card id object
 	card_object.current_object = object_penentu
+	
+	magnifying_glass.connect("elimination_active", play_animation_elimination_mode)
 
 func _process(_delta: float) -> void:
-	if magnifying_glass.investigation_active:
-		cursor_magnifying_glass.visible = true
-		cursor_normal.visible = false
-	else:
-		cursor_magnifying_glass.visible = false
-		cursor_normal.visible = true
+	# Mode eliminasi aktif
+	if magnifying_glass.elimination:
+		for card: Card in current_deck:
+			# Kartu yang tidak dicurigai
+			if !card.suspect:
+				card.button.disabled = true
+				card.is_mouse_can_entered = true
+				card.sprite.self_modulate = Color(0.577, 0.577, 0.577, 1.0)
+			# Kartu yang dicurigai
+			else:
+				card.sprite.self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+				card.magnifying_glass_sprite.visible = false
+				card.loop.pause()
+		# TODO nanti ubah jadi cursor senapan
+		if !is_level_complete:
+			cursor_magnifying_glass.visible = false
+			cursor_normal.visible = false
+			cursor_crosshair.visible = true
+		else:
+			cursor_magnifying_glass.visible = false
+			cursor_normal.visible = true
+			cursor_crosshair.visible = false
+	else: # Mode eliminasi non-aktif
+		for card: Card in current_deck:
+			# Kartu yang tidak dicurigai
+			if !card.suspect:
+				card.button.disabled = false
+				card.is_mouse_can_entered = false
+				card.sprite.self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+			# Kartu yang dicurigai
+			else:
+				card.magnifying_glass_sprite.visible = true
+				card.sprite.self_modulate = Color(0.577, 0.577, 0.577, 1.0)
+				card.loop.play("loop")
+			card.elimination_mode.stop()
+		# Mengubah cursor saat investigasi aktif dan non-aktif
+		if magnifying_glass.investigation_active:
+			cursor_magnifying_glass.visible = true
+			cursor_normal.visible = false
+			cursor_crosshair.visible = false
+		else:
+			cursor_magnifying_glass.visible = false
+			cursor_normal.visible = true
+			cursor_crosshair.visible = false
 
 ## Untuk menerapkan deck mana yang dipilih
 func terapkan_deck(deck: Array, jml_kartu: int, deck_1_visible: bool,deck_2_visible: bool) -> void:
@@ -94,15 +137,46 @@ func terapkan_deck(deck: Array, jml_kartu: int, deck_1_visible: bool,deck_2_visi
 	total_kartu = jml_kartu
 	for card: Card in deck:
 		card.connect("card_clicked", _on_card_clicked)
+		card.connect("card_hover_entered", _on_card_hover_entered)
+		card.connect("card_hover_exited", _on_card_hover_exited)
+
+func play_animation_elimination_mode() -> void:
+	if magnifying_glass.elimination:
+		for card: Card in current_deck:
+			if card.suspect:
+				card.elimination_mode.play("elimination_mode")
+
+## Penanganan saat kursor masuk ke kartu
+func _on_card_hover_entered(_card_node: Card) -> void:
+	# Asumsikan properti ini mengontrol kursor melalui _process() di CardBoard
+	magnifying_glass.investigation_active = true
+
+## Penanganan saat kursor keluar dari kartu
+func _on_card_hover_exited() -> void:
+	magnifying_glass.investigation_active = false
 
 ## Untuk mengeliminasi kartu
 func _on_card_clicked(card: Card) -> void:
 	if magnifying_glass.investigation_active and card.card_flipped:
-		periksa_kartu(card.id_card)
-		card.button_disabled = true
-		card.eliminated.play("eliminated")
-		SoundEffect.glasss()
-		
+		if card.suspect:
+			SoundEffect.glass_double_deselect()
+			if magnifying_glass.elimination:
+				periksa_kartu(card.id_card)
+				card.button_disabled = true
+				card.dialogue_box_fade.play_backwards("fade")
+				cursor_magnifying_glass.visible = false
+				cursor_normal.visible = true
+				card.elimination_mode.stop()
+				SoundEffect.shoot()
+			
+			card.suspect = false
+			card.suspect_anim.play_backwards("suspect")
+			card.sprite.self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+		else:
+			card.suspect_anim.play("suspect")
+			card.suspect = true
+			SoundEffect.glasss()
+			card.sprite.self_modulate = Color(0.577, 0.577, 0.577, 1.0)
 
 ## Memeriksa id kartu
 func periksa_kartu(kartu_id: Card.IdCard) -> void:

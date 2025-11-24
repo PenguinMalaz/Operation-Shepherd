@@ -1,58 +1,46 @@
-[gd_scene load_steps=19 format=3 uid="uid://cljtijri10fg8"]
+[gd_scene load_steps=20 format=3 uid="uid://cljtijri10fg8"]
 
 [ext_resource type="Script" uid="uid://d1hgtpjvdkgec" path="res://Scenes/Cards/Card.gd" id="1_ntgjb"]
 [ext_resource type="Texture2D" uid="uid://dy34stskx411p" path="res://Asset/Sprite/Cards/Belakang kartu.png" id="2_yh81d"]
-[ext_resource type="AudioStream" uid="uid://xxxrxcm2rk6i" path="res://Asset/Sound/Sound Effect/Pop.wav" id="4_7mr5f"]
-[ext_resource type="AudioStream" uid="uid://4v6c14lhpl1u" path="res://Asset/Sound/Sound Effect/Card Flip.wav" id="4_rd7hj"]
+[ext_resource type="Texture2D" uid="uid://5s1ulyjet1v4" path="res://Asset/Sprite/Cards/ShadowCard.png" id="3_yh81d"]
 [ext_resource type="Texture2D" uid="uid://btxmafg4ni1gj" path="res://Asset/Sprite/Cards/Domba.png" id="4_yh81d"]
 [ext_resource type="PackedScene" uid="uid://dn34f0hfsnj83" path="res://Scenes/UI/dialogue_box.tscn" id="6_3yyhe"]
 [ext_resource type="Texture2D" uid="uid://dr1ypteml0iud" path="res://Asset/Sprite/UI/Kaca pembesar.png" id="7_yh81d"]
 
 [sub_resource type="Animation" id="Animation_ntgjb"]
 resource_name = "Flip"
+length = 0.3667
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Audio/CardFlip:playing")
+tracks/0/path = NodePath("Button/Sprite:scale")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
+"times": PackedFloat32Array(0, 0.1667, 0.3667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0, 1.2), Vector2(1, 1)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Button/Sprite:scale")
+tracks/1/path = NodePath("Button/Sprite:texture")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.1667, 0.3667),
+"times": PackedFloat32Array(0, 0.16666667, 0.1667),
 "transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(1, 1), Vector2(0, 1.2), Vector2(1.1, 1.1)]
+"update": 1,
+"values": [ExtResource("2_yh81d"), ExtResource("2_yh81d"), ExtResource("4_yh81d")]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Button/Sprite:texture")
+tracks/2/path = NodePath(".:card_flipped")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.1667),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [ExtResource("2_yh81d"), ExtResource("4_yh81d")]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath(".:card_flipped")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
 "times": PackedFloat32Array(0, 0.05),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
@@ -73,6 +61,30 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Button/Sprite:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Button/Sprite:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_yh81d")]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_58ae4"]
@@ -183,12 +195,12 @@ _data = {
 }
 
 [sub_resource type="Animation" id="Animation_vvixk"]
-resource_name = "eliminated"
+resource_name = "suspect"
 length = 0.1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:scale")
+tracks/0/path = NodePath("Button/Sprite/Sprite2D:scale")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -200,7 +212,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite2D:modulate")
+tracks/1/path = NodePath("Button/Sprite/Sprite2D:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -212,7 +224,28 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_cmvdk"]
 _data = {
-&"eliminated": SubResource("Animation_vvixk")
+&"suspect": SubResource("Animation_vvixk")
+}
+
+[sub_resource type="Animation" id="Animation_cmvdk"]
+resource_name = "elimination_mode"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Button/Sprite:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.1, 1.1), Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_73hkj"]
+_data = {
+&"elimination_mode": SubResource("Animation_cmvdk")
 }
 
 [node name="Card" type="Node2D"]
@@ -239,6 +272,16 @@ flat = true
 position = Vector2(24, 34)
 texture = ExtResource("2_yh81d")
 
+[node name="Shadow" type="Sprite2D" parent="Button/Sprite"]
+z_index = -1
+position = Vector2(-1.6666666, 1.6666666)
+texture = ExtResource("3_yh81d")
+
+[node name="Sprite2D" type="Sprite2D" parent="Button/Sprite"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(0, 6.6666665)
+texture = ExtResource("7_yh81d")
+
 [node name="DialogueBox" parent="." instance=ExtResource("6_3yyhe")]
 modulate = Color(1, 1, 1, 0)
 z_index = 100
@@ -249,11 +292,7 @@ offset_right = 128.0
 offset_bottom = -40.0
 scale = Vector2(0.5, 0.5)
 pivot_offset = Vector2(128, 48)
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-modulate = Color(1, 1, 1, 0)
-position = Vector2(0, 8)
-texture = ExtResource("7_yh81d")
+mouse_filter = 2
 
 [node name="Animations" type="Node" parent="."]
 
@@ -275,21 +314,16 @@ libraries = {
 &"": SubResource("AnimationLibrary_nilbr")
 }
 
-[node name="Eliminated" type="AnimationPlayer" parent="Animations"]
+[node name="Suspect" type="AnimationPlayer" parent="Animations"]
 root_node = NodePath("../..")
 libraries = {
 &"": SubResource("AnimationLibrary_cmvdk")
 }
 
-[node name="Audio" type="Node" parent="."]
-
-[node name="CardFlip" type="AudioStreamPlayer" parent="Audio"]
-stream = ExtResource("4_rd7hj")
-volume_db = 15.0
-
-[node name="CardHover" type="AudioStreamPlayer" parent="Audio"]
-stream = ExtResource("4_7mr5f")
-volume_db = 5.0
+[node name="EliminationMode" type="AnimationPlayer" parent="Animations"]
+libraries = {
+&"": SubResource("AnimationLibrary_73hkj")
+}
 
 [connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
 [connection signal="mouse_entered" from="Button" to="." method="_on_button_mouse_entered"]
