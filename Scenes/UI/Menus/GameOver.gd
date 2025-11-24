@@ -6,18 +6,17 @@ var predators_left: int = 0
 var total_predators: int = 0
 
 # Node text dari score
-@onready var game_over_score_label: RichTextLabel = $"GameOver/Predator left"/Panel/RichTextLabel
-
+@onready var game_over_score_label: RichTextLabel = $"GameOver/Predator left"/RichTextLabel
 
 func _process(_delta: float) -> void:
 	display_text()
 
 func display_text() -> void:
-	var color_red: String = "#b35054"
+	var color_red: String = "#bd726f"
 	
-	var format_string: String = "Predators found\t : [color=" + color_red + "]%d[/color]\n"
-	format_string += "Predators left: [color=" + color_red + "]%d[/color]\n"
-	format_string += "Total predators: [color=" + color_red + "]%d[/color]"
+	var format_string: String = "Predators found\t: [color=" + color_red + "]%d[/color]\n"
+	format_string += "Predators left  : [color=" + color_red + "]%d[/color]\n"
+	format_string += "Total predators : [color=" + color_red + "]%d[/color]"
 	
 	game_over_score_label.text = format_string % [
 		predators_found,
@@ -33,7 +32,7 @@ func _on_level_selection_btn_pressed() -> void:
 
 ## Ketika tombol restart ditekan
 func _on_restart_btn_pressed() -> void:
-	get_tree().reload_current_scene()
+	$Fade.fade_reload_current_scene()
 	SoundEffect.pressed()
 	timer_hold()
 

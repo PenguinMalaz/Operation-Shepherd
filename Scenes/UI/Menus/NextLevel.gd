@@ -13,7 +13,7 @@ var go_to_next_level: String = ""
 		update_score_display()
 
 # Label text di next level
-@onready var Stats: RichTextLabel = $NextLevel/StatPanel/Panel/Stats
+@onready var Stats: RichTextLabel = $NextLevel/StatPanel/UiBox/Stats
 
 @onready var fade: CanvasLayer = $Fade
 
@@ -27,7 +27,7 @@ func update_score_display() -> void:
 	if not is_instance_valid(Stats):
 		return
 
-	var color_red: String = "#b35054"
+	var color_red: String = "#bd726f"
 
 	# Menggunakan BBCode untuk mengatur warna
 	var text: String = ""

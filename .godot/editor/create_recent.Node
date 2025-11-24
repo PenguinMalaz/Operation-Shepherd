@@ -1,11 +1,11 @@
+Node2D
+Sprite2D
 AnimatedSprite2D
 Control
 Label
 HSlider
 CenterContainer
-Sprite2D
 AnimationPlayer
-Node2D
 Node
 CanvasLayer
 AudioStreamPlayer

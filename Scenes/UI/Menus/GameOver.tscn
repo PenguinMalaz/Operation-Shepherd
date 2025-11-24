@@ -1,42 +1,45 @@
-[gd_scene load_steps=16 format=3 uid="uid://bcicsfokqyoh5"]
+[gd_scene load_steps=25 format=3 uid="uid://bcicsfokqyoh5"]
 
 [ext_resource type="Script" uid="uid://bndwlogy1oa3a" path="res://Scenes/UI/Menus/GameOver.gd" id="1_6et0x"]
-[ext_resource type="Texture2D" uid="uid://bsmh7nd8lndh" path="res://Asset/Sprite/Textures/PanelTexture.png" id="1_b5w5t"]
 [ext_resource type="FontFile" uid="uid://b4lfqjm4wfgf2" path="res://Asset/Font/VCR_OSD_MONO_1.001.ttf" id="2_cyj2c"]
+[ext_resource type="Texture2D" uid="uid://cj0ct1hg80h78" path="res://Asset/Sprite/UI/board.png" id="2_gsc5i"]
+[ext_resource type="Texture2D" uid="uid://bp1p26gmkaao3" path="res://Asset/Sprite/UI/UI-box.png" id="3_6et0x"]
 [ext_resource type="Texture2D" uid="uid://bey3bmgu1f0g1" path="res://Asset/Sprite/Textures/Button/Button Normal.png" id="4_6et0x"]
 [ext_resource type="Texture2D" uid="uid://v5ves4bof83b" path="res://Asset/Sprite/Textures/Button/Button Pressed.png" id="5_gsc5i"]
 [ext_resource type="Texture2D" uid="uid://dyf18hbi8huom" path="res://Asset/Sprite/Textures/Button/Button Hover.png" id="6_y46o5"]
 [ext_resource type="PackedScene" uid="uid://cac7sq4vlj501" path="res://Scenes/Fade/fade.tscn" id="8_gsc5i"]
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gsc5i"]
-texture = ExtResource("1_b5w5t")
-texture_margin_left = 6.0
-texture_margin_top = 6.0
-texture_margin_right = 6.0
-texture_margin_bottom = 6.0
-region_rect = Rect2(0, 0, 32, 32)
+[ext_resource type="Texture2D" uid="uid://caqj3fru6k1gb" path="res://Asset/Sprite/Level Selection/pin.png" id="9_3od3v"]
+[ext_resource type="Texture2D" uid="uid://cwrsbbc85dcmc" path="res://Asset/Sprite/UI/UI-PaperLong.png" id="9_y46o5"]
+[ext_resource type="Texture2D" uid="uid://bhp2dsd8bsisv" path="res://Asset/Sprite/Level Selection/Decoration/board-item-dog-game-over.png" id="10_70p1l"]
+[ext_resource type="Texture2D" uid="uid://c0jj1xyutpn85" path="res://Asset/Sprite/Level Selection/Decoration/board-item-mini-paper1.png" id="11_a5wjq"]
+[ext_resource type="Texture2D" uid="uid://cxhjpxsxadx4h" path="res://Asset/Sprite/Level Selection/Decoration/board-item-mini-paper2.png" id="12_iaemj"]
+[ext_resource type="Texture2D" uid="uid://cqf831542cbmv" path="res://Asset/Sprite/Level Selection/Decoration/board-item-mini-paper4.png" id="13_bcv3d"]
+[ext_resource type="Texture2D" uid="uid://de7j1qxsluvlx" path="res://Asset/Sprite/Level Selection/Decoration/board-item-win_.png" id="14_70p1l"]
+[ext_resource type="Texture2D" uid="uid://deefwpqiqwadc" path="res://Asset/Sprite/Level Selection/Decoration/board-item-mini-paper5.png" id="15_x408m"]
+[ext_resource type="Texture2D" uid="uid://cet8dvp25t12u" path="res://Asset/Sprite/Level Selection/Decoration/board-item-mini-paper3.png" id="16_wcr6s"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_y46o5"]
 texture = ExtResource("4_6et0x")
-texture_margin_left = 5.0
-texture_margin_top = 7.0
-texture_margin_right = 5.0
+texture_margin_left = 7.0
+texture_margin_top = 9.0
+texture_margin_right = 6.0
 texture_margin_bottom = 9.0
-region_rect = Rect2(0, 0, 32, 32)
+region_rect = Rect2(0, 0, 34, 34)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3od3v"]
 texture = ExtResource("5_gsc5i")
-texture_margin_left = 5.0
+texture_margin_left = 7.0
 texture_margin_top = 10.0
-texture_margin_right = 5.0
-texture_margin_bottom = 6.0
+texture_margin_right = 6.0
+texture_margin_bottom = 8.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_omkwh"]
 texture = ExtResource("6_y46o5")
-texture_margin_left = 5.0
-texture_margin_top = 7.0
-texture_margin_right = 5.0
+texture_margin_left = 7.0
+texture_margin_top = 9.0
+texture_margin_right = 6.0
 texture_margin_bottom = 9.0
+region_rect = Rect2(0, 0, 34, 34)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qv44x"]
 
@@ -76,6 +79,17 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
+[node name="Sprite2D" type="Sprite2D" parent="GameOver"]
+position = Vector2(294, 164)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("2_gsc5i")
+
+[node name="UiPaperLong" type="Sprite2D" parent="GameOver"]
+position = Vector2(284, 79)
+rotation = -0.02508752
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("9_y46o5")
+
 [node name="BG" type="ColorRect" parent="GameOver"]
 z_index = -1
 layout_mode = 1
@@ -84,7 +98,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 0, 0, 0.68235296)
+color = Color(0, 0, 0, 0.78431374)
 
 [node name="RichTextLabel" type="RichTextLabel" parent="GameOver"]
 layout_mode = 1
@@ -93,14 +107,16 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -115.5
-offset_top = -105.520004
-offset_right = 115.5
-offset_bottom = -24.519897
+offset_left = -116.0
+offset_top = -119.0
+offset_right = 115.0
+offset_bottom = -37.999893
 grow_horizontal = 2
 grow_vertical = 2
+rotation = -0.046344694
 size_flags_horizontal = 4
 size_flags_vertical = 4
+theme_override_colors/default_color = Color(0.7019608, 0.3137255, 0.32941177, 1)
 theme_override_fonts/normal_font = ExtResource("2_cyj2c")
 theme_override_font_sizes/normal_font_size = 40
 bbcode_enabled = true
@@ -115,45 +131,44 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -114.5
-offset_top = -23.375
-offset_right = 114.5
-offset_bottom = 23.375
+offset_left = -114.0
+offset_top = -29.0
+offset_right = 115.0
+offset_bottom = 17.75
 grow_horizontal = 2
 grow_vertical = 2
+rotation = -0.00886624
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="Panel" type="Panel" parent="GameOver/Predator left"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = -2.5
-offset_bottom = 2.5
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_gsc5i")
+[node name="UiBox" type="Sprite2D" parent="GameOver/Predator left"]
+position = Vector2(114.5, 29.375)
+texture = ExtResource("3_6et0x")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="GameOver/Predator left/Panel"]
+[node name="Pin" type="Sprite2D" parent="GameOver/Predator left"]
+position = Vector2(116, -14)
+texture = ExtResource("9_3od3v")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="GameOver/Predator left"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 7.0
-offset_top = 4.0
-offset_right = 138.83331
-offset_bottom = 28.708344
+offset_left = 37.999996
+offset_top = 0.8549986
+offset_right = 60.666687
+offset_bottom = 97.43831
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.6, 0.6)
-theme_override_constants/paragraph_separation = 10
+theme_override_colors/default_color = Color(0.9490196, 1, 1, 1)
+theme_override_constants/paragraph_separation = 25
 theme_override_fonts/normal_font = ExtResource("2_cyj2c")
 bbcode_enabled = true
 text = "Predators found : 0
 Predators left : 0
 Total predators : 0"
-vertical_alignment = 1
+horizontal_alignment = 1
 
 [node name="ActionButtons" type="Control" parent="GameOver"]
 layout_mode = 1
@@ -162,10 +177,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -68.5
-offset_top = 43.0
-offset_right = 68.5
-offset_bottom = 72.96002
+offset_left = -68.0
+offset_top = 30.520004
+offset_right = 69.0
+offset_bottom = 100.52002
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -176,10 +191,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -104.0
-offset_top = 20.019993
-offset_right = 104.0
-offset_bottom = 48.019993
+offset_left = -80.5
+offset_top = 18.47998
+offset_right = 80.5
+offset_bottom = 47.47998
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0.37254903, 0.39215687, 0.4392157, 1)
@@ -201,10 +216,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -104.0
-offset_top = -19.980007
-offset_right = 104.0
-offset_bottom = 8.019993
+offset_left = -80.5
+offset_top = -14.5
+offset_right = 80.5
+offset_bottom = 14.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0.37254903, 0.39215687, 0.4392157, 1)
@@ -218,6 +233,41 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_omkwh")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_qv44x")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_ewbbc")
 text = "Restart"
+
+[node name="Sprite" type="Node2D" parent="GameOver"]
+position = Vector2(0, -4)
+
+[node name="BoardItemDog" type="Sprite2D" parent="GameOver/Sprite"]
+position = Vector2(150, 139)
+texture = ExtResource("10_70p1l")
+
+[node name="BoardItemMiniPaper1" type="Sprite2D" parent="GameOver/Sprite"]
+position = Vector2(158, 195)
+texture = ExtResource("11_a5wjq")
+
+[node name="BoardItemMiniPaper2" type="Sprite2D" parent="GameOver/Sprite"]
+position = Vector2(137, 242)
+texture = ExtResource("12_iaemj")
+
+[node name="BoardItemMiniPaper6" type="Sprite2D" parent="GameOver/Sprite"]
+position = Vector2(419, 127)
+texture = ExtResource("12_iaemj")
+
+[node name="BoardItemMiniPaper4" type="Sprite2D" parent="GameOver/Sprite"]
+position = Vector2(181, 265)
+texture = ExtResource("13_bcv3d")
+
+[node name="BoardItemFox" type="Sprite2D" parent="GameOver/Sprite"]
+position = Vector2(426, 239)
+texture = ExtResource("14_70p1l")
+
+[node name="BoardItemMiniPaper5" type="Sprite2D" parent="GameOver/Sprite"]
+position = Vector2(412, 191)
+texture = ExtResource("15_x408m")
+
+[node name="BoardItemMiniPaper3" type="Sprite2D" parent="GameOver/Sprite"]
+position = Vector2(451, 155)
+texture = ExtResource("16_wcr6s")
 
 [node name="Fade" parent="." instance=ExtResource("8_gsc5i")]
 

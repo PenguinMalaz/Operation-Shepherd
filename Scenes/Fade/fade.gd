@@ -2,6 +2,7 @@ extends CanvasLayer
 
 var SceneString: String = ""
 var play: bool = false
+var reload_current_scene: bool = false
 
 var normal_fade: bool = false
 var visible_canvas: bool = false
@@ -19,6 +20,10 @@ func _on_animation_player_animation_finished(_anim_name: StringName) -> void:
 		var _c: Error
 		_c = get_tree().change_scene_to_file(SceneString)
 		play = false
+	
+	if reload_current_scene:
+		get_tree().reload_current_scene()
+		reload_current_scene = false
 
 func fade(Scene : StringName) -> void:
 	$AnimationPlayer.play_backwards("fade")
@@ -28,3 +33,7 @@ func fade(Scene : StringName) -> void:
 func fade_normal() -> void:
 	$AnimationPlayer.play_backwards("fade")
 	normal_fade = true
+
+func fade_reload_current_scene() -> void:
+	$AnimationPlayer.play_backwards("fade")
+	reload_current_scene = true

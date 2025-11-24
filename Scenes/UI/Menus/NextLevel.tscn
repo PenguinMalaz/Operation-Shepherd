@@ -1,20 +1,21 @@
-[gd_scene load_steps=13 format=3 uid="uid://b1nsbqfdtiaqf"]
+[gd_scene load_steps=21 format=3 uid="uid://b1nsbqfdtiaqf"]
 
+[ext_resource type="Texture2D" uid="uid://cj0ct1hg80h78" path="res://Asset/Sprite/UI/board.png" id="2_x45r7"]
 [ext_resource type="Script" uid="uid://cm5tee6eqkyoj" path="res://Scenes/UI/Menus/NextLevel.gd" id="2_y3kif"]
+[ext_resource type="Texture2D" uid="uid://cwrsbbc85dcmc" path="res://Asset/Sprite/UI/UI-PaperLong.png" id="3_d45qr"]
 [ext_resource type="FontFile" uid="uid://b4lfqjm4wfgf2" path="res://Asset/Font/VCR_OSD_MONO_1.001.ttf" id="3_x45r7"]
-[ext_resource type="Texture2D" uid="uid://bsmh7nd8lndh" path="res://Asset/Sprite/Textures/PanelTexture.png" id="4_d45qr"]
 [ext_resource type="StyleBox" uid="uid://bxxuvw3u47hhj" path="res://Resources/Texture/Button/ButtonNormal.tres" id="5_6hbgh"]
+[ext_resource type="Texture2D" uid="uid://gncfwsrbkjqx" path="res://Asset/Sprite/UI/UI-box-complete.png" id="5_y3kif"]
 [ext_resource type="StyleBox" uid="uid://b1415tteok2jy" path="res://Resources/Texture/Button/ButtonPressed.tres" id="6_y3kif"]
 [ext_resource type="StyleBox" uid="uid://do5xtbv76wo0b" path="res://Resources/Texture/Button/ButtonHover.tres" id="7_x45r7"]
+[ext_resource type="Texture2D" uid="uid://nn5gdbra1341" path="res://Asset/Sprite/Level Selection/Decoration/board-item-dog.png" id="9_5qd4i"]
 [ext_resource type="PackedScene" uid="uid://cac7sq4vlj501" path="res://Scenes/Fade/fade.tscn" id="9_y3kif"]
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_y3kif"]
-texture = ExtResource("4_d45qr")
-texture_margin_left = 6.0
-texture_margin_top = 6.0
-texture_margin_right = 6.0
-texture_margin_bottom = 6.0
-region_rect = Rect2(0, 0, 32, 32)
+[ext_resource type="Texture2D" uid="uid://c0jj1xyutpn85" path="res://Asset/Sprite/Level Selection/Decoration/board-item-mini-paper1.png" id="10_2uqrm"]
+[ext_resource type="Texture2D" uid="uid://cxhjpxsxadx4h" path="res://Asset/Sprite/Level Selection/Decoration/board-item-mini-paper2.png" id="11_nfnve"]
+[ext_resource type="Texture2D" uid="uid://cqf831542cbmv" path="res://Asset/Sprite/Level Selection/Decoration/board-item-mini-paper4.png" id="12_86nnu"]
+[ext_resource type="Texture2D" uid="uid://bl4ffwk0j4c2f" path="res://Asset/Sprite/Level Selection/Decoration/board-item-fox_.png" id="13_0kkx8"]
+[ext_resource type="Texture2D" uid="uid://deefwpqiqwadc" path="res://Asset/Sprite/Level Selection/Decoration/board-item-mini-paper5.png" id="14_c28lr"]
+[ext_resource type="Texture2D" uid="uid://cet8dvp25t12u" path="res://Asset/Sprite/Level Selection/Decoration/board-item-mini-paper3.png" id="15_0iea8"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qv44x"]
 
@@ -45,6 +46,7 @@ _data = {
 script = ExtResource("2_y3kif")
 
 [node name="NextLevel" type="Control" parent="."]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -63,25 +65,38 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0.68235296)
 
-[node name="RichTextLabel" type="RichTextLabel" parent="NextLevel"]
+[node name="Sprite2D" type="Sprite2D" parent="NextLevel"]
+position = Vector2(294, 165.00002)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("2_x45r7")
+
+[node name="UiPaperLong" type="Sprite2D" parent="NextLevel"]
+position = Vector2(285.47943, 86.25138)
+rotation = -0.02508752
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("3_d45qr")
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="NextLevel"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -177.75
-offset_top = -105.520004
-offset_right = 177.75
-offset_bottom = -24.519882
+offset_left = -121.30255
+offset_top = -111.29821
+offset_right = 109.69739
+offset_bottom = -30.298096
 grow_horizontal = 2
 grow_vertical = 2
+rotation = -0.046344694
 size_flags_horizontal = 4
 size_flags_vertical = 4
+theme_override_colors/default_color = Color(0.5686275, 0.45490196, 0.36078432, 1)
 theme_override_fonts/normal_font = ExtResource("3_x45r7")
 theme_override_font_sizes/normal_font_size = 40
 bbcode_enabled = true
-text = "Level Complete"
+text = "Complete"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -92,50 +107,37 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -114.5
-offset_top = -23.375
-offset_right = 114.5
-offset_bottom = 23.375
+offset_left = -117.0
+offset_top = -12.0
+offset_right = 112.0
+offset_bottom = 34.75
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="Panel" type="Panel" parent="NextLevel/StatPanel"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_bottom = -0.375
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_y3kif")
+[node name="UiBox" type="Sprite2D" parent="NextLevel/StatPanel"]
+position = Vector2(114.5, 21.375)
+rotation = -0.022270998
+texture = ExtResource("5_y3kif")
 
-[node name="Stats" type="RichTextLabel" parent="NextLevel/StatPanel/Panel"]
-layout_mode = 1
+[node name="Stats" type="RichTextLabel" parent="NextLevel/StatPanel/UiBox"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 7.0
-offset_top = 4.0
-offset_right = 138.83301
-offset_bottom = 26.833
+offset_left = -76.53553
+offset_top = -21.709772
+offset_right = 55.297485
+offset_bottom = 1.12323
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.6, 0.6)
-theme_override_constants/paragraph_separation = 10
+theme_override_constants/paragraph_separation = 20
 theme_override_fonts/normal_font = ExtResource("3_x45r7")
 bbcode_enabled = true
 text = "Predator founded : 0
 Heart : 0"
 vertical_alignment = 1
-
-[node name="Heart" type="Control" parent="NextLevel/StatPanel/Panel"]
-anchors_preset = 0
-offset_left = 69.25
-offset_top = 40.375
-offset_right = 234.25
-offset_bottom = 55.375
 
 [node name="NextLevelButton" type="Control" parent="NextLevel"]
 layout_mode = 1
@@ -145,19 +147,21 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -68.5
-offset_top = 43.0
+offset_top = 64.0
 offset_right = 68.5
-offset_bottom = 72.96002
+offset_bottom = 93.96002
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="NextLevelBtn" type="Button" parent="NextLevel/NextLevelButton"]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -79.0
+offset_right = 79.0
+offset_bottom = 33.0
 grow_horizontal = 2
-grow_vertical = 2
 theme_override_colors/font_color = Color(0.37254903, 0.39215687, 0.4392157, 1)
 theme_override_colors/font_pressed_color = Color(0.9490196, 1, 1, 1)
 theme_override_colors/font_hover_color = Color(0.9490196, 1, 1, 1)
@@ -168,6 +172,41 @@ theme_override_styles/hover = ExtResource("7_x45r7")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_qv44x")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_ewbbc")
 text = "Next Level"
+
+[node name="Sprite" type="Node2D" parent="NextLevel"]
+position = Vector2(0, -4)
+
+[node name="BoardItemDog" type="Sprite2D" parent="NextLevel/Sprite"]
+position = Vector2(147, 158)
+texture = ExtResource("9_5qd4i")
+
+[node name="BoardItemMiniPaper1" type="Sprite2D" parent="NextLevel/Sprite"]
+position = Vector2(164, 208)
+texture = ExtResource("10_2uqrm")
+
+[node name="BoardItemMiniPaper2" type="Sprite2D" parent="NextLevel/Sprite"]
+position = Vector2(137, 242)
+texture = ExtResource("11_nfnve")
+
+[node name="BoardItemMiniPaper6" type="Sprite2D" parent="NextLevel/Sprite"]
+position = Vector2(405, 138)
+texture = ExtResource("11_nfnve")
+
+[node name="BoardItemMiniPaper4" type="Sprite2D" parent="NextLevel/Sprite"]
+position = Vector2(181, 265)
+texture = ExtResource("12_86nnu")
+
+[node name="BoardItemFox" type="Sprite2D" parent="NextLevel/Sprite"]
+position = Vector2(426, 239)
+texture = ExtResource("13_0kkx8")
+
+[node name="BoardItemMiniPaper5" type="Sprite2D" parent="NextLevel/Sprite"]
+position = Vector2(410, 188)
+texture = ExtResource("14_c28lr")
+
+[node name="BoardItemMiniPaper3" type="Sprite2D" parent="NextLevel/Sprite"]
+position = Vector2(453, 159)
+texture = ExtResource("15_0iea8")
 
 [node name="Fade" parent="." instance=ExtResource("9_y3kif")]
 

@@ -2,22 +2,15 @@
 
 [ext_resource type="Script" uid="uid://dfomabdbuqvyx" path="res://Scenes/UI/hud.gd" id="1_4bm6u"]
 [ext_resource type="Texture2D" uid="uid://dd0d7eth13gky" path="res://Asset/Sprite/UI/heart.png" id="1_omqfp"]
-[ext_resource type="Texture2D" uid="uid://bsmh7nd8lndh" path="res://Asset/Sprite/Textures/PanelTexture.png" id="1_qc5w2"]
+[ext_resource type="Texture2D" uid="uid://01ayrpjj52dy" path="res://Asset/Sprite/UI/UI-heart-bar.png" id="2_pydgx"]
 [ext_resource type="FontFile" uid="uid://b4lfqjm4wfgf2" path="res://Asset/Font/VCR_OSD_MONO_1.001.ttf" id="3_xaom8"]
+[ext_resource type="Texture2D" uid="uid://ffkf67te71r" path="res://Asset/Sprite/UI/UI-text.png" id="4_pydgx"]
 [ext_resource type="StyleBox" uid="uid://bxxuvw3u47hhj" path="res://Resources/Texture/Button/ButtonNormal.tres" id="5_i4i0y"]
 [ext_resource type="PackedScene" uid="uid://bcicsfokqyoh5" path="res://Scenes/UI/Menus/GameOver.tscn" id="5_ykvyr"]
 [ext_resource type="PackedScene" uid="uid://b1nsbqfdtiaqf" path="res://Scenes/UI/Menus/NextLevel.tscn" id="6_lelo4"]
 [ext_resource type="StyleBox" uid="uid://b1415tteok2jy" path="res://Resources/Texture/Button/ButtonPressed.tres" id="6_yenib"]
 [ext_resource type="StyleBox" uid="uid://do5xtbv76wo0b" path="res://Resources/Texture/Button/ButtonHover.tres" id="7_pydgx"]
 [ext_resource type="PackedScene" uid="uid://cac7sq4vlj501" path="res://Scenes/Fade/fade.tscn" id="10_yenib"]
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xaom8"]
-texture = ExtResource("1_qc5w2")
-texture_margin_left = 6.0
-texture_margin_top = 6.0
-texture_margin_right = 6.0
-texture_margin_bottom = 6.0
-region_rect = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qc5w2"]
 atlas = ExtResource("1_omqfp")
@@ -53,28 +46,23 @@ offset_top = 32.0
 offset_right = 156.0
 offset_bottom = 72.0
 
-[node name="Panel" type="Panel" parent="Heart"]
-layout_mode = 1
-anchors_preset = 4
-anchor_top = 0.5
-anchor_bottom = 0.5
-offset_left = -76.0
-offset_top = -20.0
-offset_right = 156.0
-offset_bottom = 20.0
-grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_xaom8")
+[node name="UiHeartBar" type="Sprite2D" parent="Heart"]
+position = Vector2(44, 21)
+texture = ExtResource("2_pydgx")
 
-[node name="Heart1" type="AnimatedSprite2D" parent="Heart/Panel"]
-position = Vector2(112, 20)
+[node name="Heart1" type="AnimatedSprite2D" parent="Heart"]
+position = Vector2(36, 20)
+rotation = 0.13563222
 sprite_frames = SubResource("SpriteFrames_umhnj")
 
-[node name="Heart2" type="AnimatedSprite2D" parent="Heart/Panel"]
-position = Vector2(158, 20)
+[node name="Heart2" type="AnimatedSprite2D" parent="Heart"]
+position = Vector2(82, 20)
+rotation = -0.16633067
 sprite_frames = SubResource("SpriteFrames_umhnj")
 
-[node name="Heart3" type="AnimatedSprite2D" parent="Heart/Panel"]
-position = Vector2(202, 20)
+[node name="Heart3" type="AnimatedSprite2D" parent="Heart"]
+position = Vector2(126, 20)
+rotation = 0.10624632
 sprite_frames = SubResource("SpriteFrames_umhnj")
 
 [node name="Predator found" type="Control" parent="."]
@@ -85,25 +73,17 @@ offset_top = 88.0
 offset_right = 156.0
 offset_bottom = 128.0
 
-[node name="Panel" type="Panel" parent="Predator found"]
-layout_mode = 1
-anchors_preset = 4
-anchor_top = 0.5
-anchor_bottom = 0.5
-offset_left = -68.0
-offset_top = -28.0
-offset_right = 148.0
-offset_bottom = 4.0
-grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_xaom8")
+[node name="UiHeartBar" type="Sprite2D" parent="Predator found"]
+position = Vector2(38, 6)
+texture = ExtResource("4_pydgx")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Predator found/Panel"]
+[node name="RichTextLabel" type="RichTextLabel" parent="Predator found"]
 layout_mode = 0
-offset_left = 86.0
-offset_top = 8.0
-offset_right = 352.66666
-offset_bottom = 30.857147
+offset_left = 18.0
+offset_right = 284.66666
+offset_bottom = 22.857147
 scale = Vector2(0.6, 0.6)
+theme_override_colors/default_color = Color(0.36078432, 0.23529412, 0.18039216, 1)
 theme_override_fonts/normal_font = ExtResource("3_xaom8")
 bbcode_enabled = true
 text = "Predators found : 0/1"

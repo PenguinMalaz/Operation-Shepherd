@@ -12,14 +12,14 @@ var total_predators: int = 1
 var predators_found: int = 0
 
 # Node heart 1
-@onready var heart_1: AnimatedSprite2D = $Heart/Panel/Heart1
+@onready var heart_1: AnimatedSprite2D = $Heart/Heart1
 # Node heart 2
-@onready var heart_2: AnimatedSprite2D = $Heart/Panel/Heart2
+@onready var heart_2: AnimatedSprite2D = $Heart/Heart2
 # Node heart 3
-@onready var heart_3: AnimatedSprite2D = $Heart/Panel/Heart3
+@onready var heart_3: AnimatedSprite2D = $Heart/Heart3
 
 # Node text dari predator found
-@onready var predator_counter: RichTextLabel = $"Predator found/Panel/RichTextLabel"
+@onready var predator_counter: RichTextLabel = $"Predator found/RichTextLabel"
 
 
 
