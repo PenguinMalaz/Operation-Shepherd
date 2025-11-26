@@ -6,7 +6,7 @@
 [resource]
 script = ExtResource("1_wha71")
 nama_objek = "Pulpen"
-domba_dialogs = PackedStringArray("Di dalamnya terdapat tinta", "Biasa digunakan untuk menulis", "Biasanya bentuknya panjang", "Setelah digunakan tidak bisa di hapus", "Jenisnya ballpoint, gel, rollerball, fountain, dan mekanik")
-serigala_dialogs = PackedStringArray("Benda tersebut berada di sekolah saja", "Benda yang sangat rapuh", "Benda ini cocok berpasangan dengan pengserut", "Benda ini cocok berpasangan dengan penghapus")
+domba_dialogs = PackedStringArray("$sheep_dialog_pulpen_1", "$sheep_dialog_pulpen_2", "$sheep_dialog_pulpen_3", "$sheep_dialog_pulpen_4", "$sheep_dialog_pulpen_5")
+serigala_dialogs = PackedStringArray("$wolf_dialog_pulpen_1", "$wolf_dialog_pulpen_2", "$wolf_dialog_pulpen_3", "$wolf_dialog_pulpen_4")
 card_texture = ExtResource("1_rbvu3")
 metadata/_custom_type_script = "uid://da326um6liqtu"

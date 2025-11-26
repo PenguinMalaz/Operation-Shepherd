@@ -13,7 +13,9 @@ var go_to_next_level: String = ""
 		update_score_display()
 
 # Label text di next level
-@onready var Stats: RichTextLabel = $NextLevel/StatPanel/UiBox/Stats
+@onready var amount_of_predators_founded: RichTextLabel = $NextLevel/StatPanel/UiBox/Stats/HBoxContainer/Amount
+@onready var amount_of_remaining_lives: RichTextLabel = $NextLevel/StatPanel/UiBox/Stats/HBoxContainer2/Amount
+
 
 @onready var fade: CanvasLayer = $Fade
 
@@ -23,22 +25,16 @@ func _ready() -> void:
 
 # Fungsi untuk memperbarui teks di RichTextLabel
 func update_score_display() -> void:
-	# **Pengecekan Keamanan**
-	if not is_instance_valid(Stats):
-		return
-
 	var color_red: String = "#bd726f"
-
+	
 	# Menggunakan BBCode untuk mengatur warna
 	var text: String = ""
 	
 	# Predator founded
-	text += "Predators founded : [color=" + color_red + "]" + str(predator_found) + "[/color]\n"
+	amount_of_predators_founded.text = "[color=" + color_red + "]" + str(predator_found) + "[/color]"
 	
 	# Heart left
-	text += "Hearts left : [color=" + color_red + "]" + str(current_heart) + "[/color]"
-
-	Stats.text = text
+	amount_of_remaining_lives.text = "[color=" + color_red + "]" + str(current_heart) + "[/color]"
 
 ## Ketika tombol next level ditekan
 func _on_next_level_btn_pressed() -> void:

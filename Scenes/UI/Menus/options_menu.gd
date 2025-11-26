@@ -24,3 +24,10 @@ func _on_back_pressed() -> void:
 	
 func _on_back_mouse_entered() -> void:
 	SoundEffect.hover()
+
+
+func _on_change_language_pressed() -> void:
+	if TranslationServer.get_locale() == "id":
+		TranslationServer.set_locale("en")
+	else:
+		TranslationServer.set_locale("id")

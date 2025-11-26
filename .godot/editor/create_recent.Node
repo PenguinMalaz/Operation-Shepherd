@@ -1,3 +1,5 @@
+HBoxContainer
+VBoxContainer
 CanvasLayer
 ColorRect
 Control
@@ -10,5 +12,3 @@ Label
 HSlider
 CenterContainer
 Node
-AudioStreamPlayer
-AudioStreamPlayer      - Matches the "sound" keyword.

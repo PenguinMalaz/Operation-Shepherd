@@ -6,7 +6,9 @@ var predators_left: int = 0
 var total_predators: int = 0
 
 # Node text dari score
-@onready var game_over_score_label: RichTextLabel = $"GameOver/Predator left"/RichTextLabel
+@onready var amount_of_predators_founded: RichTextLabel = $"GameOver/Predator left/HBoxContainer/Amount"
+@onready var amount_of_remaining_predators: RichTextLabel = $"GameOver/Predator left/HBoxContainer2/Amount"
+@onready var amount_of_predators: RichTextLabel = $"GameOver/Predator left/HBoxContainer3/Amount"
 
 func _process(_delta: float) -> void:
 	display_text()
@@ -14,15 +16,13 @@ func _process(_delta: float) -> void:
 func display_text() -> void:
 	var color_red: String = "#bd726f"
 	
-	var format_string: String = "Predators found\t: [color=" + color_red + "]%d[/color]\n"
-	format_string += "Predators left  : [color=" + color_red + "]%d[/color]\n"
-	format_string += "Total predators : [color=" + color_red + "]%d[/color]"
+	var new_predators_founded: String = "[color=" + color_red + "]" + str(predators_found) + "[/color]"
+	var new_remaining_predators: String = "[color=" + color_red + "]" + str(predators_left) + "[/color]"
+	var new_number_of_predators: String = "[color=" + color_red + "]" + str(total_predators) + "[/color]"
 	
-	game_over_score_label.text = format_string % [
-		predators_found,
-		predators_left, 
-		total_predators,
-	]
+	amount_of_predators_founded.text = new_predators_founded
+	amount_of_remaining_predators.text = new_remaining_predators
+	amount_of_predators.text = new_number_of_predators
 
 ## Ketika tombol level selection ditekan
 func _on_level_selection_btn_pressed() -> void:

@@ -3,11 +3,11 @@ extends CanvasLayer
 signal animation_info_finish
 
 var dialogue: Array = [
-	"Pengembala!, sepertinya aku mencium bau predator baru",
-	"Predator ini sepertinya rubah, dia suka menyampaikan informasi palsu tentang kartu yang berada di tengah",
-	"Untuk kasus ini aku akan membantu mu dengan cara memberikan pin di setiap domba",
-	"Jika pin yang aku berikan berwarna hijau, kemungkinan itu adalah domba asli",
-	"Tetapi jika yang aku berikan berwarna merah, kemungkinan itu adalah predator yang menyamar"
+	"$fox_dialog_tutorial_1",
+	"$fox_dialog_tutorial_2",
+	"$fox_dialog_tutorial_3",
+	"$fox_dialog_tutorial_4",
+	"$fox_dialog_tutorial_5",
 ]
 
 var current_dialogue_index: int = 0
@@ -36,7 +36,7 @@ func update_dialogue_info() -> void:
 		dialogue_fisnished = true
 
 func update_dialogue_tutorial() -> void:
-	dialogue_box_tutorial.text = "Klik aku untuk mengaktif pin"
+	dialogue_box_tutorial.text = "$fox_dialog_tutorial_6"
 
 ## Fungsi ini akan dipanggil ketika tombol diklik
 func _on_button_pressed() -> void:

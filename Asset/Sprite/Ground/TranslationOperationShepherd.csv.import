@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://cjxujl33hhvka"
+
+[deps]
+
+files=["res://Asset/Sprite/Ground/TranslationOperationShepherd.id.translation", "res://Asset/Sprite/Ground/TranslationOperationShepherd.en.translation"]
+
+source_file="res://Asset/Sprite/Ground/TranslationOperationShepherd.csv"
+dest_files=["res://Asset/Sprite/Ground/TranslationOperationShepherd.id.translation", "res://Asset/Sprite/Ground/TranslationOperationShepherd.en.translation"]
+
+[params]
+
+compress=true
+delimiter=0
