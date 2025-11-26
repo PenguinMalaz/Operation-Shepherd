@@ -91,7 +91,6 @@ func _process(_delta: float) -> void:
 		cardboard.is_level_complete = true
 	elif hud.heart == 0:
 		cardboard.is_level_complete = true
-	
 
 ## Mengurangi heart di HUD
 func _on_cardboard_domba() -> void:

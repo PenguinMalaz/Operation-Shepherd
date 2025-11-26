@@ -46,6 +46,7 @@ _data = {
 script = ExtResource("2_y3kif")
 
 [node name="NextLevel" type="Control" parent="."]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -124,9 +125,9 @@ texture = ExtResource("5_y3kif")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -81.13336
+offset_left = -74.61651
 offset_top = -24.781605
-offset_right = 9.211792
+offset_right = -18.17334
 offset_bottom = -12.063801
 grow_horizontal = 2
 grow_vertical = 2
@@ -144,7 +145,15 @@ theme_override_fonts/normal_font = ExtResource("3_x45r7")
 bbcode_enabled = true
 text = "PREDATORS FOUNDED"
 scroll_active = false
-horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Colon" type="RichTextLabel" parent="NextLevel/StatPanel/UiBox/Stats/HBoxContainer"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("3_x45r7")
+bbcode_enabled = true
+text = ":"
+scroll_active = false
 vertical_alignment = 1
 
 [node name="Amount" type="RichTextLabel" parent="NextLevel/StatPanel/UiBox/Stats/HBoxContainer"]
@@ -163,13 +172,22 @@ size_flags_vertical = 3
 alignment = 1
 
 [node name="RemainingLives" type="RichTextLabel" parent="NextLevel/StatPanel/UiBox/Stats/HBoxContainer2"]
+custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_fonts/normal_font = ExtResource("3_x45r7")
 bbcode_enabled = true
 text = "REMAINING LIVES"
 scroll_active = false
-horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Colon" type="RichTextLabel" parent="NextLevel/StatPanel/UiBox/Stats/HBoxContainer2"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("3_x45r7")
+bbcode_enabled = true
+text = ":"
+scroll_active = false
 vertical_alignment = 1
 
 [node name="Amount" type="RichTextLabel" parent="NextLevel/StatPanel/UiBox/Stats/HBoxContainer2"]

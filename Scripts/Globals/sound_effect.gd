@@ -14,6 +14,7 @@ extends Node
 @onready var reload: AudioStreamPlayer = $Reload
 @onready var fox: AudioStreamPlayer = $Fox
 @onready var dog: AudioStreamPlayer = $Dog
+@onready var pin: AudioStreamPlayer = $Pin
 
 func hover() -> void:
 	button_hover.play()
@@ -56,3 +57,6 @@ func fox_hurt() -> void:
 
 func bark() -> void:
 	dog.play(0.24)
+
+func pin_() -> void:
+	pin.play()

@@ -1,12 +1,12 @@
+AnimatedSprite2D
+Sprite2D
+Button
 HBoxContainer
 VBoxContainer
 CanvasLayer
 ColorRect
 Control
-Sprite2D
 AnimationPlayer
-AnimatedSprite2D
-Button
 Node2D
 Label
 HSlider

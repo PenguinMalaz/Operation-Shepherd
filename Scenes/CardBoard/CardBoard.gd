@@ -216,6 +216,7 @@ func _on_card_clicked(card: Card) -> void:
 			card.apply_texture_pin()
 			card.pinned = true
 			emit_signal("pinned")
+			SoundEffect.pin_()
 			if card.pinned:
 				card.dialogue_box_fade.play_backwards("fade")
 				card.dog_mode = false

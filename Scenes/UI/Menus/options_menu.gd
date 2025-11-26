@@ -27,6 +27,7 @@ func _on_back_mouse_entered() -> void:
 
 
 func _on_change_language_pressed() -> void:
+	SoundEffect.pressed()
 	if TranslationServer.get_locale() == "id":
 		TranslationServer.set_locale("en")
 	else:
