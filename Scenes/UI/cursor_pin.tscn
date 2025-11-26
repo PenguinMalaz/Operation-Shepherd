@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://cw82kpxnvdcrl"]
+
+[ext_resource type="Texture2D" uid="uid://c5g0ke88usjtv" path="res://Asset/Sprite/Level Selection/pin-dog1.png" id="1_hu8uy"]
+[ext_resource type="Script" uid="uid://m6db1sb8t680" path="res://cursor_pin.gd" id="2_ulh7e"]
+
+[node name="CursorPin" type="Sprite2D"]
+texture = ExtResource("1_hu8uy")
+script = ExtResource("2_ulh7e")

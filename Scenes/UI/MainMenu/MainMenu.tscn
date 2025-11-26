@@ -9,7 +9,6 @@
 [ext_resource type="StyleBox" uid="uid://b1415tteok2jy" path="res://Resources/Texture/Button/ButtonPressed.tres" id="5_tbwd8"]
 [ext_resource type="StyleBox" uid="uid://do5xtbv76wo0b" path="res://Resources/Texture/Button/ButtonHover.tres" id="6_geava"]
 [ext_resource type="Texture2D" uid="uid://ceim0nhnq5hl8" path="res://Asset/Sprite/Ground/Ground-main menu.png" id="9_tbwd8"]
-[ext_resource type="Texture2D" uid="uid://dsjwv8o6s6mun" path="res://Asset/Sprite/UI/main-menu-96x80-256x96.png" id="12_vwuc7"]
 [ext_resource type="Texture2D" uid="uid://nn5gdbra1341" path="res://Asset/Sprite/Level Selection/Decoration/board-item-dog.png" id="13_jd0v2"]
 [ext_resource type="Texture2D" uid="uid://bl4ffwk0j4c2f" path="res://Asset/Sprite/Level Selection/Decoration/board-item-fox_.png" id="14_rd75r"]
 [ext_resource type="Texture2D" uid="uid://c0jj1xyutpn85" path="res://Asset/Sprite/Level Selection/Decoration/board-item-mini-paper1.png" id="15_pnb7d"]
@@ -19,6 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://deefwpqiqwadc" path="res://Asset/Sprite/Level Selection/Decoration/board-item-mini-paper5.png" id="17_2jg2i"]
 [ext_resource type="Texture2D" uid="uid://cet8dvp25t12u" path="res://Asset/Sprite/Level Selection/Decoration/board-item-mini-paper3.png" id="18_pnb7d"]
 [ext_resource type="Texture2D" uid="uid://caqj3fru6k1gb" path="res://Asset/Sprite/Level Selection/pin.png" id="19_2jg2i"]
+[ext_resource type="Texture2D" uid="uid://dsjwv8o6s6mun" path="res://Asset/Sprite/UI/main-menu-96x80-256x96.png" id="19_8rr3h"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -34,14 +34,17 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = 25.699999
+offset_bottom = -12.417603
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(0.95, 0.95)
 pivot_offset = Vector2(288, 162)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
 custom_minimum_size = Vector2(200, 230)
 layout_mode = 2
-theme_override_constants/separation = 10
+theme_override_constants/separation = 7
 alignment = 2
 
 [node name="Play" type="Button" parent="CenterContainer/VBoxContainer"]
@@ -54,7 +57,7 @@ theme_override_fonts/font = ExtResource("3_tc2ed")
 theme_override_styles/normal = ExtResource("4_u8hla")
 theme_override_styles/pressed = ExtResource("5_tbwd8")
 theme_override_styles/hover = ExtResource("6_geava")
-text = "Play"
+text = "PLAY"
 
 [node name="Setting" type="Button" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2
@@ -66,7 +69,7 @@ theme_override_fonts/font = ExtResource("3_tc2ed")
 theme_override_styles/normal = ExtResource("4_u8hla")
 theme_override_styles/pressed = ExtResource("5_tbwd8")
 theme_override_styles/hover = ExtResource("6_geava")
-text = "Settings"
+text = "SETTINGS"
 
 [node name="Credits" type="Button" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2
@@ -78,7 +81,7 @@ theme_override_fonts/font = ExtResource("3_tc2ed")
 theme_override_styles/normal = ExtResource("4_u8hla")
 theme_override_styles/pressed = ExtResource("5_tbwd8")
 theme_override_styles/hover = ExtResource("6_geava")
-text = "Credits"
+text = "CREDITS"
 
 [node name="Quit" type="Button" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2
@@ -90,7 +93,7 @@ theme_override_fonts/font = ExtResource("3_tc2ed")
 theme_override_styles/normal = ExtResource("4_u8hla")
 theme_override_styles/pressed = ExtResource("5_tbwd8")
 theme_override_styles/hover = ExtResource("6_geava")
-text = "Exit"
+text = "EXIT"
 
 [node name="Fade" parent="." instance=ExtResource("2_7rqq1")]
 
@@ -124,12 +127,8 @@ position = Vector2(859.2, 165)
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("9_tbwd8")
 
-[node name="Logo" type="Sprite2D" parent="Sprite"]
-position = Vector2(288, 72)
-texture = ExtResource("12_vwuc7")
-
 [node name="BoardItemDog" type="Sprite2D" parent="Sprite"]
-position = Vector2(444, 137)
+position = Vector2(439, 153)
 texture = ExtResource("13_jd0v2")
 
 [node name="BoardItemFox" type="Sprite2D" parent="Sprite"]
@@ -137,15 +136,15 @@ position = Vector2(131, 257)
 texture = ExtResource("14_rd75r")
 
 [node name="BoardItemMiniPaper1" type="Sprite2D" parent="Sprite"]
-position = Vector2(146, 207)
+position = Vector2(156, 204)
 texture = ExtResource("15_pnb7d")
 
 [node name="BoardItemMiniPaper2" type="Sprite2D" parent="Sprite"]
-position = Vector2(424, 217)
+position = Vector2(414, 221)
 texture = ExtResource("16_2jg2i")
 
 [node name="BoardItemMiniPaper3" type="Sprite2D" parent="Sprite"]
-position = Vector2(433, 267)
+position = Vector2(423, 269)
 texture = ExtResource("15_pnb7d")
 
 [node name="BoardItemMiniPaper4Ripped" type="Sprite2D" parent="Sprite"]
@@ -161,16 +160,21 @@ position = Vector2(159, 146)
 texture = ExtResource("17_2jg2i")
 
 [node name="BoardItemMiniPaper6" type="Sprite2D" parent="Sprite"]
-position = Vector2(469, 234)
+position = Vector2(474, 238)
 texture = ExtResource("18_pnb7d")
 
 [node name="BoardItemMiniPaper7" type="Sprite2D" parent="Sprite"]
-position = Vector2(468, 183)
+position = Vector2(468, 196)
 texture = ExtResource("16_pnb7d")
 
 [node name="Pin" type="Sprite2D" parent="Sprite"]
-position = Vector2(417, 181)
+position = Vector2(404, 188)
 texture = ExtResource("19_2jg2i")
+
+[node name="MainMenu96x80256x96" type="Sprite2D" parent="Sprite"]
+position = Vector2(287.00003, 81.00001)
+rotation = -0.0041912207
+texture = ExtResource("19_8rr3h")
 
 [connection signal="mouse_entered" from="CenterContainer/VBoxContainer/Play" to="." method="_on_play_mouse_entered"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]

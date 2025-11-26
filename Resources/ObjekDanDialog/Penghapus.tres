@@ -8,5 +8,6 @@ script = ExtResource("1_guusa")
 nama_objek = "Penghapus"
 domba_dialogs = PackedStringArray("Benda kecil terbuat dari karet", "Saat digosok, tulisan pensil hilang", "Warnanya beragam dan sering ada di meja belajar", "Jika dipakai, ia meninggalkan serpihan", "Benda ini berpasangan dengan pensil")
 serigala_dialogs = PackedStringArray("Aku melihat sebuah barang kecil di antara rak buku", "Ada sebuah benda ringan di dalam laci", "Sebuah objek kecil di dalam kotak", "Barang kecil yang berada di samping penggaris")
+fox_dialogs = PackedStringArray("Benda kecil lunak itu sebenarnya bisa menyala di gelap", "Benda warna-warni itu dipercaya mampu memantulkan suara", "Benda kecil itu dipercaya dapat memindahkan tulisan sendiri", "Benda mungil itu dikabarkan terbentuk dari debu meteor")
 card_texture = ExtResource("1_4supf")
 metadata/_custom_type_script = "uid://da326um6liqtu"

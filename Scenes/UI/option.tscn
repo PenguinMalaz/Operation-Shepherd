@@ -1,0 +1,181 @@
+[gd_scene load_steps=17 format=3 uid="uid://bt2hff2w07c3l"]
+
+[ext_resource type="FontFile" uid="uid://b4lfqjm4wfgf2" path="res://Asset/Font/VCR_OSD_MONO_1.001.ttf" id="1_0gjrs"]
+[ext_resource type="Texture2D" uid="uid://cj0ct1hg80h78" path="res://Asset/Sprite/UI/board.png" id="1_ebb6k"]
+[ext_resource type="Script" uid="uid://cjireengbatwe" path="res://Scenes/UI/option.gd" id="1_heyqu"]
+[ext_resource type="StyleBox" uid="uid://bxxuvw3u47hhj" path="res://Resources/Texture/Button/ButtonNormal.tres" id="2_kmpyr"]
+[ext_resource type="Texture2D" uid="uid://cwrsbbc85dcmc" path="res://Asset/Sprite/UI/UI-PaperLong.png" id="2_l32uo"]
+[ext_resource type="StyleBox" uid="uid://b1415tteok2jy" path="res://Resources/Texture/Button/ButtonPressed.tres" id="3_ebb6k"]
+[ext_resource type="StyleBox" uid="uid://do5xtbv76wo0b" path="res://Resources/Texture/Button/ButtonHover.tres" id="4_l32uo"]
+[ext_resource type="Texture2D" uid="uid://nn5gdbra1341" path="res://Asset/Sprite/Level Selection/Decoration/board-item-dog.png" id="7_lqw5k"]
+[ext_resource type="Texture2D" uid="uid://c0jj1xyutpn85" path="res://Asset/Sprite/Level Selection/Decoration/board-item-mini-paper1.png" id="8_d68lk"]
+[ext_resource type="Texture2D" uid="uid://cxhjpxsxadx4h" path="res://Asset/Sprite/Level Selection/Decoration/board-item-mini-paper2.png" id="9_heyqu"]
+[ext_resource type="Texture2D" uid="uid://cqf831542cbmv" path="res://Asset/Sprite/Level Selection/Decoration/board-item-mini-paper4.png" id="10_3wcwh"]
+[ext_resource type="Texture2D" uid="uid://bl4ffwk0j4c2f" path="res://Asset/Sprite/Level Selection/Decoration/board-item-fox_.png" id="11_p6fja"]
+[ext_resource type="Texture2D" uid="uid://deefwpqiqwadc" path="res://Asset/Sprite/Level Selection/Decoration/board-item-mini-paper5.png" id="12_duh75"]
+[ext_resource type="Texture2D" uid="uid://cet8dvp25t12u" path="res://Asset/Sprite/Level Selection/Decoration/board-item-mini-paper3.png" id="13_alj46"]
+[ext_resource type="Texture2D" uid="uid://btqfgxmmifa67" path="res://Asset/Sprite/Level Selection/Decoration/board-item-mini-paper4-ripped.png" id="14_d68lk"]
+[ext_resource type="PackedScene" uid="uid://cac7sq4vlj501" path="res://Scenes/Fade/fade.tscn" id="16_3wcwh"]
+
+[node name="Option" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_heyqu")
+
+[node name="Option" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BG" type="ColorRect" parent="Option"]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.78431374)
+
+[node name="Sprite2D" type="Sprite2D" parent="Option"]
+position = Vector2(294, 164)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("1_ebb6k")
+
+[node name="UiPaperLong" type="Sprite2D" parent="Option"]
+position = Vector2(284, 79)
+rotation = -0.025087519
+scale = Vector2(1.2000002, 1.2000002)
+texture = ExtResource("2_l32uo")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Option"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -116.0
+offset_top = -119.0
+offset_right = 115.0
+offset_bottom = -37.999893
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -0.046344694
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/default_color = Color(0.5686275, 0.45490196, 0.36078432, 1)
+theme_override_fonts/normal_font = ExtResource("1_0gjrs")
+theme_override_font_sizes/normal_font_size = 40
+bbcode_enabled = true
+text = "Paused"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="Option"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 25.699997
+offset_bottom = -12.417603
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.95, 0.95)
+pivot_offset = Vector2(288, 162)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Option/CenterContainer"]
+custom_minimum_size = Vector2(180, 140)
+layout_mode = 2
+theme_override_constants/separation = 7
+alignment = 2
+
+[node name="Resume" type="Button" parent="Option/CenterContainer/VBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+theme_override_colors/font_color = Color(0.37254903, 0.39215687, 0.4392157, 1)
+theme_override_colors/font_pressed_color = Color(0.9490196, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0.9490196, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_0gjrs")
+theme_override_styles/normal = ExtResource("2_kmpyr")
+theme_override_styles/pressed = ExtResource("3_ebb6k")
+theme_override_styles/hover = ExtResource("4_l32uo")
+text = "Resume"
+
+[node name="Settings" type="Button" parent="Option/CenterContainer/VBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+theme_override_colors/font_color = Color(0.37254903, 0.39215687, 0.4392157, 1)
+theme_override_colors/font_pressed_color = Color(0.9490196, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0.9490196, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_0gjrs")
+theme_override_styles/normal = ExtResource("2_kmpyr")
+theme_override_styles/pressed = ExtResource("3_ebb6k")
+theme_override_styles/hover = ExtResource("4_l32uo")
+text = "Settings"
+
+[node name="Main Menu" type="Button" parent="Option/CenterContainer/VBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+theme_override_colors/font_color = Color(0.37254903, 0.39215687, 0.4392157, 1)
+theme_override_colors/font_pressed_color = Color(0.9490196, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0.9490196, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_0gjrs")
+theme_override_styles/normal = ExtResource("2_kmpyr")
+theme_override_styles/pressed = ExtResource("3_ebb6k")
+theme_override_styles/hover = ExtResource("4_l32uo")
+text = "Main Menu"
+
+[node name="Sprite" type="Node2D" parent="Option"]
+position = Vector2(0, -4)
+
+[node name="BoardItemDog" type="Sprite2D" parent="Option/Sprite"]
+position = Vector2(147, 158)
+texture = ExtResource("7_lqw5k")
+
+[node name="BoardItemMiniPaper1" type="Sprite2D" parent="Option/Sprite"]
+position = Vector2(164, 208)
+texture = ExtResource("8_d68lk")
+
+[node name="BoardItemMiniPaper2" type="Sprite2D" parent="Option/Sprite"]
+position = Vector2(252, 271)
+texture = ExtResource("9_heyqu")
+
+[node name="BoardItemMiniPaper6" type="Sprite2D" parent="Option/Sprite"]
+position = Vector2(405, 138)
+texture = ExtResource("9_heyqu")
+
+[node name="BoardItemMiniPaper4" type="Sprite2D" parent="Option/Sprite"]
+position = Vector2(180, 255)
+texture = ExtResource("10_3wcwh")
+
+[node name="BoardItemFox" type="Sprite2D" parent="Option/Sprite"]
+position = Vector2(426, 239)
+texture = ExtResource("11_p6fja")
+
+[node name="BoardItemMiniPaper5" type="Sprite2D" parent="Option/Sprite"]
+position = Vector2(410, 188)
+texture = ExtResource("12_duh75")
+
+[node name="BoardItemMiniPaper3" type="Sprite2D" parent="Option/Sprite"]
+position = Vector2(453, 159)
+texture = ExtResource("13_alj46")
+
+[node name="BoardItemMiniPaper4Ripped" type="Sprite2D" parent="Option/Sprite"]
+position = Vector2(132, 256)
+texture = ExtResource("14_d68lk")
+
+[node name="BoardItemMiniPaper7" type="Sprite2D" parent="Option/Sprite"]
+position = Vector2(341, 267)
+texture = ExtResource("8_d68lk")
+
+[node name="Fade" parent="." instance=ExtResource("16_3wcwh")]
+
+[connection signal="mouse_entered" from="Option/CenterContainer/VBoxContainer/Resume" to="." method="_on_resume_mouse_entered"]
+[connection signal="pressed" from="Option/CenterContainer/VBoxContainer/Resume" to="." method="_on_resume_pressed"]
+[connection signal="mouse_entered" from="Option/CenterContainer/VBoxContainer/Settings" to="." method="_on_settings_mouse_entered"]
+[connection signal="pressed" from="Option/CenterContainer/VBoxContainer/Settings" to="." method="_on_settings_pressed"]
+[connection signal="mouse_entered" from="Option/CenterContainer/VBoxContainer/Main Menu" to="." method="_on_main_menu_mouse_entered"]
+[connection signal="pressed" from="Option/CenterContainer/VBoxContainer/Main Menu" to="." method="_on_main_menu_pressed"]

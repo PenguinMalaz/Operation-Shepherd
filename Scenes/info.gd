@@ -4,11 +4,11 @@ signal animation_info_finish
 
 # Variabel untuk menyimpan array dialog
 var dialogue: Array = [
-	"Pengembala!, seekor domba telah ditemukan mati seperti dimakan oleh predator, tetapi aku tidak melihat adanya predator",
-	"Kemungkinan para predator menyamar di antara kawanan domba",
-	"Kita harus menemukan predatornya dengan cara memberikan kartu yang bergambarkan benda kepada para domba",
-	"Hanya domba saja yang bisa mendeskripsikan dengan benar tentang gambar yang ada di kartu",
-	"Jika ada domba yang tidak bisa mendeskripsikannya kemungkinan itu adalah predator"
+	"$dialog_tutorial_1",
+	"$dialog_tutorial_2",
+	"$dialog_tutorial_3",
+	"$dialog_tutorial_4",
+	"$dialog_tutorial_5"
 ]
 
 # Variabel untuk melacak indeks dialog yang sedang ditampilkan
@@ -37,7 +37,7 @@ func update_dialogue_info() -> void:
 		dialogue_fisnished = true
 
 func update_dialogue_tutorial() -> void:
-	dialogue_box_tutorial.text = "Hover kartu untuk melihat dialog"
+	dialogue_box_tutorial.text = "$dialog_tutorial_6"
 
 ## Fungsi ini akan dipanggil ketika tombol diklik
 func _on_button_pressed() -> void:

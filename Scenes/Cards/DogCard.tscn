@@ -1,0 +1,116 @@
+[gd_scene load_steps=10 format=3 uid="uid://btcuoynvhclng"]
+
+[ext_resource type="Script" uid="uid://78peatetoikw" path="res://Scenes/Cards/dog_card.gd" id="1_8icrx"]
+[ext_resource type="Texture2D" uid="uid://yl4xyfve01dw" path="res://Asset/Sprite/Cards/Dog-Card-Normal.png" id="1_n0eyf"]
+[ext_resource type="Texture2D" uid="uid://57jkwpmelvao" path="res://Asset/Sprite/Cards/card-dog.png" id="1_oflx2"]
+[ext_resource type="Texture2D" uid="uid://bol5clpql8kgj" path="res://Asset/Sprite/Cards/ShadowCardFull.png" id="2_3cssj"]
+[ext_resource type="Texture2D" uid="uid://cgo8ug423p8sc" path="res://Asset/Sprite/Cards/Dog-Card-Hover.png" id="2_8icrx"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3cssj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_oflx2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_8icrx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_n0eyf")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_3cssj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Button/Sprite2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.08726646]
+}
+
+[sub_resource type="Animation" id="Animation_8icrx"]
+resource_name = "loop"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Button/Sprite2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [-0.08726646, 0.08726646, -0.08726646]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3cssj"]
+_data = {
+&"RESET": SubResource("Animation_3cssj"),
+&"loop": SubResource("Animation_8icrx")
+}
+
+[node name="DogCard" type="CanvasLayer"]
+script = ExtResource("1_8icrx")
+
+[node name="Dog Card" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Dialogue" type="Control" parent="Dog Card"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Button" type="Button" parent="Dog Card/Dialogue"]
+layout_mode = 0
+offset_left = -231.0
+offset_top = 13.0
+offset_right = -173.0
+offset_bottom = 93.0
+focus_mode = 0
+flat = true
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="Dog Card/Dialogue/Button"]
+position = Vector2(29, 39)
+rotation = -0.08726646
+scale = Vector2(1.2, 1.2)
+sprite_frames = SubResource("SpriteFrames_3cssj")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Dog Card/Dialogue/Button/Sprite2D"]
+z_index = -1
+position = Vector2(-2.5, 3.3333282)
+texture = ExtResource("2_3cssj")
+
+[node name="Loop" type="AnimationPlayer" parent="Dog Card/Dialogue"]
+libraries = {
+&"": SubResource("AnimationLibrary_3cssj")
+}
+autoplay = "loop"
+
+[connection signal="mouse_entered" from="Dog Card/Dialogue/Button" to="." method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="Dog Card/Dialogue/Button" to="." method="_on_button_mouse_exited"]
+[connection signal="pressed" from="Dog Card/Dialogue/Button" to="." method="_on_button_pressed"]

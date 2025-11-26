@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://b8b7tqighm1qp"
+
+[deps]
+
+files=["res://Resources/Translation/TranslationOperationShepherd.id.translation", "res://Resources/Translation/TranslationOperationShepherd.en.translation"]
+
+source_file="res://Resources/Translation/TranslationOperationShepherd.csv"
+dest_files=["res://Resources/Translation/TranslationOperationShepherd.id.translation", "res://Resources/Translation/TranslationOperationShepherd.en.translation"]
+
+[params]
+
+compress=true
+delimiter=1

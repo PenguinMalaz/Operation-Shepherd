@@ -1,15 +1,13 @@
-[gd_scene load_steps=15 format=3 uid="uid://ckqxyhwrtplkt"]
+[gd_scene load_steps=13 format=3 uid="uid://ckqxyhwrtplkt"]
 
 [ext_resource type="Script" uid="uid://dfomabdbuqvyx" path="res://Scenes/UI/hud.gd" id="1_4bm6u"]
 [ext_resource type="Texture2D" uid="uid://dd0d7eth13gky" path="res://Asset/Sprite/UI/heart.png" id="1_omqfp"]
 [ext_resource type="Texture2D" uid="uid://01ayrpjj52dy" path="res://Asset/Sprite/UI/UI-heart-bar.png" id="2_pydgx"]
 [ext_resource type="FontFile" uid="uid://b4lfqjm4wfgf2" path="res://Asset/Font/VCR_OSD_MONO_1.001.ttf" id="3_xaom8"]
 [ext_resource type="Texture2D" uid="uid://ffkf67te71r" path="res://Asset/Sprite/UI/UI-text.png" id="4_pydgx"]
-[ext_resource type="StyleBox" uid="uid://bxxuvw3u47hhj" path="res://Resources/Texture/Button/ButtonNormal.tres" id="5_i4i0y"]
 [ext_resource type="PackedScene" uid="uid://bcicsfokqyoh5" path="res://Scenes/UI/Menus/GameOver.tscn" id="5_ykvyr"]
 [ext_resource type="PackedScene" uid="uid://b1nsbqfdtiaqf" path="res://Scenes/UI/Menus/NextLevel.tscn" id="6_lelo4"]
-[ext_resource type="StyleBox" uid="uid://b1415tteok2jy" path="res://Resources/Texture/Button/ButtonPressed.tres" id="6_yenib"]
-[ext_resource type="StyleBox" uid="uid://do5xtbv76wo0b" path="res://Resources/Texture/Button/ButtonHover.tres" id="7_pydgx"]
+[ext_resource type="PackedScene" uid="uid://bt2hff2w07c3l" path="res://Scenes/UI/option.tscn" id="9_i4i0y"]
 [ext_resource type="PackedScene" uid="uid://cac7sq4vlj501" path="res://Scenes/Fade/fade.tscn" id="10_yenib"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qc5w2"]
@@ -35,6 +33,7 @@ animations = [{
 }]
 
 [node name="Hud" type="CanvasLayer"]
+process_mode = 3
 layer = -1
 script = ExtResource("1_4bm6u")
 
@@ -86,36 +85,32 @@ scale = Vector2(0.6, 0.6)
 theme_override_colors/default_color = Color(0.36078432, 0.23529412, 0.18039216, 1)
 theme_override_fonts/normal_font = ExtResource("3_xaom8")
 bbcode_enabled = true
-text = "Predators found : 0/1"
+text = "PREDATOR FOUNDED"
 vertical_alignment = 1
 
-[node name="Control" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="RichTextLabel3" type="RichTextLabel" parent="Predator found"]
+layout_mode = 0
+offset_left = 112.0
+offset_right = 120.33334
+offset_bottom = 22.857147
+scale = Vector2(0.6, 0.6)
+theme_override_colors/default_color = Color(0.36078432, 0.23529412, 0.18039216, 1)
+theme_override_fonts/normal_font = ExtResource("3_xaom8")
+bbcode_enabled = true
+text = ":"
+vertical_alignment = 1
 
-[node name="Play" type="Button" parent="Control"]
-layout_mode = 1
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_left = 16.0
-offset_top = -52.0
-offset_right = 130.0
-offset_bottom = -21.0
-grow_vertical = 0
-focus_mode = 0
-theme_override_colors/font_color = Color(0.37254903, 0.39215687, 0.4392157, 1)
-theme_override_colors/font_pressed_color = Color(0.9490196, 1, 1, 1)
-theme_override_colors/font_hover_color = Color(0.9490196, 1, 1, 1)
-theme_override_fonts/font = ExtResource("3_xaom8")
-theme_override_styles/normal = ExtResource("5_i4i0y")
-theme_override_styles/pressed = ExtResource("6_yenib")
-theme_override_styles/hover = ExtResource("7_pydgx")
-text = " Main Menu "
+[node name="RichTextLabel2" type="RichTextLabel" parent="Predator found"]
+layout_mode = 0
+offset_left = 119.0
+offset_right = 217.33333
+offset_bottom = 22.857147
+scale = Vector2(0.6, 0.6)
+theme_override_colors/default_color = Color(0.7019608, 0.3137255, 0.32941177, 1)
+theme_override_fonts/normal_font = ExtResource("3_xaom8")
+bbcode_enabled = true
+text = "0/1"
+vertical_alignment = 1
 
 [node name="GameOver" parent="." instance=ExtResource("5_ykvyr")]
 visible = false
@@ -125,5 +120,5 @@ visible = false
 
 [node name="Fade" parent="." instance=ExtResource("10_yenib")]
 
-[connection signal="button_down" from="Control/Play" to="." method="_on_play_button_down"]
-[connection signal="mouse_entered" from="Control/Play" to="." method="_on_play_mouse_entered"]
+[node name="Option" parent="." instance=ExtResource("9_i4i0y")]
+visible = false

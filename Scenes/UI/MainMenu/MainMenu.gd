@@ -8,6 +8,12 @@ func _ready() -> void:
 	
 	Music.stop_gameplay()
 	Music.stop_investigation()
+	
+	if !GlobalVariable.game_sound:
+		AudioServer.set_bus_volume_db(1, linear_to_db(0.3))
+		AudioServer.set_bus_volume_db(2, linear_to_db(0.3))
+	
+	Leaves.show()
 
 ## Play button pressed
 func _on_play_pressed() -> void:

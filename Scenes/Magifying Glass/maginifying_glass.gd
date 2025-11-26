@@ -8,6 +8,7 @@ signal button_pressed
 var investigation_active: bool = false
 var elimination: bool = false
 var button_hover: bool = false
+var dog_mode: bool = false
 
 func _ready() -> void:
 	investigation_active = false
@@ -34,16 +35,21 @@ func _on_button_button_down() -> void:
 		Music.stop_gameplay()
 		Music.play_investigation()
 		emit_signal("elimination_active")
+		
 	else:
 		# Jika Investigation dibatalkan (dimatikan)
 		Music.stop_investigation()
 		Music.play_gameplay()
+		
+		
 
 func _on_button_mouse_entered() -> void:
-	SoundEffect.hover()
-	$Button/AnimatedSprite2D.frame = 1
-	button_hover = true
+	if !dog_mode:
+		SoundEffect.hover()
+		$Button/AnimatedSprite2D.frame = 1
+		button_hover = true
 
 func _on_button_mouse_exited() -> void:
-	$Button/AnimatedSprite2D.frame = 0
-	button_hover = false
+	if !dog_mode:
+		$Button/AnimatedSprite2D.frame = 0
+		button_hover = false

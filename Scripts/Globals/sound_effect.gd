@@ -12,6 +12,8 @@ extends Node
 @onready var gunshoot: AudioStreamPlayer = $Gunshoot
 @onready var glass_double: AudioStreamPlayer = $GlassDouble
 @onready var reload: AudioStreamPlayer = $Reload
+@onready var fox: AudioStreamPlayer = $Fox
+@onready var dog: AudioStreamPlayer = $Dog
 
 func hover() -> void:
 	button_hover.play()
@@ -48,3 +50,9 @@ func glass_double_deselect() -> void:
 
 func reload_() -> void:
 	reload.play()
+
+func fox_hurt() -> void:
+	fox.play()
+
+func bark() -> void:
+	dog.play(0.24)

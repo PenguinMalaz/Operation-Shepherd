@@ -32,6 +32,8 @@ func _ready() -> void:
 	# 1. Panggil load_game() terlebih dahulu untuk memuat data level tertinggi yang terbuka
 	GlobalVariable.load_game()
 	
+	Leaves.show()
+	
 	# 2. Ambil nilai yang sudah dimuat. Nilai ini sekarang adalah level tertinggi yang tersimpan.
 	var max_unlocked_level: int = GlobalVariable.unlocked_level
 	
@@ -56,6 +58,13 @@ func _ready() -> void:
 			
 			# Hentikan semua input terkait mouse/hover untuk tombol yang terkunci
 			current_button.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	
+	
+	if not Music.is_playing_mainmenu():
+		Music.play_main_menu()
+	
+	Music.stop_investigation()
+	Music.stop_gameplay()
 
 
 # --- Fungsi Pemicu Level (Menambahkan pengecekan .disabled) ---

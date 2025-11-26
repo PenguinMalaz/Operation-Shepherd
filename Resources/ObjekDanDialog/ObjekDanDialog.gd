@@ -7,5 +7,7 @@ class_name ObjekDanDialog
 @export var domba_dialogs: PackedStringArray
 ## Dialog-dialog yang digunakan oleh serigala
 @export var serigala_dialogs: PackedStringArray
+## Dialog-dialog yang digunakan oleh fox
+@export var fox_dialogs: PackedStringArray
 ## Tekstur kartu yang akan digunakan di CardObject
 @export var card_texture: Texture2D

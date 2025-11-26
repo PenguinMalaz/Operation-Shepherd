@@ -1,8 +1,8 @@
-res://Scenes/UI/HUD.tscn
-res://Scenes/UI/MainMenu/MainMenu.tscn
-res://Scenes/Credits/Credits.tscn
+res://Scenes/UI/dialogue_box.tscn
+res://Scenes/info.tscn
+res://Scenes/info.gd
+res://Scenes/Levels/level.tscn
+res://Scenes/Levels/level.gd
 res://Scenes/UI/hud.gd
+res://Scenes/UI/HUD.tscn
 res://Scenes/UI/Menus/GameOver.tscn
-res://Scenes/UI/Menus/GameOver.gd
-res://Scenes/UI/Menus/NextLevel.tscn
-res://Scenes/UI/Menus/NextLevel.gd

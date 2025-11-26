@@ -217,7 +217,7 @@ theme_override_fonts/font = ExtResource("10_5pwot")
 theme_override_styles/normal = ExtResource("2_eqhlv")
 theme_override_styles/pressed = ExtResource("3_bp6eg")
 theme_override_styles/hover = ExtResource("4_o061i")
-text = "Back"
+text = "BACK"
 
 [node name="Level 1" type="Button" parent="."]
 layout_mode = 1

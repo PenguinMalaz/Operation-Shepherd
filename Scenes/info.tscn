@@ -239,8 +239,7 @@ theme_override_fonts/font = ExtResource("1_wjprj")
 theme_override_styles/normal = ExtResource("3_v0v1k")
 theme_override_styles/pressed = ExtResource("4_vq2vp")
 theme_override_styles/hover = ExtResource("5_ss1f6")
-text = "Next
-"
+text = "NEXT"
 
 [node name="Animation" type="Node" parent="."]
 

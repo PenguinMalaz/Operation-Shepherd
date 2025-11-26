@@ -5,13 +5,21 @@ class_name CardBoard
 signal Serigala
 # Signal domba
 signal Domba
+# Signal fox
+signal Fox
+
+signal pinned
 
 # Variabel yang akan menyimpan objek yang terpilih untuk sesi game ini
 @export var object_penentu: ObjekDanDialog = preload("res://Resources/ObjekDanDialog/Pensil.tres")
 # Deck yang akan digunakan
 @export_enum("Deck 1", "Deck 2") var pilih_deck: String = "Deck 1"
+# Predator yang akan dipilih
+@export_enum("wolf", "wolf and fox") var penetapan_predator: String = "wolf"
 # Variabel Export Baru: Mengatur jumlah Serigala (1 hingga 5)
 @export var jumlah_serigala: int = 1
+# Variabel Export Baru: Mengatur jumlah Serigala (1 hingga 5)
+@export var jumlah_fox: int = 0
 # Menentukan agar serigala tidak lebih dari total kartu
 var total_kartu: int = 5
 
@@ -53,6 +61,8 @@ var is_level_complete: bool = false
 @onready var cursor_normal: Sprite2D = $Cursor/CursorNormal
 # Node cursor crosshair
 @onready var cursor_crosshair: Sprite2D = $Cursor/CursorCrosshair
+# Node cursor pin
+@onready var cursor_pin: Sprite2D = $Cursor/CursorPin
 
 # Menyimpan id dari setiap card
 var deck_kartu: Array = []
@@ -63,6 +73,8 @@ var current_deck: Array = []
 const ID_DOMBA = Card.IdCard.DOMBA
 # Id serigala
 const ID_SERIGALA = Card.IdCard.SERIGALA
+# Id fox
+const ID_FOX = Card.IdCard.FOX
 
 func _ready() -> void:
 	randomize()
@@ -97,15 +109,18 @@ func _process(_delta: float) -> void:
 				card.sprite.self_modulate = Color(1.0, 1.0, 1.0, 1.0)
 				card.magnifying_glass_sprite.visible = false
 				card.loop.pause()
-		# TODO nanti ubah jadi cursor senapan
+				
+				card.button.disabled = false
 		if !is_level_complete:
-			cursor_magnifying_glass.visible = false
-			cursor_normal.visible = false
-			cursor_crosshair.visible = true
+			if !GlobalVariable.cursor:
+				cursor_visible(false, false, true, false)
+			else:
+				cursor_visible(false, true, false, false)
 		else:
-			cursor_magnifying_glass.visible = false
-			cursor_normal.visible = true
-			cursor_crosshair.visible = false
+			cursor_visible(false, true, false, false)
+		
+		
+		
 	else: # Mode eliminasi non-aktif
 		for card: Card in current_deck:
 			# Kartu yang tidak dicurigai
@@ -118,16 +133,30 @@ func _process(_delta: float) -> void:
 				card.magnifying_glass_sprite.visible = true
 				card.sprite.self_modulate = Color(0.577, 0.577, 0.577, 1.0)
 				card.loop.play("loop")
+				if card.pinned:
+					if card.id_card != card.IdCard.DOMBA:
+						card.button_disabled = true
+					card.button.disabled = true
 			card.elimination_mode.stop()
 		# Mengubah cursor saat investigasi aktif dan non-aktif
 		if magnifying_glass.investigation_active:
-			cursor_magnifying_glass.visible = true
-			cursor_normal.visible = false
-			cursor_crosshair.visible = false
+			for card: Card in current_deck:
+				if !card.dog_mode:
+					cursor_visible(true, false, false, false)
+				else:
+					cursor_visible(false, false, false, true)
+					if card.suspect_with_magnifying_glass:
+						card.button.disabled = true
+						
+				
 		else:
-			cursor_magnifying_glass.visible = false
-			cursor_normal.visible = true
-			cursor_crosshair.visible = false
+			cursor_visible(false, true,false, false)
+
+func cursor_visible(magnifying: bool, normal: bool, crosshair: bool, pin: bool) -> void:
+	cursor_magnifying_glass.visible = magnifying
+	cursor_normal.visible = normal
+	cursor_crosshair.visible = crosshair
+	cursor_pin.visible = pin
 
 ## Untuk menerapkan deck mana yang dipilih
 func terapkan_deck(deck: Array, jml_kartu: int, deck_1_visible: bool,deck_2_visible: bool) -> void:
@@ -158,25 +187,40 @@ func _on_card_hover_exited() -> void:
 ## Untuk mengeliminasi kartu
 func _on_card_clicked(card: Card) -> void:
 	if magnifying_glass.investigation_active and card.card_flipped:
-		if card.suspect:
-			SoundEffect.glass_double_deselect()
-			if magnifying_glass.elimination:
-				periksa_kartu(card.id_card)
-				card.button_disabled = true
-				card.dialogue_box_fade.play_backwards("fade")
-				cursor_magnifying_glass.visible = false
-				cursor_normal.visible = true
-				card.elimination_mode.stop()
-				SoundEffect.shoot()
+		if !card.dog_mode:
+			if card.suspect:
+				SoundEffect.glass_double_deselect()
+				if magnifying_glass.elimination:
+					periksa_kartu(card.id_card)
+					card.button_disabled = true
+					card.dialogue_box_fade.play_backwards("fade")
+					cursor_visible(false, true, false, false)
+					card.elimination_mode.stop()
+					SoundEffect.shoot()
+					if card.pinned:
+						card.terapkan_texture()
+						card.pinned = false
+						card.button.disabled = true
+				card.suspect = false
+				
+				card.suspect_anim.play_backwards("suspect")
+				card.sprite.self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+			else:
+				card.suspect_anim.play("suspect")
+				card.suspect = true
+				card.suspect_with_magnifying_glass = true
+				SoundEffect.glasss()
+				card.sprite.self_modulate = Color(0.577, 0.577, 0.577, 1.0)
 			
-			card.suspect = false
-			card.suspect_anim.play_backwards("suspect")
-			card.sprite.self_modulate = Color(1.0, 1.0, 1.0, 1.0)
 		else:
-			card.suspect_anim.play("suspect")
-			card.suspect = true
-			SoundEffect.glasss()
-			card.sprite.self_modulate = Color(0.577, 0.577, 0.577, 1.0)
+			card.apply_texture_pin()
+			card.pinned = true
+			emit_signal("pinned")
+			if card.pinned:
+				card.dialogue_box_fade.play_backwards("fade")
+				card.dog_mode = false
+			
+
 
 ## Memeriksa id kartu
 func periksa_kartu(kartu_id: Card.IdCard) -> void:
@@ -187,28 +231,40 @@ func periksa_kartu(kartu_id: Card.IdCard) -> void:
 		Card.IdCard.DOMBA:
 			emit_signal("Domba")
 			SoundEffect.sheeps()
+		Card.IdCard.FOX:
+			emit_signal("Fox")
+			SoundEffect.fox_hurt()
 
 ## --- FUNGSI PENETAPAN PERAN DAN DIALOG ---
 func tetapkan_peran_kartu(deck: Array) -> void:
 	# 1. Hitung jumlah Domba
+	var total_predator_fox: int = jumlah_serigala + jumlah_fox
+	if total_predator_fox >= total_kartu:
+		push_error("ERROR: Jumlah Serigala dan Fox melebihi total kartu!")
+		return
+	
 	var jumlah_domba: int = total_kartu - jumlah_serigala
 	
-	# 2. Buat Array untuk menyimpan posisi indeks yang akan menjadi Serigala
+	# 2. Buat Array untuk menyimpan posisi indeks untuk Serigala dan Fox
 	var semua_indeks: Array = []
 	for i in range(total_kartu):
 		semua_indeks.append(i)
 		
 	semua_indeks.shuffle()
-	var indeks_serigala_terpilih: Array = semua_indeks.slice(0, jumlah_serigala)
+	# 3. Ambil indeks untuk Serigala dan Fox
+	var indeks_predator_terpilih: Array = semua_indeks.slice(0, total_predator_fox)
+	var indeks_serigala_terpilih: Array = indeks_predator_terpilih.slice(0, jumlah_serigala)
+	var indeks_fox_terpilih: Array = indeks_predator_terpilih.slice(jumlah_serigala, total_predator_fox)
 	
 	# 4. Persiapkan Array Dialog Sementara (Unik)
 	var dialog_domba_sisa: Array = object_penentu.domba_dialogs.duplicate()
 	var dialog_serigala_sisa: Array = object_penentu.serigala_dialogs.duplicate()
+	var dialog_fox_sisa: Array = object_penentu.fox_dialogs.duplicate()
 	
 	# 5. Cek Ketersediaan Dialog (Sama seperti sebelumnya)
-	if dialog_domba_sisa.size() < jumlah_domba or dialog_serigala_sisa.size() < jumlah_serigala:
-		push_error("ERROR: Data dialog tidak cukup! Butuh %d dialog Domba dan %d dialog Serigala." % [jumlah_domba, jumlah_serigala])
-		return 
+	if dialog_domba_sisa.size() < jumlah_domba or dialog_serigala_sisa.size() < jumlah_serigala or dialog_fox_sisa.size() < jumlah_fox:
+		push_error("ERROR: Data dialog tidak cukup!")
+		return
 	
 	# 6. Iterasi dan Panggil Fungsi Pembantu
 	for i in range(deck.size()):
@@ -218,6 +274,8 @@ func tetapkan_peran_kartu(deck: Array) -> void:
 		if i in indeks_serigala_terpilih:
 			# Panggil fungsi terpisah untuk Serigala
 			_tetapkan_dialog_kartu(card, ID_SERIGALA, dialog_serigala_sisa)
+		elif i in indeks_fox_terpilih:
+			_tetapkan_dialog_kartu(card, ID_FOX, dialog_fox_sisa)
 		else:
 			# Panggil fungsi terpisah untuk Domba
 			_tetapkan_dialog_kartu(card, ID_DOMBA, dialog_domba_sisa)

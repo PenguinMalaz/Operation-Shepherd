@@ -19,9 +19,9 @@ var predators_found: int = 0
 @onready var heart_3: AnimatedSprite2D = $Heart/Heart3
 
 # Node text dari predator found
-@onready var predator_counter: RichTextLabel = $"Predator found/RichTextLabel"
+@onready var predator_counter: RichTextLabel = $"Predator found/RichTextLabel2"
 
-
+var paused: bool = false
 
 func _ready() -> void:
 	## Set UI
@@ -31,6 +31,25 @@ func _ready() -> void:
 	if predator_counter:
 		update_predator_display()
 	
+	
+
+func _process(_delta: float) -> void:
+	if Input.is_action_just_pressed("ui_cancel"):
+		paused = !paused
+		GlobalVariable.cursor = true
+		if !paused:
+			$Option.hide()
+			get_tree().paused = true
+			paused = false
+		else:
+			$Option.show()
+			get_tree().paused = false
+			paused = false
+			
+	
+	if GlobalVariable.fade:
+		await  get_tree().create_timer(0.5).timeout
+		$Fade/AnimationPlayer.play("fade")
 
 ## Mengatur UI dari heart
 func heart_frame(heart_1_frame: int, heart_2_frame: int, heart_3_frame: int) -> void:
@@ -84,19 +103,10 @@ func update_predator_display() -> void:
 	var teks_merah_total: String = "[color=#b35054]%d[/color]" % total_predators
 	
 	# Gabungkan semua bagian
-	var teks_final: String = "Predators found : %s%s%s" % [
+	var teks_final: String = " %s%s%s" % [
 		teks_merah_angka,
 		teks_merah_slash,
 		teks_merah_total
 	]
 	
 	predator_counter.text = teks_final
-
-
-func _on_play_button_down() -> void:
-	$Fade.fade("res://Scenes/UI/MainMenu/MainMenu.tscn")
-	SoundEffect.pressed()
-
-
-func _on_play_mouse_entered() -> void:
-	SoundEffect.hover()

@@ -7,6 +7,7 @@
 next_level_scene = "res://Scenes/Levels/level_4.tscn"
 current_level = 3
 
-[node name="CardBoard" parent="." index="1"]
+[node name="CardBoard" parent="." index="0"]
 object_penentu = ExtResource("2_nfly3")
 pilih_deck = "Deck 2"
+jumlah_serigala = 2

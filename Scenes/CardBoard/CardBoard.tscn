@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bu562416w70f7"]
+[gd_scene load_steps=9 format=3 uid="uid://bu562416w70f7"]
 
 [ext_resource type="Script" uid="uid://bphtxfwccssbh" path="res://Scenes/CardBoard/CardBoard.gd" id="1_8xbk8"]
 [ext_resource type="PackedScene" uid="uid://cljtijri10fg8" path="res://Scenes/Cards/Card.tscn" id="1_bcglx"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://bogdb2py0tcfc" path="res://Scenes/UI/CursorMagnifyingGlass.tscn" id="5_1rs4u"]
 [ext_resource type="PackedScene" uid="uid://cuoj3ka8bma1t" path="res://Scenes/UI/CursorNormal.tscn" id="6_qnhg7"]
 [ext_resource type="PackedScene" uid="uid://cyy4icf24m5s" path="res://Scenes/UI/CursorCrosshair.tscn" id="7_bpc0d"]
+[ext_resource type="PackedScene" uid="uid://cw82kpxnvdcrl" path="res://Scenes/UI/cursor_pin.tscn" id="8_kd022"]
 
 [node name="CardBoard" type="Node2D"]
 script = ExtResource("1_8xbk8")
@@ -71,4 +72,7 @@ visible = false
 position = Vector2(288, 168)
 
 [node name="CursorCrosshair" parent="Cursor" instance=ExtResource("7_bpc0d")]
+visible = false
+
+[node name="CursorPin" parent="Cursor" instance=ExtResource("8_kd022")]
 visible = false

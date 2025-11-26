@@ -10,6 +10,12 @@ var CURRENT_STATE: String = "standby"
 
 var unlocked_level: int = 1
 
+var game_sound: bool = false
+
+var fade: bool = false
+
+var cursor: bool = false
+
 # Variable untuk menyimpan level.
 var LEVEL_SCENES: Array[PackedScene] = [ 
 	load("res://Scenes/Levels/Level_1.tscn"), 
