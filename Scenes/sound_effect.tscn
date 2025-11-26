@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://bs8hbndj5guub"]
+[gd_scene load_steps=17 format=3 uid="uid://bs8hbndj5guub"]
 
 [ext_resource type="Script" uid="uid://bi0jcjouyl3oa" path="res://Scripts/Globals/sound_effect.gd" id="1_0sduf"]
 [ext_resource type="AudioStream" uid="uid://hq8o0fnfdc4f" path="res://Asset/Sound/Sound Effect/Button (Hover).wav" id="2_sid52"]
@@ -15,6 +15,7 @@
 [ext_resource type="AudioStream" uid="uid://cutbewuw6okk2" path="res://Asset/Sound/Sound Effect/Reload.wav" id="13_wxaro"]
 [ext_resource type="AudioStream" uid="uid://bu4nqqbtebeln" path="res://Asset/Sound/Sound Effect/Hurt (High).wav" id="14_u1aqg"]
 [ext_resource type="AudioStream" uid="uid://dqi6dya1hp2ou" path="res://Asset/Sound/Sound Effect/Bark (Dog).wav" id="15_e3tq4"]
+[ext_resource type="AudioStream" uid="uid://cuyjhh8x15a8l" path="res://Asset/Sound/Sound Effect/Paper Pin.wav" id="16_61kss"]
 
 [node name="sound effect" type="Node"]
 script = ExtResource("1_0sduf")
@@ -85,6 +86,12 @@ bus = &"SFX"
 
 [node name="Dog" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("15_e3tq4")
+volume_db = 5.0
+pitch_scale = 2.0
+bus = &"SFX"
+
+[node name="Pin" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("16_61kss")
 volume_db = 5.0
 pitch_scale = 2.0
 bus = &"SFX"

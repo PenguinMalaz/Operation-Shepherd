@@ -1,11 +1,13 @@
 extends CanvasLayer
 
+signal resume
 
 func _on_resume_pressed() -> void:
 	get_tree().paused = false
 	hide()
 	GlobalVariable.cursor = false
 	SoundEffect.pressed()
+	emit_signal("resume")
 
 func _on_settings_pressed() -> void:
 	$Fade.fade_add_or_delete_scene("res://Scenes/UI/Menus/options_menu.tscn", "instance")

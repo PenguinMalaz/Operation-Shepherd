@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://ckqxyhwrtplkt"]
+[gd_scene load_steps=17 format=3 uid="uid://ckqxyhwrtplkt"]
 
 [ext_resource type="Script" uid="uid://dfomabdbuqvyx" path="res://Scenes/UI/hud.gd" id="1_4bm6u"]
 [ext_resource type="Texture2D" uid="uid://dd0d7eth13gky" path="res://Asset/Sprite/UI/heart.png" id="1_omqfp"]
@@ -6,7 +6,10 @@
 [ext_resource type="FontFile" uid="uid://b4lfqjm4wfgf2" path="res://Asset/Font/VCR_OSD_MONO_1.001.ttf" id="3_xaom8"]
 [ext_resource type="Texture2D" uid="uid://ffkf67te71r" path="res://Asset/Sprite/UI/UI-text.png" id="4_pydgx"]
 [ext_resource type="PackedScene" uid="uid://bcicsfokqyoh5" path="res://Scenes/UI/Menus/GameOver.tscn" id="5_ykvyr"]
+[ext_resource type="Texture2D" uid="uid://srkwchlpbmq3" path="res://Asset/Sprite/UI/icon-setting1.png" id="6_eebq5"]
 [ext_resource type="PackedScene" uid="uid://b1nsbqfdtiaqf" path="res://Scenes/UI/Menus/NextLevel.tscn" id="6_lelo4"]
+[ext_resource type="Texture2D" uid="uid://bosdxl1sulllx" path="res://Asset/Sprite/UI/icon-setting2.png" id="7_18ujm"]
+[ext_resource type="Texture2D" uid="uid://boed6y3ofan75" path="res://Asset/Sprite/UI/icon-setting3.png" id="8_jt2rc"]
 [ext_resource type="PackedScene" uid="uid://bt2hff2w07c3l" path="res://Scenes/UI/option.tscn" id="9_i4i0y"]
 [ext_resource type="PackedScene" uid="uid://cac7sq4vlj501" path="res://Scenes/Fade/fade.tscn" id="10_yenib"]
 
@@ -28,6 +31,23 @@ animations = [{
 "texture": SubResource("AtlasTexture_xaom8")
 }],
 "loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pd044"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_eebq5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_18ujm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_jt2rc")
+}],
+"loop": true,
 "name": &"default",
 "speed": 5.0
 }]
@@ -112,6 +132,23 @@ bbcode_enabled = true
 text = "0/1"
 vertical_alignment = 1
 
+[node name="Button" type="Button" parent="."]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = -60.0
+offset_right = 56.0
+offset_bottom = -12.0
+grow_vertical = 0
+scale = Vector2(1.2, 1.2)
+focus_mode = 0
+flat = true
+
+[node name="Settings" type="AnimatedSprite2D" parent="Button"]
+position = Vector2(24, 24)
+sprite_frames = SubResource("SpriteFrames_pd044")
+
 [node name="GameOver" parent="." instance=ExtResource("5_ykvyr")]
 visible = false
 
@@ -122,3 +159,7 @@ visible = false
 
 [node name="Option" parent="." instance=ExtResource("9_i4i0y")]
 visible = false
+
+[connection signal="mouse_entered" from="Button" to="." method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="Button" to="." method="_on_button_mouse_exited"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

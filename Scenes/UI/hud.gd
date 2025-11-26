@@ -21,7 +21,11 @@ var predators_found: int = 0
 # Node text dari predator found
 @onready var predator_counter: RichTextLabel = $"Predator found/RichTextLabel2"
 
-var paused: bool = false
+@onready var option: CanvasLayer = $Option
+
+@onready var settings: AnimatedSprite2D = $Button/Settings
+
+
 
 func _ready() -> void:
 	## Set UI
@@ -31,24 +35,10 @@ func _ready() -> void:
 	if predator_counter:
 		update_predator_display()
 	
-	
 
 func _process(_delta: float) -> void:
-	if Input.is_action_just_pressed("ui_cancel"):
-		paused = !paused
-		GlobalVariable.cursor = true
-		if !paused:
-			$Option.hide()
-			get_tree().paused = true
-			paused = false
-		else:
-			$Option.show()
-			get_tree().paused = false
-			paused = false
-			
-	
 	if GlobalVariable.fade:
-		await  get_tree().create_timer(0.5).timeout
+		await  get_tree().create_timer(0.4).timeout
 		$Fade/AnimationPlayer.play("fade")
 
 ## Mengatur UI dari heart
@@ -110,3 +100,18 @@ func update_predator_display() -> void:
 	]
 	
 	predator_counter.text = teks_final
+
+
+func _on_button_pressed() -> void:
+	SoundEffect.pressed()
+	option.show()
+	settings.frame = 2
+
+
+func _on_button_mouse_entered() -> void:
+	SoundEffect.hover()
+	settings.frame = 1
+
+
+func _on_button_mouse_exited() -> void:
+	settings.frame = 0
