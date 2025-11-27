@@ -26,7 +26,6 @@ var predators_found: int = 0
 @onready var settings: AnimatedSprite2D = $Button/Settings
 
 
-
 func _ready() -> void:
 	## Set UI
 	# Jika heart berkurang maka UI heart akan ter-update
@@ -104,6 +103,7 @@ func update_predator_display() -> void:
 
 func _on_button_pressed() -> void:
 	SoundEffect.pressed()
+	GlobalVariable.cursor = true
 	option.show()
 	settings.frame = 2
 
