@@ -14,7 +14,8 @@ config/name="Operation Shepherd"
 config/tags=PackedStringArray("game_jam", "team_undefined")
 run/main_scene="uid://rrlygdbjfrhp"
 config/features=PackedStringArray("4.5", "GL Compatibility")
-config/icon="res://icon.svg"
+config/icon="uid://cevg5yxrt3lhf"
+config/windows_native_icon="res://icon.ico"
 
 [autoload]
 
