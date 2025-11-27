@@ -11,12 +11,12 @@ NEXT LEVEL,Level Selanjutnya,Next Level
 MAIN MENU,Menu Utama,Main Menu
 $dialog_tutorial_1,"Hey Pengembala! Aku mengendus adanya  [color=#b35054]predator[/color] di antara gerombolan [color=#a7d694]domba[/color] ini, tetapi aku tidak melihat adanya [color=#b35054]predator[/color].","Hey Shepherd! I smell a [color=#b35054]predator[/color] among the sheeps, but I don't see any sign of a [color=#b35054]predator[/color]"
 $dialog_tutorial_2,Kemungkinan para [color=#b35054]predator[/color] sedang menyamar di antara kawanan [color=#a7d694]domba-domba[/color] itu.,Maybe the [color=#b35054]predators[/color] are currently disguised among those [color=#a7d694]sheeps[/color].
-$dialog_tutorial_3,Kita harus menginterogasi para [color=#a7d694]domba[/color] dengan menanyakan apa karakteristik benda yang ada di tengah,We have to interrogate the [color=#a7d694]sheeps[/color] by asking what are the characteristics of the object in the middle.
-$dialog_tutorial_4,Hanya [color=#a7d694]domba[/color] saja yang bisa mendeskripsikan dengan akurat  tentang karakteristik benda yang berada di tengah,Only [color=#a7d694]sheeps[/color] can accurately describe the characteristics of the object in the middle.
-$dialog_tutorial_5,"Jika ada [color=#a7d694]domba[/color] yang tidak bisa mendeskripsikannya dengan tepat, ada kemungkinan itu adalah [color=#b35054]predator[/color]","If a sheep can't accurately describe the object, there's a chance that might be a [color=#b35054]predator[/color]."
+$dialog_tutorial_3,Kita harus menginterogasi para [color=#a7d694]domba[/color] dengan menanyakan apa karakteristik benda yang ada di tengah.,We have to interrogate the [color=#a7d694]sheeps[/color] by asking what are the characteristics of the object in the middle.
+$dialog_tutorial_4,Hanya [color=#a7d694]domba[/color] saja yang bisa mendeskripsikan objek dengan akurat.,Only [color=#a7d694]sheeps[/color] can describe the object accurately.
+$dialog_tutorial_5,"Jika ada ""domba"" yang tidak bisa mendeskripsikannya dengan tepat, ada kemungkinan itu adalah [color=#b35054]predator[/color]","If a ""sheep"" can't accurately describe the object, there's a chance that might be a [color=#b35054]predator[/color]."
 $dialog_tutorial_6,Arahkan kursor-mu ke kartu untuk melihat dialog mereka,Hover your cursor to the cards to see their dialogs
-$dialog_tutorial_7,Klik lagi kartu untuk batal [color=#8acfdb]dicurigai[/color],Click again to cancel [color=#8acfdb]suspected[/color]
-$dialog_tutorial_8,Klik kartu untuk [color=#8acfdb]dicurigai[/color],Click a card to  [color=#8acfdb]suspect [/color] them
+$dialog_tutorial_7,Klik lagi kartu untuk batal [color=#8acfdb]dicurigai[/color],Click again to cancel [color=#8acfdb]suspicion[/color]
+$dialog_tutorial_8,Klik kartu untuk [color=#8acfdb]dicurigai[/color],Click a card to [color=#8acfdb]suspect [/color] them
 $dialog_tutorial_9,"Klik tombol yang bergambar ""bidik pistol"" untuk [color=#b35054]eksekusi[/color]","Click the button with the ""pistol aim"" symbol to [color=#b35054]execute[/color]"
 $dialog_tutorial_10,Klik kartu untuk di [color=#b35054]eksekusi[/color],Click a card to [color=#b35054]execute[/color]
 $dialog_tutorial_11,"Klik tombol yang bergambar ""bidik pistol"" untuk [color=#b35054]eksekusi[/color]","Click the button with the ""pistol aim"" symbol to [color=#b35054]execute[/color]"
@@ -44,9 +44,9 @@ $fox_dialog_kertas_4,Benda putih tipis itu bisa mengeluarkan suara saat diam,Tha
 ,,
 $sheep_dialog_penghapus_1,Benda kecil terbuat dari karet,A tiny object made out of rubber
 $sheep_dialog_penghapus_2,"Saat digosok di tulisan pensil, tulisan pensil hilang","When rubbed on pencil writing, the pencil writing disappears"
-$sheep_dialog_penghapus_3,Warnanya beragam dan sering ada di meja belajar,They come in a variety of colors and are always on the school desk
+$sheep_dialog_penghapus_3,Warnanya beragam dan sering ada di meja belajar,They come in a variety of colors and usually appears on the school desk
 $sheep_dialog_penghapus_4,"Jika dipakai, ia meninggalkan serpihan","If used, it will leave flakes"
-$sheep_dialog_penghapus_5,Benda ini berpasangan dengan pensil,This tiiny object is paired with a pencil
+$sheep_dialog_penghapus_5,Benda ini berpasangan dengan pensil,This tiny object is paired with a pencil
 $wolf_dialog_penghapus_1,Aku melihat sebuah barang kecil di antara rak buku,I see a tiny object between a bookshlef
 $wolf_dialog_penghapus_2,Ada sebuah benda ringan di dalam laci,There is a light object inside a drawer
 $wolf_dialog_penghapus_3,Sebuah objek kecil di dalam kotak,A tiny object inside a box
@@ -86,14 +86,14 @@ $wolf_dialog_pulpen_2,Benda yang sangat rapuh,A very fragile object
 $wolf_dialog_pulpen_3,Benda ini cocok berpasangan dengan pengserut,This object is perfectly paired with a sharpener
 $wolf_dialog_pulpen_4,Benda ini cocok berpasangan dengan penghapus,This object is perfectly paired with an eraser
 ,,
-$fox_dialog_tutorial_1,Pengembala! Sepertinya aku mencium bau [color=#b35054]predator[/color] baru,Shepherd! I think I smelled a new [color=#b35054]predator[/color].
-$fox_dialog_tutorial_2," [color=#b35054]Predator[/color] ini sepertinya seekor  [color=#b35054]rubah[/color], dia suka menyampaikan informasi palsu tentang kartu yang berada di tengah","This [color=#b35054]predator[/color] seems to be a [color=#b35054]fox[/color], they alwas like to send a false information about the object."
-$fox_dialog_tutorial_3,Untuk kasus ini aku akan membantu mu dengan cara memberikan pin di setiap [color=#a7d694]domba[/color],"For this case, I will help you by giving a pin on some [color=#a7d694]sheep[/color]."
-$fox_dialog_tutorial_4,"Jika pin yang aku berikan berwarna [color=#a7d694]hijau[/color], kemungkinan itu adalah [color=#a7d694]domba[/color] asli","If the color of the pin that I gave is  [color=#a7d694]green[/color], there's a chance that is an actual  [color=#a7d694]sheep[/color]."
-$fox_dialog_tutorial_5,"Tetapi jika yang aku berikan berwarna [color=#b35054]merah[/color], kemungkinan itu adalah [color=#b35054]predator[/color] yang menyamar","But if the color of the pin that I gave is [color=#b35054]red[/color], there's a chance that is a disguised [color=#b35054]predator[/color]."
-$fox_dialog_tutorial_6,Klik aku untuk mengaktif pin,Click me to activate pin
-$fox_dialog_tutorial_7,Klik aku untuk mengaktif pin,Click me to activate pin
-$fox_dialog_tutorial_8,Pilih kartu yang ingin dipin,Pick the card you want to pick
+$fox_dialog_tutorial_1,Pengembala! Sepertinya aku mencium bau [color=#b35054]predator[/color] baru.,Shepherd! I think I smelled a new [color=#b35054]predator[/color].
+$fox_dialog_tutorial_2," [color=#b35054]Predator[/color] ini sepertinya seekor [color=#b35054]rubah[/color], dia suka menyampaikan informasi palsu tentang kartu yang berada di tengah.","This [color=#b35054]predator[/color] seems to be a [color=#b35054]fox[/color], they alwas like to send a false information about the object."
+$fox_dialog_tutorial_3,Untuk kasus ini aku akan membantu mu dengan cara memberikan pin di beberapa [color=#a7d694]domba[/color].,"For this case, I will help you by giving a pin on some [color=#a7d694]sheeps[/color]."
+$fox_dialog_tutorial_4,"Jika pin yang aku berikan berwarna [color=#a7d694]hijau[/color], itu adalah [color=#a7d694]domba[/color] asli.","If the color of the pin that I gave is [color=#a7d694]green[/color], then that is an actual  [color=#a7d694]sheep[/color]."
+$fox_dialog_tutorial_5,"Tetapi jika yang aku berikan berwarna [color=#b35054]merah[/color], itu adalah [color=#b35054]predator[/color] yang menyamar.","But if the color of the pin that I gave is [color=#b35054]red[/color], then that is a disguised [color=#b35054]predator[/color]."
+$fox_dialog_tutorial_6,Klik aku untuk mengaktifkan pin,Click me to activate pin
+$fox_dialog_tutorial_7,Klik aku untuk mengaktifkan pin,Click me to activate pin
+$fox_dialog_tutorial_8,Pilih kartu yang ingin dipin,Pick the card you want to pin
 PAUSED,Dijeda,Paused
 RESUME,Lanjut,Resume
 COMPLETED,Selesai,Completed
