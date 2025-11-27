@@ -70,7 +70,7 @@ theme_override_colors/default_color = Color(0.5686275, 0.45490196, 0.36078432, 1
 theme_override_fonts/normal_font = ExtResource("1_0gjrs")
 theme_override_font_sizes/normal_font_size = 40
 bbcode_enabled = true
-text = "Paused"
+text = "PAUSED"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -102,7 +102,7 @@ theme_override_fonts/font = ExtResource("1_0gjrs")
 theme_override_styles/normal = ExtResource("2_kmpyr")
 theme_override_styles/pressed = ExtResource("3_ebb6k")
 theme_override_styles/hover = ExtResource("4_l32uo")
-text = "Resume"
+text = "RESUME"
 
 [node name="Settings" type="Button" parent="Option/CenterContainer/VBoxContainer"]
 layout_mode = 2
@@ -114,7 +114,7 @@ theme_override_fonts/font = ExtResource("1_0gjrs")
 theme_override_styles/normal = ExtResource("2_kmpyr")
 theme_override_styles/pressed = ExtResource("3_ebb6k")
 theme_override_styles/hover = ExtResource("4_l32uo")
-text = "Settings"
+text = "SETTINGS"
 
 [node name="Main Menu" type="Button" parent="Option/CenterContainer/VBoxContainer"]
 layout_mode = 2
@@ -126,7 +126,7 @@ theme_override_fonts/font = ExtResource("1_0gjrs")
 theme_override_styles/normal = ExtResource("2_kmpyr")
 theme_override_styles/pressed = ExtResource("3_ebb6k")
 theme_override_styles/hover = ExtResource("4_l32uo")
-text = "Main Menu"
+text = "MAIN MENU"
 
 [node name="Sprite" type="Node2D" parent="Option"]
 position = Vector2(0, -4)
